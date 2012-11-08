@@ -1,0 +1,31 @@
+Haskell
+=======
+
+What do I know?
+
+* It's a lazy functional language
+    - Lazy meaning that functions (expressions?) are not evaluated eagerly.  
+      They are evaluated at the last possible moment (is that the correct 
+      definition of lazy?).  This is different to many languages (Java, C, 
+      Ruby, Python) where expressions are evaluated before calling the 
+      function 
+    - Functional: Functions are first class citizens.  They can be passed as 
+      arguments to other functions (a function which takes another function as 
+      an argument is called a higher order function).
+* Like many (all?) FP values are immutable.  This is contrast to most 
+  imperative languages where the default state is mutable.
+* Monads are used as a way to introduce mutabale state, concurrency and IO 
+  into the language in a clean way.
+* It has a rich type system?  Not sure what that means.
+* It is a pure FP
+* Does it have classes?  My answer would be that whilst it is not an OO 
+  language, the type system is able to define something similar to classes.
+* Like many (all?) FP recurssion is used heavily as the method of iteration.  
+  Haskell optimizes tail recursion.
+
+What I don't know
+
+* What a Monad is
+* Is it interpreted or compiled
+* Does it use bytecode
+* How it compares to other functional languages

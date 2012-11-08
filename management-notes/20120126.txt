@@ -1,0 +1,62 @@
+What are somethings we could measure which would help us improve?
+What are somethings I could measure which could help me improve?
+
+* Days from original deadline
+* Number of times requirements changed
+* Number of migration errors
+
+Monday, 06 February 2012
+------------------------
+
+* No place for storing current deadline
+    - Front page of wiki?
+* What to do with daily todo list?
+    - One file
+    - Many files
+    - Automatic git
+* Where to store time tracking for me?
+    - TaskJuggler
+    - Wiki
+    - Text file
+    - Spreadsheet
+    - Database
+    - Prolog
+
+It's not possible to complete, or even make progress on all the things I can 
+think of.  This means that prioritising and managing a large list of stuff is 
+an very important skill.
+
+How many items on the todo list?
+grep '^*' todo.txt |wc -l
+328
+How many minutes a week 40*60=2400.
+But how many do you realistically have for progressing tasks? 10*60=600.
+This allows less than 2 minutes per task.
+What about per month? 8 minutes per task.
+
+So what does this mean?  Something has to change.
+What can be done with tasks?  This is where getting things done comes in.
+* Is it actionable?
+** No
+*** Reference
+*** Tickle - someday maybe
+*** Bin
+** Yes
+- Do it
+- Delegate it
+- Defer it
+
+Mainly these are tasks that are probably in the actionable list.  Are they 
+tasks I can delegate (they are relevant to dev?)  If so then it's a simply a 
+case of making a case for them which I am okay at.  If not then I need a list 
+of criteria for deciding which ones to work on.
+
+Ideas
+~~~~~
+
+* Consider filing process improvements stuff in one place e.g. wiki and share
+* Add good links to read to wiki
+* Add dev meeting ideas to wiki
+
+
+

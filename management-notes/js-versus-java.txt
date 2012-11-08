@@ -1,0 +1,17 @@
+Argh with these google apis, jquery, and javascript we could do so much in
+javascript rather than in java
+
+for example we could return the data in a raw form to the browser (JSON) and
+use google visualisation apis
+
+Using javascript rather than server
+
+Pros
+
+* Data can be interactive
+- well actually with ajax you could do pretty much everything on the server
+  that you could do in javascript the difference is that it would be faster to
+do it on the client
+- ajax can be slow - you need the servers to respond fast
+
+Cons

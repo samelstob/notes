@@ -1,0 +1,8 @@
+* Central tendency of a data set
+    - A number which is most representative of all of the numbers
+    - Average
+    - Arithmetic Mean, Median, Mode
+
+* Measures of dispersion
+    - Variance
+

@@ -1,0 +1,134 @@
+Leading a Software Development Team
+===================================
+
+9 How do I draw up a project plan?  What use it it?
+---------------------------------------------------
+
+Why plan?
+~~~~~~~~
+
+* To give you and your team a framework to think within.
+
+    - Just as a drawing of the technical architecture of the project lets you 
+      think about the technical solution, so the project plan lets you think 
+      about the organization of the project.
+
+    - Work needs organizing and structuring, every bit as much as software 
+      does.
+
+    - The documentation that results is not the thing of value.  It's the 
+      mental effort, forced on you by having to confront the issues, that is 
+      valuable.
+
+* It helps defend your decisions.
+
+* It is a communication tool.
+
+
+22 I've got someone on my team who's a real problem
+---------------------------------------------------
+
+* Don't act too soon.  Whilst you can't let personnel problems drag on for 
+  months, it's a mistake to think that you should try to sort them out in a 
+  matter of a day or two.  You can't judge someone's behaviour that quickly, 
+  and you can't expect people to modify their behaviour that fast.
+
+* Everyone has bad days, and bad weeks.
+
+* Someone who seems to challenge everything you say can also be very helpful.  
+  It depends whether the challenge comes from someone who is trying to help 
+  get a better job done, or someone who would disagree with you whatever you 
+  said.
+
+* It's very important with personnel issues to try to get to the root cause of 
+  the problem.
+    - People may have a bad attitude because they have been stuck doing boring 
+      or menial work for a long time.  Or by them being given too much work to 
+      which they are not suited.
+    - Organisational problems - people managed by different people working 
+      together on the ground will often be working towards contrary priorities 
+      and perspectives.  They get stressed by the individual issues, the 
+      apparent unhelpfulneess and inflexibility of the 'other lot'.
+    - If someone is dragging out work, they may be doing so because they are 
+      not looking forward to the task that is coming next, or they may even 
+      believe that there is no more work waiting for them to do and they might 
+      fear losing their job.
+    - If someone is always chatting, they may be bored with work that is too 
+      easy for them.
+    - Someone may have poor time-keeping because of person problems (e.g. 
+      childcare).
+    - People become difficult and uncommunicative if they are under too much 
+      stress.
+    - Poor perfomrnace may be due to poor training or poor coaching.  No one 
+      can do a job well if they are not confident of the skills required.
+    - Dropping people in the deep end suits some people but not others.  For 
+      many people, trying to do a job without prior training saps the 
+      confidence and reduces morale.
+    - If someone is sinking rather than swimming - you should give them work 
+      that is easier and which helps their learning.  Build up their 
+      confidence and give time and training to bring them up to speed.
+* Poor performance can also be caused by poor leadership.  You need to bsure 
+  that you are not actually the cause of the problem.
+
+* You need to talk to the person to find out what is going on.  This is a very 
+  difficult thing to do.  It has to be done informally and sensitively.
+* You need to keep the focus on the problem, not the personality.  Talk about 
+  what is happening, and ask why it is happening.  Explain why it is causing a 
+  problem to you.
+
+* If someone is not doing the work you require, you need to get more rigorous, 
+  and a little more formal, about the way you allocate work to them.
+    - Make extra sure that the person knows what you expect them to deliver, 
+      and when.
+    - Make any constraints or preferences clear.
+    - If you don't spell out what you want, you cannot complain if you don't 
+      get it.
+    - Allocate smaller tasks, and review work more often, to give a chance for 
+      the person to learn what is required without having to do huge amounts 
+      of rework.
+
+* Insist only on those points that you specified when you allocated the work, 
+  and no more.  For instance , if you review some code and find it has no 
+  error checking, then explain the value of error checking, and be clear that 
+  you expect it to be done next time.
+
+* This situation is unstable and can only go two ways.  The person will either 
+  realise what is expected of them and start to perform, or things will 
+  deteriorate completely.
+    - For this reason, you must start off gently, giving a little more 
+      guidance and being a little more formal.  It should be hardly 
+      perceptible at first.  Escalate it slowly if necessary.  If you go in 
+      too hard, you will be open to the accusation of vicitimization.
+
+* When all is said and done, there are still some people who are simply in the 
+  wrong job.  Nobody is useless, but some people are pretty useless at the 
+  work they are currently being asked to perform.
+
+* If someone is not pulling their weight, it is not fair on the rest of the 
+  team, nor to your customers or the rest of the organisation, to allow it to 
+  continue.
+
+* The defining question is 'do I trust this person to be on my team?'.  Trust 
+  is vital.  You should always start off with the assumption that people are 
+  trustworth and can be allowed to get on with things in their own way.  But 
+  if you find that you cannot trust somebody on your team, then you should get 
+  rid of them.
+
+* Most personnel issues are not black and white; people are not either 'good' 
+  or 'bad, 'brilliant' or 'incompetent'.  Often, able people are given the 
+  wrong jobs, get poor training, or are put under inteolerable pressure, and 
+  may respond by becomiong negative, unproductive or disruptive.
+* With careful thought and sensitive consideration, many such problems can be 
+  resolved.  But there are people who are in the wrong team or the wrong job 
+  and cannot be trusted to continue, and these people should be removed.
+
+
+Dealing with boring/menial work
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Ensure that allocation is even
+* Take on some yourself
+* Automate some of it
+* Talk to the person and support them
+
+

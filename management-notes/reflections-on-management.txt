@@ -1,0 +1,299 @@
+Reflections on management
+=========================
+
+Chapter 2: Planning
+-------------------
+
+2.1 The hardest time to make a plan is when you need it most
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Given a deadline from management that sounds unrealistic don't accept the 
+  deadline.  Create a plan as a basis for negotiating the deadline.
+
+"Management doesn't know how long this project will take, and neither do you.  
+As long as you are both guessing, the manager will always win."
+
+* If you have enough to commit to a date, you have enough to make a plan.
+
+* The plan will be least accurate at the start of the project, but that is 
+  when you need it most.
+
+* PSP has methods for creating workable plans.
+
+2.2 Make two kinds of plans: period and product
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Period planning: day, week, month, year
+* Product/project planning
+
+* e.g. Reading a book
+    - Project plan: 20 hours to read 20 chapters
+    - Period plan: allocate 1 hour a week
+
+* "Your work schedule, income, and other daily activities are governed by time 
+  periods.  You live in a world with *period* activities, rules, and 
+  constraints.
+
+The principal purpose of your work, however, is to produce *products* and 
+services of value to others.  The cost, schedule, and quality of these goods 
+or services are thus important.  Since your work will be on products and your 
+life will be in periods, both period and product plans are important to you.  
+You cannot make a competent plan for either one without also planning the 
+other."
+
+2.3 Make product plans for every major task
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* "Planning is a critical part of a software engineer's job, and to be an 
+  effective engineer, you need to know how to make plans."
+
+* "The key is practice, so to get the most practice, start making plans now 
+  and continue to do so for all your future projects."
+
+* "I suggest that you develop product plans for all your projects or major 
+  tasks: writing a program, reading a textbook, or preparing a report.  The 
+  product plan will help you judge how much time the work will take and when 
+  you will finish.  Plans also help you track progress while doing the work."
+
+* Personal planning: "When engineers work on development teams, they need to 
+  plan their personal work.  Planning provides a sound basis for committing to 
+  competition dates, and it allows engineers to coordinate their work on joint 
+  products."
+
+* Project costs: "A well-made plan includes a project cost estimate.  
+  Estimates are essential for development contracts because customers often 
+  need to know the price in advance."
+
+* Project status: "Engineers also use product plans to understand project 
+  status.  They can see if they are late and need help or if they will have to 
+  delay the schedule.  They can better organize their time and avoid last 
+  minute crises"
+
+* Clear definition of the outcome: "The first step in producing a product plan 
+  is to get a clear definition of the product you plan to produce.  Only after 
+  you know what you want to do, should you start thinking about how to do it."
+
+* Key elements of a product plan:
+  1. The size and important features of the product to be produced
+  2. An estimate of the time required to do the work
+  3. A projection of the schedule"
+
+* "More complex products require more sophisticated planning and many kinds 
+  of information, such as responsibility assignments, staffing plans, product 
+  or process specifications, dependencies on other groups, or special testing 
+  or quality provisions."
+
+=== 2.4 Review detailed plans with your management ===
+
+* "Most requirements are complex and cannot be easily described.  By 
+  emphasising the schedule, management gives the impression that it is their 
+  highest-priority concern."
+
+* "Although the schedule is important, you must also address all of 
+  management's stated and implied goals.  In addition you must do your best to 
+  meet management's desired schedule."
+
+* "What management really wants is a completed project _now_, at no cost.  
+  Anything else is a compromise.  However, because they know that development 
+  takes time, they will push for the most aggressive schedule that you and 
+  your team will accept as a goal.  They will keep pushing until they believe 
+  that the schedule is the shortest on you will agree to meet."
+
+" Typically, when management asks for an aggressive date, the developers tell 
+them that this date doesn't allow enough time to do the work.  Management then 
+insist that the date is firm, and the team generally caves in and agrees to do 
+its best.  Such teams start out in trouble and almost always end up in 
+trouble.
+
+The best answer to this problem is to make a detailed plan and to review it 
+with management.  If you present a convincing case, they will then end up 
+agreeing to your schedule."
+
+=== 2.5 Everyone loses with incompetent planning ===
+
+* Costs and schedules: "In software entineering as in other field our role as 
+  developers is to devise economical and timely solutions to our employer's 
+  needs.  To do this, we must consider costs and schedules"
+
+________________________________________________________________________________
+Suppose you want to put an addition on your home.  After deciding what you 
+want and getting several bids, most of which are around $24,000, you pick a 
+builder who offers to do the job in three months for $20,000.  Although this 
+is a lot of money, you need the extra space and can arrange for a home-equity 
+loan.  You then sign an agreement and the builder starts the work.  After 
+about a month into the job, the builder tells you that, because of unforseen 
+problems, the job will take an extra month and cost an additional $4,000
+
+This presents you with several problems.  First, you badly need the space, and 
+another month of delay is a gret inconvenience.  Second, you have already 
+arranged for the loan and don't know where you can get the extra $4,000.  
+Third, if you get a lawyer and decide to fight the builder in court, all the 
+work will stop for many months while the case is settled.  Fourth, it woudl 
+take a great deal of time an dprobably cost even more to switch to a new 
+builder in the middle of the job.
+
+After considerable thought, you decide that the real problem is that the 
+builder did a sloppy job of planning.  The odds are good that at this point 
+you will try to negotiate a lower price but continue with the current builder.  
+Because the other bids were close to $24,000 you know this is a pretty fair 
+price.  You would not use this builder again, however, and would probably not 
+recommend him to anyone else."
+________________________________________________________________________________
+
+* "The problem with incompetent planning is that everybody loses: customers 
+  receive late and more costly products, management must tie up more 
+  resources, and the developer gets a bad reputation.
+
+* "To be successful, business must meet their commitments"
+
+* "To do our part, we must produce plans that accurately represent what we 
+  will do."
+
+Chapter 7: Taking Control of Your Work
+--------------------------------------
+
+* A defined, measured, planned and quality-controlled process will help you 
+  improve
+
+7.2 Be your own boss and don't be a victim
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Smart capable software engineers often behave like victims.  Many software 
+  developers have lots of complaints.  There are many reasons why our projects 
+  fail and we typically blame somebody else for the failures.
+
+* The alternative to being a victim is to take charge:
+    i. Take control of your oen work
+   ii. Convince management to let you mange yourself.
+
+7.3 How to improve the quality of your work
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The steps needed to change the way you work are the same as the steps I 
+followed in learning to shoot clay pigeons.
+
+Define the quality goal:: What percentage should hit the target?
+
+Measure product quality:: The instructor could see my terrible scores
+
+Understand the process:: The instructor observed me shooting to see what I 
+should change
+
+Adjust the process:: He suggested I shoot left handed
+
+Measure the results::
+
+Compare the results with the goal::
+
+Recycle and continue improving::
+
+7.4 The 18-hour work week
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Our lives are filled with interruptions
+
+* Software people do many kinds of tasks, and only some contribute directly to 
+  our projects.
+
+* Our processes are often informal and our working practices ad hoc.
+
+* Even if we wanted to, it is hard to do demanding intellectual work for long 
+  uninterrupted periods.
+
+Use support and admin staff where possible:: Every hour spent on these tasks 
+is an hour we can't spend on development.
+
+List of tasks a junior TS could do::
+
+* Answering telephone
+* Printer, fax, telephone maintenance
+    - Stocked with paper, fitted with cartridges, working at all times
+* Postage and shipping for TS
+* Answering the door
+* Changing backup disks
+* Moving and racking servers and UPS
+* Machine checking
+* Setting up PCs and laptops
+
+* Every hour spent on support and admin is an hour we can't spend on 
+  development tasks.
+
+* To manage your personal work, you need to know where your time goes.  This 
+  means you need to track your time.  It is not hard, but it does require 
+  discipline.
+
+
+7.12 What do you want from life?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Status is temporary:: While there is nothing wrong with status, it is 
+temporary.  You may hold an important job for a while but, sooner or later, 
+your next step will be down.  Losing status can be a crisis.  It is easy to 
+confuse the importance of a job with personal importance.  I have known 
+managers who were crushed by a demotion.  They had built an image of 
+themselves as important people.  Their reward was status (and it was gone when 
+they were demoted).
+
+When you ultimately retire, what would a satisfying life look like? I suggest 
+that what you have done will be far more rewarding than what you have been.
+
+If, for example, you plan to do entineering work, you probably have the 
+instincts of a builder.  Maybe you will build systems or compomentns.  You 
+could end up building methods or processes.  Or you might have a scientific 
+bent and build theories or do research to build fundamental knowledge.
+
+Quality will make you proud:: Whatever you build quality will be key.  Even if 
+no one else finds out, you will know you did a sloppy job.  The will destroy 
+your pride in the work and it will limit your satisfaction with life.  There 
+are always lots of excuses.  You might even satisfy others with an expedient 
+answer, but you will never satisfy yourself.
+
+When you do quality work, you will be produ.  Eevn if no one else knows, you 
+know you did a first-class job and you are satisifed that you did your best.  
+The surprising things it aht quality work gets known.  It may take a long 
+time, but sooner or later quality work is recognized.  Whetehr you now it, you 
+will get credit for the quality of your work.
+
+
+.Quality work gets recognized
+********************************************************************************
+This seems to be true from some examples I can think of.
+
+* Linux
+* Ruby - took ten years before it made the big time
+    - The cool thing about having designed something like Ruby is not that it 
+      makes you famous, but that you have created something of quality that 
+      has been recognized and appreciated by and useful to others.
+* Roy Fielding's doctoral dissertation that introduced 
+  http://en.wikipedia.org/wiki/Representational_state_transfer[REST]
+    - Interesntily then, this tells me that perhaps a reason to go back to do 
+      a PHd is not gain status, but to have time to do something of quality.
+
+********************************************************************************
+
+Do I want to feel produ of what I do?:: Most people would answer yes.  But if 
+you really mean it, you need to set personal standards and strive to meet 
+them.  When you meet these standards, raise them and strive again.  Challenge 
+yourself to do superior work and you will be surprised at what you can 
+accomplish.
+
+7.13 Devote yourself to excellence
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Your pgoress probably will be limited by your ability to build your personal 
+skills.  Make practice a part of every project and measure and observe your 
+own work.  You cannot stand still, so you should treat every project as a way 
+to build talent rather than merely treating your talent as a way to build 
+projects.
+
+Surprisingly often, people achieve their objectives, but in ways they did not 
+expect.  Life rarely turns out the way we plan.  While our carefully developed 
+strategies may go down in flames, a new and more rewarding opportunity shows 
+up in the ashes.  The key is to keep an open mind and to keep looking.  Devote 
+yourself to excellence, and you just might achieve it.
+
+********************************************************************************
+Ah, I think I understand why this seems to "click" with me.  I seem to have 
+always been interested in excellence.  I used to look at the top 100 films and 
+top 100 singles, the art and photography book.  I admire people like Feynmann.
+********************************************************************************

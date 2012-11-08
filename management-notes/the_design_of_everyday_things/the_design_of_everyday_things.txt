@@ -1,0 +1,62 @@
+The Design of Everyday Things
+=============================
+
+1. The Psychopathology of everyday things
+-----------------------------------------
+
+Conceptual Model
+~~~~~~~~~~~~~~~~
+
+Principles of design for understandability and usability::
+
+1. Provide a good conceptual model
+2. Make things visible
+
+* The mental model of how the systems works
+* Problems arise when the user's conceptual model differs from the systems
+
+==== Examples at Trio ====
+
+* Dashboards and published reports
+
+- It is not necessarily clear that dashboards are built from published reports
+- We could display the items that make up 
+
+* Published reports and IGUI/parent reports
+
+- We could display the items that a published report was created from
+
+* Data sources
+
+- It is not clear that some published reports draw from the same data source.  
+  Data source is completely hidden from the user.
+
+* Published reports
+
+- It is not necessarily clear what the result of publishing is
+    - schedule
+    - stored query
+    - stored data
+
+- The user has no visibility on these
+
+===== Positive examples =====
+
+* Files and folders
+    - We exploit the user's familiarity with files and folders
+
+The prinicple of mapping
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Mapping is a technical term meaning the relationship between two things, in 
+  this case between the controls and their movements and the results in the 
+  world.
+
+    - Consider the mapping relationships involved in steering a car.  To turn 
+      the car to the right, one turns the steering wheel clockwise.
+
+* Natural mapping, by which I mean taking advantage of physical analogies and 
+  cultural standards, leads to immediate understanding.
+
+    - For example, a designer can use spatial analogy: to move an object up, 
+      move the cotnrol up.
