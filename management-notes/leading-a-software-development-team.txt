@@ -16,13 +16,24 @@ Why plan?
     - Work needs organizing and structuring, every bit as much as software 
       does.
 
-    - The documentation that results is not the thing of value.  It's the 
-      mental effort, forced on you by having to confront the issues, that is 
-      valuable.
+    - It's not the doc but the mental effort that is valuable:  "The 
+      documentation that results is not the thing of value.  It's the mental 
+      effort, forced on you by having to confront the issues, that is 
+      valuable."
+
+* A plan is needed for negotiating with people - managers, customers, other 
+  teams
 
 * It helps defend your decisions.
 
 * It is a communication tool.
+
+Stress
+------
+
+* If people are stressed then manage interruptions
+
+* Say "No" to extra work, features, bugs, demos, meetings
 
 
 22 I've got someone on my team who's a real problem
