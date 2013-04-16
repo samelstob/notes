@@ -45,7 +45,7 @@ Principles of design for understandability and usability::
 * Files and folders
     - We exploit the user's familiarity with files and folders
 
-The prinicple of mapping
+The principle of mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Mapping is a technical term meaning the relationship between two things, in 
@@ -59,4 +59,4 @@ The prinicple of mapping
   cultural standards, leads to immediate understanding.
 
     - For example, a designer can use spatial analogy: to move an object up, 
-      move the cotnrol up.
+      move the control up.

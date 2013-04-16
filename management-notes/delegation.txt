@@ -115,14 +115,19 @@ Manager tools - Delegation
   that is the minimum you should be delegating.
   
 * Plan your delegation
+
     - Think through before you ask them to accept responsibility.
+
     - Have an answer for some of their objections and concerns.
+
     - Schedule it in advance, don't do it in passing.  One on ones are 
       wonderful place to do this.
+
     - Focus on results versus methods.  This is one of the top three failings 
       of managers who don't delegate.  "The other way works just fine.  People 
-      don't ahve to be just like you to get promoted to your role".
-    - If yo udelegate the person you delegate to gets to choose the steps.  
+      don't have to be just like you to get promoted to your role".
+
+    - If you delegate the person you delegate to gets to choose the steps.  
       "We're going northwest" NO "We need to get to the top of that hill by 
       day 3"
 
