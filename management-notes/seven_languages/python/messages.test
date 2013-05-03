@@ -1,0 +1,10 @@
+Apr 29 10:01:02 deben dbus-daemon[931]: dbus[931]: [system] Activating service name='org.freedesktop.PackageKit' (using servicehelper)
+Apr 29 10:01:02 deben dbus[931]: [system] Activating service name='org.freedesktop.PackageKit' (using servicehelper)
+Apr 29 10:01:02 deben dbus-daemon[931]: dbus[931]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Apr 29 10:01:02 deben dbus[931]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Apr 29 10:01:23 deben yum[10804]: Updated: kmod-libs-12-3.fc18.x86_64
+Apr 29 10:01:25 deben yum[10804]: Updated: kmod-12-3.fc18.x86_64
+Apr 29 10:01:25 deben yum[10804]: Updated: kmod-libs-12-3.fc18.i686
+Apr 29 10:01:29 deben dbus-daemon[931]: dbus[931]: [system] Activating service name='org.freedesktop.PackageKit' (using servicehelper)
+Apr 29 10:01:29 deben dbus[931]: [system] Activating service name='org.freedesktop.PackageKit' (using servicehelper)
+Apr 29 10:01:29 deben dbus-daemon[931]: dbus[931]: [system] Successfully activated service 'org.freedesktop.PackageKit'
