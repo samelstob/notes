@@ -1,0 +1,22 @@
+Inspiration
+-----------
+* There will be a day when you can no longer do this.
+Today is NOT that day.
+* The universe is 99% bullshit
+* What is the business requirement?
+* DONE "We're far from "done" but I believe we're already significantly ahead 
+  of most other date/time APIs I've seen in terms of providing a clean API 
+  which reduces *incidental* complexity while highlighting the *inherent* 
+  complexity of the domain."
+* DONE "Composition is the key to controlling complexity in software.  In The 
+  Structure and Interpretation of Computer Programs, Abelson and Sussman argue 
+  that composition beautifully expresses complex systems from simple patterns.
+
+    In our study of program design, we have seen that expert programmers 
+    control the complexity of their designs with the same general techniques 
+    used by designers of all complex systems. They combine primitive elements 
+    to form compound objects, they abstract compound objects to form 
+    higher-level building blocks, and they preserve modularity by adopting 
+    appropriate large-scale views of system structure.
+
+
