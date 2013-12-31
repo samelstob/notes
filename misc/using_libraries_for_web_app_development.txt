@@ -1,0 +1,46 @@
+UI testing is taking an enormous amount of time per release especially as we support three browsers and v4/v5.  We need to invest some time to save time in this area:
+
+1. Streamline and improve existing tests.
+
+For example many of our UI tests ask the user to create reports or dashboards as part of the test setup or load test data.  A lot of time can be saved if we scripted these or even created a standard set of test reports/dashboards that were used across tests.
+
+2. Consider dropping IE6 support, make it unsupported for v5 or fixing only major IE6 bugs
+
+- Stats from a two week period at GTA show that no one used IE6 with our GUI.
+
+http://drake/~sam/awstats/gta/awstats.localhost.localdomain.browserdetail.html
+
+We should gets stats from other customers and consider if the cost of supporting IE6 is worth it or at least devote only a proportional amount of time to it.
+
+2. Take advantage of libraries and frameworks and third-party technologies
+
+Everyone is writing web applications.  We should be modest and recognize that we are not breaking new ground with our UI - things like tabs, toolbars, trees, menus are provided by all the major UI
+frameworks. 
+
+We should try and use third-party, well tested cross browser UI components where possible.
+
+A huge benefit of JSF and JavaScript libraries is that a lot of the idiosyncrasies or Javascript/HTML/CSS between broswers is taken care of.  I appreciate that when we first started using RichFaces we found a few problems in components such as the tree control but things move fast and these bugs may be fixed.
+
+Additionally JavaScript libraries are also available if JSF is not the preferred implementation technology for a project.
+
+3. Investigate tools, frameworks and techniques for UI testing
+
+Initially I had investigated a tool called iMacros which is for browser
+automation.
+
+I have also looked at a tool called Selenium which is a UI testing tool used by RichFaces and other large projects.
+
+It is specifically geared towards testing web application UIs and so supports many of the features we require; automation, test cases are stored as plain text, 
+
+http://seleniumhq.org/
+
+Unfortunately these products are not magic and we need to invest time in
+learning to use them to reap the benefits.
+
+4. Keep an eye on what's going on in web application development
+
+Lots of people are working on the problems we are encountering and solving
+them in new and innovative ways.
+
+Newer tools such as Google Web Toolkit are taking an approach to the problem whereby the entire front end is developed in Java and the compiled into cross browser, optimized Javascript/HTML.  We should be aware of these advances in technologies.
+

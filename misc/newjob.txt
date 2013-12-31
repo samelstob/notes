@@ -1,0 +1,166 @@
+New job
+=======
+
+Possible schedule
+-----------------
+
+Mon
+
+Meetings.  Hand out work schedule.  Catch up with each member.
+
+Tues
+
+Re-active
+Project planning and design
+
+Wed
+
+pm
+
+Catch up with each member
+
+Thursday
+
+Re-active
+Project planning and design
+
+Friday
+
+Perhaps catch up with TS.
+
+pm
+
+status update.  Plan schedule for next week
+
+When would I get to do programming?
+
+What parts 
+
+Thought record
+--------------
+
+Activating event
+~~~~~~~~~~~~~~~~
+
+I have been offered a promotion.
+
+Beliefs
+~~~~~~~
+
+Positive::
+
+* Flattering
+* Exciting
+* Unexpected
+* Ego boosting
+* Progression
+* Growing up
+
+Negative::
+
+* Change
+* Moving away from what I enjoy
+* Hypocrisy (middle management, manager)
+* Tiring
+* Stressful
+
+Consequenses
+~~~~~~~~~~~~
+
+* Feel down.  Anxious (but probably was anyway!)
+* Worried
+
+Thought record
+~~~~~~~~~~~~~~
+
+==== Catastrophising ====
+
+If I take this job then I'll end up really stressed, tired, hating my job, 
+losing friends, arguing with Sam, becoming a nob, not knowing how to program, 
+becoming dumber.
+
+If I don't take this job I'll be shying away, weak, immature, scaredy cat.
+
+Consider less terrifying explanations::
+
+Most people would find this situation scary and daunting.  Probably most 
+programmers actually go through the same thing at the same sort of time in 
+their career.  Why not talk to Jim.
+
+It is without doubt a more difficult choice than many others in your career 
+path.  Dad said that the reality is that few people can progress their career  
+purely on their technical ability.  Some level of management is inevitable 
+with career progression.
+
+I want to be a team leader instead though.
+
+a. That's not on the table
+b. You could consider asking although Rich specifically said he didn't want 
+you to be a team lead.
+
+==== All or Nothing ====
+
+Be realistic
+
+If you did choose this, it doesn't actually prevent you from ever programming 
+again.  If even if it *did* end taking up all your time, stressing you out, 
+making you miserable and regretting it; you *can* leave.  It's not a prison 
+sentence.
+
+If you were doing no programming at work you could choose to do some in your 
+spare time.  For example, you could work on an open source project or just try 
+out things your interested in.  Programming might actually be *more* fun 
+because you don't *have* to finish anything!
+
+At the moment I'm trying to finish this bloody categorisation/extraction gui 
+and not getting the blocks of time clear to work on it.
+
+Both - And reasoning
+
+I can both do the job of development manager and not have to never code again.  
+And the money might be nice!
+
+If you want you could set yourself a time limit.  Give yourself two years to 
+see if you enjoy it.  If you really don't after two years then move on.
+
+Some of the positives:
+
+. Might be able to introduce some of the things that interest me in process 
+  improvement
+.. Code reviews
+.. Practice sessions
+.. Static analysis
+.. Continuous integration
+.. Automated testing
+
+==== Fortune-telling ====
+
+You don't *really* know what a job is like until you do it.  I didn't think 
+*this* job, which I'm now worried about 'losing' would be any good at first.
+
+==== Mind-reading ====
+
+Yanxin doesn't respect me so this wouldn't work.
+
+Sure, she disagrees with you on some things.  You can be patronising, 
+argumentative and stubbon sometimes.  This isn't the end of the world.  No 
+manager gets on equally well with everyone.
+
+==== Emotional Reasoning ====
+
+What if it doesn't 'feel' like the right move.
+
+Well, it's not entirely clear how useful gut feelings are for this kind of 
+thing. Anyway gut feelings are not a one-to-one relationship with thoughts and 
+feelings.
+
+
+In an ideal world I would have a like to work on bigger projects before doing 
+this.  In the real world I may do this and then work on bigger projects!
+
+
+I guess part of me feels I have invested an enormous amount of time in 
+becoming a good programmer and now my reward is - not doing any programming.  
+The reality is though this *is* how good programmers are most often rewarded.  
+And your statements from before still hold; you don't *have* to do it for ever 
+and it's still a very good experience and career move if you don't.

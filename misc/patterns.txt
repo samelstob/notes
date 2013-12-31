@@ -1,0 +1,116 @@
+Observer
+~~~~~~~~
+
+
+Strategy
+~~~~~~~~
+
+Plugable algorithms
+
+e.g. 
+
+Interface Sort
+{
+    Collection Sort(Collection<Comparable> collection);
+}
+
+class BubbleSort implements Sort
+
+class MergeSort implements Sort
+
+
+class BookShelf
+{
+    Sort sortStrategy;
+
+    void sortBookshelf()
+    {
+        sortStrategy.sort();
+    }
+}
+
+Command
+~~~~~~~
+
+Encapsulate instructions?
+
+Good for undo, history, audit?
+
+MVC
+~~~
+
+
+State
+~~~~~
+
+A state machine in OO.
+
+Interface TcpState
+{
+    void ackRecvd(); 
+    void synRecvd();
+    void finRecvd();
+    void dataRecvd();
+}
+
+Enum TcpStates
+{
+    CLOSED, HALF_OPEN, OPEN
+}
+
+class TcpStateMachine implements TcpState
+{
+    TcpState state;
+
+    void ackRecvd()
+    {
+        TcpState nextState = state.ackRecvd();
+        useState(nextState);
+    }
+
+    void synRecvd()
+    {
+        TcpState nextState = state.synRecvd();
+        useState(nextState);
+    }
+}
+
+Iterator
+~~~~~~~~
+
+Move through a data structure without knowledge of the type of data structure
+e.g.
+
+interface Iterator
+{
+   Iterable<Collection> getNext(); 
+}
+
+class LinkedList implements Iterable<List>
+{
+    Iterable<List> getNext()
+    {
+        return this.next;
+    }
+
+    Iterator iterator()
+    {
+        return new LinkedListIterator(this);
+    }
+}
+
+class LinkedListIterator implements Iterator
+{
+    LinkedList current;
+
+    LinkedListIterator(LinkedList initial)
+    {
+        current = initial;
+    }
+    
+    Iterable<LinkedList> getNext()
+    {
+        current = current.getNext();
+        return current; 
+    }
+}

@@ -1,0 +1,8 @@
+Simplicity, Clarity, Generality
+
+. Write a new language - little languages, special purpose notation, programs
+that write programs, virtual machines - think printf notation, regular
+expressions, compiler compilers, notation for packing and unpacking network
+packets.  See the practice of programming [kernighan, Pike]
+
+

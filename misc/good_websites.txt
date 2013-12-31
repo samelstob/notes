@@ -1,0 +1,16 @@
+Color schemes
+~~~~~~~~~~~~~
+
+* http://bazaar.launchpad.net/~mysql/mysql-server/mysql-5.0/revision/2781
+* http://freshmeat.net/
+* http://www.c2c-online.co.uk/travel_information
+* http://library.gnome.org/devel/glib/2.26/glib-Singly-Linked-Lists.html
+* http://kerryosborne.oracle-guy.com/2011/01/storagezz-and-z/
+* http://pauldone.blogspot.com/
+* https://github.com/unconed/TermKit
+* http://oracle-randolf.blogspot.co.uk/2012/05/nested-loop-join-costing.html
+
+Nice tool
+
+* http://www.thecompleteuniversityguide.co.uk/league-tables/rankings?s=Computer+Science&y=2011
+

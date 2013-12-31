@@ -1,0 +1,32 @@
+
+Meetings
+~~~~~~~~
+
+* Good when everyone there needs to talk to everyone else there - more
+* efficient
+* Good for when something should be arrived at by concensus
+* Good for discussing contentious issues
+* Don't call a meeting just for the sake of it.  Don't feel afraid to cancel
+  or decline a meeting
+* Agree actions during the meeting not afterwards
+* Write up minutes as soon as possible
+
+Recruiting
+~~~~~~~~~~
+
+* Recruiting is expensive.  Recruiting the wrong person is VERY expensive.
+* Even if you can't find the right person don't be tempted to hire someone who
+  isn't right.
+* Spend time with them on first day
+* If you know they are wrong candidate then draw interview to a close
+* Ask everyone same test
+* Recruiting is not just about getting someone in.  It's about getting someone
+  in who will do a good job and stay for some time
+* Consider showing good candidates round
+* Let them do as much talking as possible, else you won't learn much about
+  them.
+* Be organised - candidates will judge you as representitive of the
+  organisation
+* Don't be scared to ask hard questions.  Better people like being asked
+  harder questions because it gives them a chance to stand out from the crowd.
+* Consider asking developers to write some code

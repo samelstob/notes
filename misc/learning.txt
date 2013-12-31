@@ -1,0 +1,25 @@
+Learning goals
+==============
+
+Too much to learn!
+------------------
+
+* Concepts over details
+    - e.g. With CSS - what are the main concepts?  Selectors, Cascading?
+
+* Details that are unlikely to change over ones that will
+    - e.g. Selector format, rather than all available CSS font styles
+
+CSS
+---
+
+* Concepts over details -> e.g. With CSS - what are the main concepts?
+  Selectors, Cascading?
+  * Details that are unlikely to change over ones that will -> e.g. Selector
+    format, rather than all available font styles
+
+Hibernate
+---------
+
+[qanda]
+* Why not use fields instead of getters/setters?
