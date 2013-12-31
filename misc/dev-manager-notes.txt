@@ -1,0 +1,91 @@
+Changing priorities is inefficient
+
+To do a good job as dev manager, I need to have a fairly good understanding of 
+what it is we are trying to achieve, what is possible, what are the strengths 
+and weaknesses of the individuals on this project.
+
+If we go from user interface to Oracle work, then it takes a while for me to 
+properly switch from managing one to the other.
+
+An example is that if we are doing GUI work then I might be researching about 
+best practices and tools and resources for this.  If we switch to Oracle work 
+then I need to switch over to that.
+
+Testers
+-------
+
+What is their role
+What do they do
+http://www.joelonsoftware.com/items/2010/01/26.html
+
+" Sure, automated test suites are a time saver, but testing software covers so 
+much more than that. If you put too much emphasis on those scripts, you won’t 
+notice misaligned text, hostile user interfaces, bad color choices, and 
+inconsistency. Worse, you’ll have a culture of testers frantically working to 
+get their own code working, which crowds out what you need them to do: 
+evaluate someone else’s code."
+
+"Since testing can be taught on the job, but general intelligence can’t, you 
+really need very smart people as testers, even if they don’t have relevant 
+experience. Many of the best testers I’ve worked with didn’t even realize they 
+wanted to be testers until someone offered them the job."
+
+"If you:
+
+    Love software and computers
+        Want to work on a software team, and
+            Don’t particularly like programming
+            you should consider being a tester. "
+http://www.joelonsoftware.com/articles/fog0000000067.html
+
+"The QA department should be independent and powerful, it must not report to 
+the development team, in fact, the head of QA should have veto power over 
+releasing any software that doesn't meet muster."
+
+http://www.codinghorror.com/blog/2006/09/making-developers-cry-since-1995.html
+http://www.joelonsoftware.com/articles/Ladder.html
+Do we need em?
+How much do they earn
+What would an interview look like
+
+https://www.deming.org/theman/theories/profoundknowledge
+“Why did something go wrong?” “Why are results so poor?” “How can we repeat 
+this success?” The job of management is to not only ask these and other 
+important performance-related questions, but also to find the right answers 
+and take the right course of action. Dr. Deming provided the means for 
+management to do just that through knowledge of variation. 
+
+Why does this project exist?  What is the problem we are trying to solve?
+
+"Right thinking engineers fail to achieve consensus for two reasons:
+
+* The issue is small and boils down to personal style
+* There is insufficient data on either side of an issue
+
+The value of information and the success of business intelligence should be 
+measured in terms of useful
+outcomes.
+
+i) Did your understanding increase (i.e., did you figure out what the 
+information means)?
+ii) If so, did that understanding relate to things that matter (i.e., did you 
+determine how that understanding could make a
+positive difference)?
+iii) If so, did that understanding produce better decisions and actions (i.e., 
+did you choose
+and then take a course of action that produced the desired effect)?
+
+Only when you can answer “Yes” to each of
+these questions was the information and the technology that helped you understand it worthwhile.
+
+Most BI companies want you to believe that your problems can be solved by 
+collecting and storing more data.
+They don’t encourage you to first understand and then use the data that you already have. Why? Because
+they only know how to build and sell you products for collecting and storing data and for accessing data at high
+speeds. They don’t know how to help you make sense and use of data in meaningful ways. They want you to
+desire and buy what they sell, not to recognize and demand what you actually need.
+
+Copyright © 2012 Stephen Few, Perceptual Edge
+Page 6 of 8
+Business intelligence has always put the cart before the horse—the technology (tools) before the users (human
+beings) and their goals. It is now piling data into the cart to the point of immovability.

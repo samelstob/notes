@@ -1,0 +1,22 @@
+
+--------------------------------------------------------------------------------
+
+S3 test
+
+Install S3cmd
+
+1. Created an account by following the getting started guide
+
+http://docs.aws.amazon.com/AmazonS3/latest/gsg/OpeningAnObject.html
+
+2. Installed s3cmd
+
+3. 
+
+s3cmd --configure
+
+4. upload something
+
+100kB/s - 13 hours
+
+s3cmd put triometric_platform_v6_1_0_4_oel6_32.iso s3://releases.triometric.net

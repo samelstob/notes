@@ -1,0 +1,62 @@
+State of monitoring
+-------------------
+
+* Collectl and graphite
+* Metric collection
+    - Love your metrics
+    - Treat them as first class citizens
+* Fault detection
+* Notification
+    - Pager duty
+* Trending
+    - "Long term trending is what empowers us to make intelligent decisions 
+      about how to resolve ongoing problems or plan for future change.  They 
+      provide empirical evidence so that we don't have to operate on purely 
+      short term spikes, conjecture, or educated guesses"
+    - MRTG -> RRDtool
+    - Graphite
+* The Good
+    - RRDtool
+    - collectd
+* Adequate
+    - Reconoitre
+    - Munin - terrible performance, written in Perl
+    - OpenTSDB
+    - Ganglia
+* The Bad
+    - Zenoss
+    - Zabix
+    - Groundwork
+* The fucking terrible
+    - Nagios - The user interface is terrible.  Acknowledgments are 
+      indefinite - ack on Saturday night, you forget about it on Monday 
+      morning.  No pagination.
+    - Cacti - Good for adding network metrics.  Doesn't favour convention over 
+      configuration.
+    - God - 
+* Characteristics of future tools
+    - Composable
+    - Self-service - developers should be able to submit metrics
+    - Distributed - resilient to failed parts
+    - Automated
+    - Correlative
+    - Craftsmanship
+* The components
+    - Sensors - gather and emit metrics.  Portable across systems.  Dumb 
+      agents.  No concept of state.  Capture value and timestamp.  Emit as 
+      file or HTTP/JSON.
+    - Aggregators - aggregation, transformation, relay
+    * State engine
+    * Storage engine - long term storage
+    * Scheduler
+    * Notifier
+    * Visualizer
+* Tools of the future (available now)
+    - collectd
+    - metric library
+    - statsd aggregator
+    - logster
+    - logstash
+    - riemann
+* Questions
+    - Historgrams and heatmaps
