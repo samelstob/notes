@@ -1,0 +1,10 @@
+Performance improvement process
+
+1. Identify where the time is spent
+2. Don't do it
+3. If you need to do it, do less of it
+3.5 Are you treating it all the same, when it would be better to split "it"
+  and treat bits differently - access patterns, types of data
+4. If you can't do any less of it, change a third party component to do it
+   more efficiently (e.g. gzip library, Oracle 11 compression)
+
