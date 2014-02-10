@@ -1,5 +1,10 @@
 Inspiration
 -----------
+* "Inside every complex solution is a simple solution trying to get out"
+* "Sophisticated crowded market and we are not going to compete there.  What 
+  can we get that augments the XML."
+* "There's always a shortage of money, but never a shortage of ways to spend 
+  it"
 * There will be a day when you can no longer do this.
 Today is NOT that day.
 * The universe is 99% bullshit
@@ -19,4 +24,6 @@ Today is NOT that day.
     higher-level building blocks, and they preserve modularity by adopting 
     appropriate large-scale views of system structure.
 
+* "“The greater danger for most of us lies not in setting our aim too high and 
+  falling short; but in setting our aim too low, and achieving our mark.”"
 

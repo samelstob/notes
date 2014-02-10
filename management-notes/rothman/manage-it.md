@@ -1,7 +1,10 @@
 Manage It! - Notes
 ==================
 
+# Starting a project
+
 Project manager:
+
 The person whose job it is to articulate and communicate what 'done' means and
 to guide the project team to done.  By 'done', I mean a product that meets the
 needs of the organization developing the product and the customers who will
@@ -14,7 +17,7 @@ use the product.
 * Can you trade off any of the drivers and constraints or buy yourself some
   more degrees of freedom?
 
-The iron triangle is too simplisitic.  Successful project managers trade off
+The iron triangle is too simplistic.  Successful project managers trade off
 many more factors than what's in the iron triangle.
 
 * First write down your customer's expectations - what's driving the project
@@ -24,11 +27,10 @@ many more factors than what's in the iron triangle.
     - How good (defect levels)
 
 * Next write down the constraints you are under
-    - Enviornment
+    - Environment
     - Processes
     - Who do you have and what can they do
     - How much money do you have
-
 
 * Driver
     Look at expectations and constraints.  What jumps out at you as being required
@@ -46,7 +48,7 @@ many more factors than what's in the iron triangle.
 
 Go back and do some juggling
 
-# Decide on a Driver for Your Project
+## Decide on a Driver for Your Project
 
 Early in the project, everything seems possible, especially if no one has
 tried to estimate anything.
@@ -60,7 +62,7 @@ If sponsors don't decide, they push that decision down to the project manager.
 If the PM doesn't decide, the team members will decide - and they will all
 work to a different driver.
 
-# Ranked list of possible drivers
+## Ranked list of possible drivers
 
 Project priorities Rank
 Cost to release     5
@@ -73,7 +75,7 @@ Work enviornment    6
 In this project, the release date was the primary driver.  If we had missed
 the release date this year, we would have lost all the value of the project.
 
-# Context-Free Questions to Identify Project Drivers
+## Context-Free Questions to Identify Project Drivers
 
 High-level questions that help elicit other people's implicit assumptions
 about the project.
@@ -92,11 +94,55 @@ about the project.
     - Avoid "how" questions.  These sound like you're asking the sponsor to
       design the system.
 
-Ask these questions out of a geniuine desire to know about the project, not to
+Ask these questions out of a genuine desire to know about the project, not to
 put anyone on the defensive.  You can use these questions to lay the
 groundwork for a useful collaboration with your sponsor, not a difficult
 relationship.
 
+## Project Charter
 
+### Vision
 
-    
+If you can't articulate the vision, chances are good that you're starting on
+an impossible project.
+
+## Know What Quality Means for Your Project
+
+Understanding the project drivers, constraints, and floats is the first step
+to understanding what qulaity measn to your sponsors and customers.
+
+* The sponsors are the people who are paying for the product
+* The customers are the people who will use the product.
+
+## Remember This
+
+* Start every project with a charter
+* Expect to iterate on the project charter.  The charter doesn't have to be
+  perfect; it just has to exist to help the entire project team with their
+planning.
+* Know what quality means and what's driving your project so you and the team
+  can make good decisions as you proceed.
+
+Planning the Project
+--------------------
+
+## Plan Just Enough to Start
+
+* Your plan does nto have to be perfect.  In fact, there's no way it can be.
+  Your plan only has to be good enough to start the project with a chance of
+succeess.
+
+### Timebox
+
+* A timebox is a specific amount of time in whic the person or team attempt to
+  accomplish a specific task.  As much as the person or the team can
+accomplish in that duration is what you bring to the next part of the project.
+If necessary, the person/team decreases the scope to complete the timebox.
+
+* Empirical planning - planning just a little and then gather information on
+  actual progress to feed back into future planning
+* Predictive planning, which is attempting to predict the future, doesn't work
+  well unless you have a crystal ball
+
+* Your projects have too much uncertainty and risk to bother planning
+  everything in advance.  Plan to start and replan every few weeks.
