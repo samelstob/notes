@@ -9,7 +9,7 @@ Week Five - Discovering Lurking Problems
 
 * The people who perform the work need to be part of the solution.
 
-* As a manager, you may need to faciliatet their problem-solving work.  If the
+* As a manager, you may need to facilitate their problem-solving work.  If the
   problem spans groups, you may need to work with your peers to solve problems
 as part of a management team.
 
@@ -17,13 +17,13 @@ as part of a management team.
   burnt-out people.  Burnout occurs when there is too much to do, not enough
 time to do it, and the person attempts to do all the work anyway.
 
-    - Working at asustainable pace of 40 hours a week isn't molly-coddling.
+    - Working at a sustainable pace of 40 hours a week isn't molly-coddling.
       It's a smart business decision, and it's your job to make it happen.
 
     - Planning for a month works only if I don't have to take changes every
       couple of days.
 
-    - Priorizing features within a project or release is a business decision,
+    - Prioritizing features within a project or release is a business decision,
       not a technical decision.
 
 * Recognize Messy Problems: Problems That Are Bigger Than One Manager Can Fix
