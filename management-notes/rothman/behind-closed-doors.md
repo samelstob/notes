@@ -37,3 +37,7 @@ time to do it, and the person attempts to do all the work anyway.
     - Look for the root cause
     - Look for solutions that you can implement
     - Fix the problem, don't affix blame
+
+### Solving Problems as a Management Team
+
+
