@@ -41,8 +41,65 @@ boughtj
     - reptutation for b2b firms
     - e.g. ibm consulting used to not be well regarded
     - got to start paying attention
+    - "I know for a fact that if I'd have spent the last 30 years of my life
+      saying I worked a Navco not I worked at Proctor and Gamble less doors
+would have been opened"
     
+
+# Choosing a Company to Work For - Values
+
+* Choose/explore/examine your values
+    - Website
+    - e.g. asked to do something illegal
+    - What is my definition of lying?
+    - Would I tell white 
+    - Would I manipulate my fitures to get a bonus
+    - Would I pad my expenses
+    - Would I say something was done when it wasn't
+    - Do you want to work for a boss or a company that would encounrage you to
+      do the above
+    - Do I feel that the fact that shell makes £1.5M in profit per hour is
+      morally wrong
+    - Do I feel that the only true work is non-profit
+    - Do I feel that a company that has a negative effect on the enviornment
+      should be made to pay?
+    - Do I feel that family is more important than work
+    - Do I feel guilty doing overtime if my kids were at home?
+    - Do I feel that I should earn as much as I can to give them a better life
+      style?
+* There is no truth about the future, only opinions.  To intentionally mislead
+  someone...
+* Values change with the stage of life.
+
+* Pay attention during interview
+    - If you interviewer disses people in the interview...
+* B2B pay more because they don't have the "street cred"
+* Ethical, professional, kind, treat their employees like family members
+* Take people out to lunch and see how they treat the waiter
+* Come back from the interview, think about the experience you had, assessing
+  them is important
+* What's it liking working there?  What seems to be important there?
+* Comment forums are generally significantly more negative
+* Consider asking on linked in
+* Consider companies that use manager tools
+* 
+    
+* Large organisations are a natural outcome
+* The net of human existence is 60% magnificent and 40% awful
+* 
+* Decide which ones apply to work
+* How to use them
+* If you go against your values, your going to be miserable
+* The great trajedy of life is not the death and the end, but the thousand
+  deaths you life along the way.
+* Make sure your values are aligned with your company and a lot of other
+  things will be easier along the way
+
+"If you're not a liberal in your twenties you don't have a heart, if you not a
+conservative on your 40s you don't have a head"
 
 ACtions
 
 * Google going from small to big company at 35
+* Profiteering
+
