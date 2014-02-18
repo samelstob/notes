@@ -1,3 +1,27 @@
+# Choosing a company to work for
+
+1. Factors to Consider
+2. Basic Compensation Principles
+3. Industry Stability
+4. Reputation
+6. Opportunities
+7. Questions
+8. Weighting
+
+# Choosing a company to work for - 2. Basic Compensation Principles
+
+## Overview
+
+1. Don't just pick a number
+2. Think about what base pay you *need*
+3. What are the monetary benefits worth to *you*
+4. What are the non-monetary benefits worth to *you*
+
+* Think about it at a higher level.  People want to have a number
+
+* Horstmann's Christmas Rule - Anything that is important that you do rarely -
+  you are going to suck at
+
 # Choosing a company to work for - Reputation
 
 * Look at long term reputation
@@ -90,7 +114,7 @@ would have been opened"
 * Decide which ones apply to work
 * How to use them
 * If you go against your values, your going to be miserable
-* The great trajedy of life is not the death and the end, but the thousand
+* The great tragedy of life is not the death and the end, but the thousand
   deaths you life along the way.
 * Make sure your values are aligned with your company and a lot of other
   things will be easier along the way
@@ -102,4 +126,41 @@ ACtions
 
 * Google going from small to big company at 35
 * Profiteering
+
+# 7 - Questions
+
+1. Is there anything else that is important to me?
+    - Work from home?  Not great for some personalities.  Not great if you
+      want to progess to senior roles.
+    - Flexibility?
+2. What have a liked or disliked about jobs in the past?
+    - Type of customer? Paperwork? Autonomy? Teamwork? Leave work at the end
+      of the day versus consuming? Clear targets versus blue ocean?  Neither
+are bad - which one did you prefer?
+    - Think about the *work* not the people
+3. What conditions bring out the best in me?
+    - Sleep
+    - Not so excited about short term wins - prefer long term improvement
+    - Like things that you can analyse
+    - Take time over things - do them well
+    - Think about when you were most productive - most in flow - the days
+      floew by the fastest - this is a sign of the conditions being good for
+you 
+    What conditions bring out the worst in me?
+    - Tiredness
+    - Stress
+    - Repeating problems
+4. What experience or relationships do I want to cultivate?
+    - When you change jobs think about the job after that
+
+* Peter Drucker
+    - No ones strengths and weaknesses
+    - What *should* I be doing?  If I know myself where there is a best place
+      for me to serve "society" best
+* You can't change a job that you don't like
+* If you don't like the people you are interviewing with, don't go there.
+* Better to get one offer 
+* Know yourself better
+
+* Relationships matter
 
