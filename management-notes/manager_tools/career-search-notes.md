@@ -19,3 +19,6 @@
 * Performance
 
 Hardware research
+
+* list of jobs
+* things to researchki
