@@ -47,3 +47,27 @@ Hardware research
 * Attends lectures of IET, and occaisionally London Java Communiity, and Software Craftmanship meetups
 * Managed the core development team made up of a wide range of experience and skills, from 0 to 10 years.  The team was 7 people at it's largest point, but has been 5 people for the majority of the time.
 * 
+
+* How did you find out about the job? Did you network to find your job? How deeply?
+** DAR: University placement programme - fell into it
+** Triometric: University careers website - friend recommend I apply
+** Shit jobs - Agency
+* What did you like about the job before you started? What were your expectations? How closely did your expectations match reality?
+** DAR: Audio, exceed expectations
+** Triometric: Nothing, except the interviewers, exceed expectations
+* Why did you leave? Was it a culture fit? Was it something different?
+** DAR: Waited until redundancy
+** Triometric: Waited until now
+You have some other questions to ponder:
+
+* What circumstances provide you the most satisfaction in this job?
+** DAR: Learning new things, becoming proficient, positive feedback, making a contribution
+** Trio: Learning new things, positive feedback, like minded people, things improving, making a difference/contribution
+* What patterns do you tend to create for yourself?
+** SMEs with a single product
+** Stay perhaps beyond when I am enjoying or learning things
+* How did you feel while doing your career line?
+** Sad at shit jobs.  Confused about management versus technical.
+* How do you react to positive events? To negative ones?
+** React quite strongly either way.
+
