@@ -71,3 +71,4 @@ You have some other questions to ponder:
 * How do you react to positive events? To negative ones?
 ** React quite strongly either way.
 
+* How many major and minor releases?  Delegated release testing
