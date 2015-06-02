@@ -1,0 +1,29 @@
+# Kanban
+
+http://blogs.versionone.com/agile_management/2012/01/10/2-kanban-vs-scrum-myths-hype/
+
+"Businesses continue to make irresponsible commitments to customers and 
+investors. This only perpetuates crystal-ball thinking, fixed-date, 
+fixed-scope and fixed-cost projects. It’s the classic sales-driven model we 
+see all too often where the sales arm doesn’t respect the capability of its 
+product development group to produce predictable value for the customer in a 
+timely manner, and with an agreed-upon level of quality. After all, quality is 
+a business decision."
+
+http://www.forbes.com/sites/stevedenning/2012/09/25/what-exactly-is-agile-is-kanban-agile/
+
+"Doing Agile isn’t the same as being Agile. The essential point is that we are 
+“Doing Agile” when we follow practices and we are “Being Agile” when we act 
+with an Agile mindset. Experienced practitioners know the practices are a 
+means to an end."
+
+http://www.forbes.com/sites/stevedenning/2011/04/29/scrum-is-a-major-management-discovery/
+
+minimal marketable features
+
+"The term “minimal marketable feature” was first used in the book Software by 
+Numbers. This book placed emphasis on the smallest portion of work that could 
+be release into production and have value to its resulting customers or 
+users."
+
+http://agileproductdesign.com/blog/2009/kanban_over_simplified.html

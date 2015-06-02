@@ -1,0 +1,73 @@
+# We are pretty good at building
+
+* MMA
+* XML DE2
+* New charts
+
+# We are pretty good at vision and strategy
+
+* TWS
+
+# Friction and stress
+
+* Quality work takes time and costs
+* We can only work on one thing at a time
+* We can't do everything we want to do
+* We don't know now what we know next week
+* We can't say accurately when things will be done
+* We have to change priorities frequently
+
+"No battle plan survives contact with the enemy"
+
+# The Enemy of Planning
+
+* SWOT
+* Technology
+* Customers
+* Risk and uncertainty
+* Emergent requirements
+
+"If I'd given them what they wanted, they would have asked for faster horses"
+
+* Is this a battle we can win?
+
+* Can we stop the world moving on?
+* Can we ensure that customers tell us everything they want upfront
+
+* Risk and uncertainity
+
+* Most projects of value have risk
+
+* Change tactics - agile
+
+* Adapatability
+* "Agility"
+* Learning
+"Be small and nimble"
+
+"Known unknowns"
+
+# Make the cost of replanning small
+
+# Incorporate feedback and learning into how we work
+
+* Be open to learning - learning is good
+
+# Deliver value frequenty
+
+* Break work down into MMFs
+
+# Attack risk and uncertainity where possible
+
+Work incrementally and iteratively
+
+
+# So Agile means no plans?  Anarchy!
+
+* The right amount of planning
+* Plan to replan
+"Planing is everything, but plans are nothing"
+
+# We are not able to stick to a plan
+
+

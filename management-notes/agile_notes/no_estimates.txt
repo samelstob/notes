@@ -1,0 +1,25 @@
+#
+
+https://pragprog.com/magazines/2013-02/estimation-is-evil
+
+"this date can’t possibly be right. It’s based on an unrealistic list of 
+requirements, using weak estimates, made at the moment of maximum ignorance, 
+by people who are always optimistic about their own abilities. It has been 
+squeezed down by managers who think they need to be tough, and sometimes it is 
+just overridden by someone who has made a rash promise to someone higher up 
+the food chain."
+
+"management tries to force the team to do more than they can do, demanding 
+that the team “become more productive,” which means “go faster, promise more, 
+and get it done.”"
+
+"Most of the time, “they” know how many people they’ll give us, and how much 
+time. They do that head-shaking thing until we “estimate” the numbers they 
+have in mind. So we should turn the question around. “How much did you want to 
+spend, and when did you hope to see the product?” Then they tell us, and we 
+decide whether we can do something reasonable within that budget."
+
+Why are you estimating?
+
+* Predictability
+* T

@@ -1,0 +1,301 @@
+# Mike Cohn - The Purpose of Agile Planning
+
+* Plan - "Snapshot of how we believe a project might unfold over an uncertain 
+  future"
+* Planning - an activity
+* Agile planning shifts the emphasis from the plan to the planning
+
+* Balance the effort and investment in planning with the knowledge that we 
+  will revise the plan through the course of the project.
+* We don't want to change the plan just for the sake of changing, but we want 
+  to change because change means we've learned something or that we've avoided 
+  a mistake.
+
+* As we discover these things, they affect our plans.  This means that we need 
+  plans that are easily changed.
+
+* There are many ways we can change a plan without changing the date:
+    - Drop a feature
+    - Reduce the scope
+    - Add people
+    - Reduce quality (e.g. demo only, one customer only "beta"
+
+* Agile planning
+    - Is more focussed on planning than the plan
+    - Encourages change
+    - Results in plans that are easily changed
+    - Is spread throughout the project
+
+   
+* "It's better to be roughly right than precisely wrong" Keynes 
+
+# Mike Cohn - Agile Estimating and Planning
+
+* Size X velocity = duration
+
+* Ideal time versus elapsed time
+    - Ideal time of a football match 90m
+    - Actual time - longer (interruptions, injuries, extra time, penalties, 
+      half time)
+
+* Break big tasks into smaller ones
+
+## Commitment driven iteration planning
+    - Discuss highest priority item
+    - Decompose into tasks
+    - Estimate each task
+    - Ask ourselves "Can we commit to this"
+    - If yes, see if we can add another backlog item
+    - If not, remove this one, and see if we can add a smaller one
+* The purpose of the iteration planning meeting is to arrive at a commitment 
+  to an iteration goal or set of product backlog items
+* The purpose of the meeting is not to come up with a list of tasks and hours
+* The tasks and estimates are a tool for determining what we can commit to
+
+## Release plan
+
+* To do a release plan you need to know or have an estimate of velocity.
+* Velocity should be expressed as a range
+
+# Mike Cohn - Agile Planning NDC video
+* Very good
+
+* Plan at two different levels
+
+* Estimating
+** Estimate Size, Derive Duration
+** Size X Speed = Duration
+* Size:
+** Story points
+** Ideal days
+
+* Story points
+** Relative measure of size
+** Story points take individual/team abilities out
+** Lick 1000 stamps perform brain surgery
+
+* Zoo points
+** Hippopotamus 12
+** Rhino        11
+** Gorilla      11
+** Giraffe      9
+** Lion         8
+** Bear         8
+** Tiger        7
+** Kangaroo     4
+
+* There are multiple sizes of bears!
+* The above are vague requirements
+** Ask for clarification
+** Use a range
+
+* Stay within one order of magnitude (1-10)
+
+* Points are an intermediate step
+* Estimate by analogy/comparison
+
+* Ideal time
+** No interruptions or context switching
+** Everything you need is available 
+
+* Be careful with time unit estimates
+    - people get confused between elapsed time and effort
+    - People confuse rough estimate hours with detailed estimate hours
+    - Work expands when looked at in detail
+
+* Planning poker - concensus based approach to estimation
+
+- Don't go with the average
+- The discussion/debate is valuable - brings out hidden assumptions
+- Find your 2 and 5 to calibrate
+
+# Mike Cohn - Agile Estimation, Bay XP meeting
+
+* Asked teams to estimate each project using a slightly different technique.  
+  This lead to evolution of techniques.
+
+# Prioritizing Product Backlog
+
+* Combine formal and informal approaches
+** Formal - big things
+** Informal - small things
+
+* Features that are too small cannot be effectively prioritized against each 
+  other.  e.g. Word processors - tables or undo?
+
+## Approaches to prioritizing
+
+### Kano analysis
+
+* Mandatory / baseline
+* Linear (the more the better) e.g. performance
+* Exciters / delighter - Features a user doesn't know they want until they 
+  see it
+
+* How do you feel if feature is present?
+** I like it that way
+** I expect it to be that way
+** I am neutral
+** I can live with it that way
+** I dislike it that way
+* How do you feel if features is absent?
+** I like it that way
+** I expect it to be that way
+** I am neutral
+** I can live with it that way
+** I dislike it that way
+
+## Relative weighting
+
+* Have it 1-9
+* Don't have it 1-9
+* Estimate absolute/relative value
+* Estimate absolute/relative cost
+* Value is independent of cost?
+
+## Expert opinion
+
+
+## Theme screening
+
+* Pick 5-9 criteria e.g.
+** Improves UX
+** Improves performance
+** Addresses threat
+** Good for Airlines
+* Assess each one as +, 0 or, - for each criteria
+* Rank
+
+# Financial prioritization
+
+* How much?
+* How long?
+* At what interest rate?
+
+
+# Mike Cohn - Succeeding with Agile
+
+* Change is not top-down or bottom-up; it's both
+* The "Newtonian" view leads to thinking of change like this:
+    - Current state -> assessment -> gap analysis -> plan -> desired state
+* We need a different mental model
+    - The organization as a Complex Adaptive System (CAS)
+    - A dynamic network of many agents, acting in parallel, acting and 
+      reacting to what other agents are doing
+    - Control is highly dispersed and decentralized
+    - Overall system behaviour is the result of a huge number of decisions 
+      made constantly by many agents
+* Awareness that the current approach isn't working
+* Desire to change
+* Ability to work in an agile manner
+* Promote early successes to build momentum and get others to follow
+* Transfer the impact of agile throughout the organization so that it sticks
+* Awareness
+    - Run a pilot
+* Desire
+    - 
+* Ability
+    - Pairing
+    - External coaches
+    - Train internal
+    - Practice
+* Promote
+    - Celebrate and share even small, early wins
+    - Goal is to build momentum
+        Want a feeling of inevitability around the transition
+    - Reduce upcoming resistance before it starts
+    - Send people on an agile safari
+    - Attract attention and interest
+* Transfer
+    - If you don't transfer, the transition will eventually fail.  Too much 
+      organizational gravity pulling us back towards the status quo
+
+* On projects we learn we cannot precisely anticipate:
+    - Our user's requirements
+    - How long it will take 
+    - Which design will be best
+    - The set of tasks
+* Alternative
+    - Deliver partial solutions, solicit feedback, repeat
+    - Design incrementally and adjust based on what we learn
+
+# Selecting the Right Scrum Sprint Length - Mike Cohn
+
+https://www.youtube.com/watch?v=1Yo2-emF4cM
+
+* Don't treat it as an intellectual exercise.  Use the standard agile advice 
+  of inspect and adapt.  Pick a sprint length, try it out to see how it goes, 
+  and consider changing.
+* Overally short sprints
+    - Overhead of sprinting feels to great e.g. meetings, manually testing
+    - team members may feel overally stressed
+    - team members feel there isn't time for innovative creative solutions
+* Too long
+    - Product owner needs to interrupt the team to change priorities
+    - Sprint planning becomes difficult
+    - If teams frequently deliver much more or less than planned
+    - Sprint starts to casual, and ends to rushed
+* Try anything new for 2 sprints
+* Inspect and adapt will be better than a lot of upfront thinking
+
+# Sprint Planning: Save Time in Scrum's Longest Meeting - Mike Cohn
+
+https://www.youtube.com/watch?v=XsE6_EP8beE
+
+* Lack of preparation
+    - Product backlog needs maintenance (grooming or refinement)
+    - Team will have a lot of questions for the product owner
+    - Trying to be perfect.  Going into too much detail.  Trying to estimate 
+      too precicly.
+    - Being perfect is knowing the right set of product backlog items that can 
+      be delivered in a sprint.
+    - A team doing a good job will identify about two-thirds of tasks.  We 
+      don't miss the big TODOs just the little ones.
+
+# Grooming the Product Backlog - Mike Cohn
+
+https://www.youtube.com/watch?v=KXJuss2w39w
+
+* Product owners will usually want to know a rough size of new items
+* Splitting larger items into smaller ones
+    - As items reach the top of the backlog, they need to be small enough to 
+      complete in a sprint
+* Add detail to items that will soon be brought into a sprint
+    - Definition of Ready e.g. Acceptance Criteria
+* Throw away items that will never be done
+    - Keep it from reaching an unmanageable size
+
+# Sprint Repair Guide: Leaving Time for Testing - Mike Cohn
+
+https://www.youtube.com/watch?v=lw41JUvJQv0
+
+* Don't leave testing until the last day
+* Don't bunch up all work for testing, do it in small bits
+* Do a little bit of everything every day - some analysis, some design, some 
+  testing, some coding
+* Testers can usually do a lot in advance of receiving the final code: prepare 
+  test plan, automation, test data
+* Swarm - have entire team working on one item.  Not something to do 
+  permanently, but great to try on the occasionally sprint.  They will find 
+  new ways to collobarate and split the work into smaller parts.
+
+# Agile Estimating and Planning: Why Plans Go Wrong
+
+* 6 levels of planning
+* Reasons plans go wrong
+    - Tasks are assumed to be indpendent
+    - Tasks that take longer than estimated are not balanced by tasks that are 
+      quicker
+
+# Agile Estimating and Planning: Product Backlog Estimating Units
+
+# What is Scrum? Mitch Lacey
+
+* Scrums inherient simplicity can seduce us into thinking it is easy to do
+* It will take a while to unlearn
+
+# 
+
+
+
+

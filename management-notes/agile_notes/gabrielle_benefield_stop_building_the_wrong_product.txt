@@ -1,0 +1,19 @@
+# Stop Building The Wrong Product
+
+Agile allows us to go faster
+
+Don't confuse faster with value
+
+More features might be the wrong features
+
+Most businesses are simple e.g amazon but a book, Skype make a call
+
+Take things away that get in the way of the primary goal of the user
+
+Use data to back decisions
+
+Use guerrilla low cost user testing. Make sure developers see users using the hing they have built
+
+Research is too important to leave to the researchers
+
+Gabrielle benefield

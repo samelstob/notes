@@ -1,0 +1,301 @@
+# Agile Development
+
+## History/Background
+
+### 2014 versus 2004
+
+* Cloud (EC2 2006)
+* Virtualisation
+* Multi-core, SSD, RAM
+* iPhone (2007), iPad (2010)
+* Hadoop (2005)
+* Salesforce
+* Facebook (2005)
+
+
+### 2017?
+
+
+# History
+
+
+### Agile Manifesto
+
+* 12 people? met in 2000 to discuss software development
+
+* Individuals and interactions over processes and tools
+* Working software over comprehensive documentation
+* Customer collaboration over contract negotiation
+* Responding to change over following a plan
+
+### Where did it come from
+
+* 1980s
+    - First use of SCRUM
+* 1990s
+    - XP, pair programming, unit testing
+
+### SCRUMMM
+
+* Who uses SCRUM?
+    - These companies use SCRUM
+* How many SCRUM people?
+* Certifcation
+
+### Evolution of Agile
+
+### Lean development
+
+* Kanban
+    - Limiting inventory and work in progress
+* Toyota - post war - 1950s
+
+### Agile in 2014
+
+* Agile and Lean
+* Some backlash against adoption of the word "Agile" by people trying to sell 
+  stuff
+    - Use of word "Agility" instead
+
+## Agile practices - core
+
+### Iterative and incremental
+
+### Feedback and learning
+
+* Feedback is key and not always obvious from the iterative versus waterfall  
+* Feedback from customer
+* Feedback from doing
+    - Problem was harder than expected
+    - Problem was not well understood
+
+### Agile people
+
+* Expertise in a few areas, but able to turn hand to where the problem is 
+* "Self-managing teams"
+* Understand the customer, communicat directely with the customer
+
+## What does this mean at Trio
+
+* Break large projects down 
+    - Minimal Marketable Features (MMF)
+    - e.g. Functions -> % Total 
+    - Would you blog about it?
+
+* 
+
+
+* 
+## Principles
+
+* Devops
+
+* Slides from Mike-cohn
+
+## SCRUM - An implementation of Agile
+
+* Agile versus SCRUM
+    - SCRUM is an implementation of Agile
+    - It is probably the most popular and widely known these days
+    - It is not an acronym
+    - Comes from Rugby - pass the ball back and forth to get it over the line
+* Popular
+* Good place to start
+* Widely used across industry and types of software
+* Other Agile methodologies
+
+* Agile Principles 1 - Responding to change over following a plan
+
+* No detailed long term plans
+    - We always have much more than we can do
+* Ensure people are working on the right things
+* What's the minimum we can do?
+* Use a process that makes changes to plans easy - e.g. SCRUM
+* Short term 
+* Switching between tasks is inefficient
+    - Protect the short term plans (next 2 weeks) to avoid multi-tasking
+    - Welcome changes to the medium and long term plans
+* Don't do detailed long term estimates
+* No gantt charts
+* Ensure features
+
+* Most projects of value have risk
+* Projects with risk are difficult to plan up front
+* Safe projects - e.g. projects we have done before are easier to plan up 
+  front 
+* Multi-manager
+* Commit incrementally
+* Learn from feedback
+
+* We want dev to be working on the best thing for Triometric at any time.
+
+* What should product development team do?
+
+    - Build things as cheaply as possible
+    - Build things robustly
+    - Build the right thing?
+
+* What is the right thing to build?
+
+    - Now?
+    - Next week?
+    - Next month?
+    - Next quarter?  Next year
+
+* Emphasise business goals
+    - "We need to show our existing customers that our product UX has moved on 
+      significantly at ITB"
+
+* Emphasise ensuring the next things in the pipeline are the right things and 
+  ready for dev to work on 
+    - MMFs
+    - Business owner (e.g. Alex, Diego)
+
+* Re-priotize the backlog frequently with business
+
+* Prioritization is a business function
+
+* "Planning is everything, but plans are nothing"
+* "No plan survives contact with the enemy"
+
+* The world moves on
+    - Customers 
+    - Competitors
+    - New technologies
+    - Regulations
+
+* Agile Principles
+
+    - Business people and developers must work together throughout the project
+
+* Agile Principle "Working software over comprehensive documentation"
+
+- Deliver *valuable* working software every often
+- Reduce work in progress and deliver often
+- Until a customer has the software, the work we have done is like waste
+
+* I don't hate estimates
+
+    - I hate estimating something in detail that we never build
+
+* 2 week iterations - Sprint
+* Potentialy releasable software at end of sprint
+    - Full lifecycle done - testing
+* Priorities can not be changed during sprint
+* Priorities can and should be changed for the next sprint - only 2 weeks away 
+  from a new priority
+* feature teams
+
+# How it might work at Trio
+
+* Scrum master - SE
+* Product owner - AB
+* Team - dev (minus one?)
+
+# Initial prep
+
+* Prepare product backlog
+
+# Week 1
+
+* Sprint planning meeting (2h)
+    - Dev, AB
+    - Work through product backlog in priority order
+    - Break product backlog (features) into tasks
+    - Estimate tasks in hours
+    - Repeat until full
+    - Teams decide what they forecast they can achieve in sprint
+
+* Dev
+    - Pull tasks from sprint backlog
+    - Design, implement, test, integrate (merge)
+
+* Demo
+
+* "Groom" backlog
+    - AB, dev
+    - Estimates for product backlog
+    - Clarification
+
+# Week 2
+
+* "Groom" backlog
+    - AB, dev
+    - Estimates for product backlog
+    - Clarification
+
+* Demo
+
+* Release
+
+* Retrospective
+    - Dev
+
+## SCRUM roles
+
+* Product owner
+* Scrum master
+* The team
+    - Cross functional - everyone can do everything
+    - Still allows for specialists
+    - Trio has always worked this way
+
+# Things we will need to do
+
+* Prepare initial product backlog
+* Decide who is product owner (Alex, Rich - both are v busy)
+* Training/coaching
+* Decide how support/reactive work fits in
+
+# Challenges
+
+
+# Future
+
+* DevOps
+* Lean product development
+
+
+* MMF
+
+Our highest priority is to satisfy the customer
+through early and continuous delivery
+of valuable software.
+
+Welcome changing requirements, even late in
+development. Agile processes harness change for
+the customer's competitive advantage.
+
+Deliver working software frequently, from a
+couple of weeks to a couple of months, with a
+preference to the shorter timescale.
+
+Business people and developers must work
+together daily throughout the project.
+
+Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.
+
+The most efficient and effective method of
+conveying information to and within a development
+team is face-to-face conversation.
+
+Working software is the primary measure of progress.
+
+Agile processes promote sustainable development.
+The sponsors, developers, and users should be able
+to maintain a constant pace indefinitely.
+
+Continuous attention to technical excellence
+and good design enhances agility.
+
+Simplicity--the art of maximizing the amount
+of work not done--is essential.
+
+The best architectures, requirements, and designs
+emerge from self-organizing teams.
+
+At regular intervals, the team reflects on how
+to become more effective, then tunes and adjusts
+its behavior accordingly. 

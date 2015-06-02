@@ -1,0 +1,17 @@
+# Initial product backlog
+
+http://msdn.microsoft.com/en-us/library/hh765980.aspx
+
+Product owner
+
+* Product owner versus product manager
+* Product owner versus business analyst
+* Multiple people
+
+* Does etimation happen before sprint?
+
+GRooming
+    - Pipeline of requirements
+    - Estimating item son the backlog
+    - Break down larger items
+    - Definition of ready

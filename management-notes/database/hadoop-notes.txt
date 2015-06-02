@@ -1,0 +1,9 @@
+
+* Cloudera
+    - Started by ex Google, Yahoo
+* Hortonworks
+
+## Tutorials
+
+http://www.cloudera.com/content/cloudera/en/documentation/HadoopTutorial/CDH4/Hadoop-Tutorial/ht_task_exec_and_env.html
+https://www.cs.rutgers.edu/~pxk/417/notes/content/mapreduce.html

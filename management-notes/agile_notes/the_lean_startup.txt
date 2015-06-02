@@ -1,0 +1,6 @@
+# The Lean Startup
+
+* Build the right thing, otherwise it doesn't matter how clean your code is
+* Validated learning - be scientific - don't just guess
+* Do -> Learn -> Pivot
+* Reduce time between Pivots
