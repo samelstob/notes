@@ -77,6 +77,8 @@ vector angle (something more complicated)
 
 # R2. Python Cost Model, Document Distance
 
+* Need to download handout
+
 # 3. Insertion Sort, Merge Sort
 
 * Why sorting?
@@ -112,4 +114,101 @@ merge(a, b)
             out[k++] = b[j++]
 
 20 13 7 2 12 11 9 1
+
+Recurrence
+
+T(n) = C1 + 2T(n/2) + Cn
+      divide + recursion + merge
+
+Recursion tree:
+
+   ^                        cn                  = cn
+   |                cn/2            cn/2        + cn
+1+lg n         cn/4    cn/4    cn/4    cn/4     + cn
+   |           <-------------n------------>
+
+T(n) = (1 + lg n).cn
+     = O(n lg n)
+
+### Auxiliary space
+
+Insertion sort is in place (no auxiliary space)
+Merge sort - O(n) auxiliary space
+In-place merge sort - constant factors worse than merge sort so often
+impractical
+
+R3. Document distance, insertion sort, merge sort
+
+* Need hand out
+
+# 4. Heaps and Heap Sort
+
+## Heap
+
+"One of the cutest little data structures ever invented"
+
+Priority queue
+
+* Implements a set S of elements
+* Each element associated with a key
+  - insert(S, x): insert element x into set S
+  - max(S): return element of S with largest key
+  - extract-max(S): return element with largest key and remove it from S 
+  - increase-key(S, x, k): increase value of x's key to new value k
+  - build-max-heap: from unsorted array
+
+An array visualised as a nearly complete binary tree
+
+16 14 10  8  7  9  3  2  4  1
+
+* Index 1 is the root
+
+                1
+            2       3
+        4   5   6   7
+    8    9 10 
+
+parent = i/2
+left child = 2i
+rigth child = 2i + 1
+
+Max heap - key of a node >= keys of children
+Min heap 
+
+### max_heapify(A, i)
+
+max_heapify: Correct a single violation of the heap property in a subtree's
+root
+
+Assume that the trees rooted at left(i) and right(i) are max heaps
+ 
+Visualisation of a heap is a nearly complete binary tree.  The height of the
+tree is bounded by log n.
+
+build_max_heap(A):
+    for i = n/2 down to 1
+        do max_heapify(A, i)
+
+elements A[n/2+1..n] are all leaves
+
+Observe max_heapify takes O(1) for nodes that one level above leaves and in
+general O(l) time for nodes that are l levels above the leaves
+
+Total amount of work in for loop
+n/4 (1 c)
++ n/8 (2 c)
++ n/16 (3 c)
++ 
+
+bounded by a constant
+
+build_max_heap can be done in O(n)
+
+heap_sort
+    1. build_max_heap
+    2. find maximum element
+    3. swap elements a[n] with a[1].  Now max element is at end of the array
+    4. Discard node n from heap.  Decrementing heap size
+    5. New root may violate max heap property but children are max heaps.  Run
+       max_heapify to fix.
 
