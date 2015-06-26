@@ -212,3 +212,176 @@ heap_sort
     5. New root may violate max heap property but children are max heaps.  Run
        max_heapify to fix.
 
+# Binary Search Trees, BST Sort
+
+Invariant in a heap is pretty weak - only the root is min or max.  Compared to
+a BST
+
+Invariant for BST: For all nodes if Y is in the left subtree of X then key(Y)
+<= key(X) 
+
+Insertion is O(h) where h = height of tree
+
+min() - O(h)
+max() - O(h)
+next_largest() - O(h) 
+rank(t) - How many nodes <= n
+
+## RAnk
+
+Augment BST structure with count of nodes below (i.e. in subtree)
+
+            49(6)
+      46(2)      79(3)
+  43(1)      64(1)  83(1)
+
+* Walk tree
+* As you walk, add in nodes that are smaller
+* Add in sub-tree sizes to the left
+
+e.g.
+
+rank(79) = 49 + subtree-size(46) + 79 + subtree-size(64)
+rank(79) = 1 + 2 + 1 + 1
+
+# R5. Recurssion trees, BST
+
+Merge sort recurrence formula
+
+       "call merge sort twice on arrays half the size" + merge
+       T(n) = 2T(n/2) + O(n)
+
+Draw call graph
+
+                              N
+                    N/2               N/2
+                N/4     N/4       N/4     N/4
+              ...
+
+Base case   1   1   1   1   1   1   1   1   1   1   1
+
+T(N) = 2T(N/2) + O(N)
+T(1) = O(1) 
+
+
+                              CN
+                    CN/2               CN/2
+                CN/4     CN/4       CN/4     CN/4
+              ...
+
+Base case   C1   C1   C1   C1   C1   C1   C1   C1   C1   C1   C1
+
+Total cost = sum of each level
+
+
+level 1                       CN                      N/2^0
+level 2             CN/2               CN/2           N/2^1
+level 3         CN/4     CN/4       CN/4     CN/4     N/2^2
+              ...
+
+Base case   C1   C1   C1   C1   C1   C1   C1   C1   C1   C1   C1
+
+N/2^l-1 = 1
+2^l-1 = N
+l-1 = lg(N)
+l ~ lg(N)
+
+Base case is CN  
+
+T(N) = CNl
+     = O(N lg N)
+
+## Data structure operations
+
+* Queries
+  * Max, min
+  * Next-larger
+  * Search
+* Updates
+  * Insert
+  * Delete
+
+Representation Invariant (RI) - Rep Invariant
+
+check_ri - Check that the RI holds
+
+## Augmented BST
+
+* Store additional info in node that can easily be recalculated upon tree
+  updates in O(h) time
+  e.g. min, max, rank
+
+# 6. AVL Trees, AVL Sort
+
+Binary tree's are not necessarily balanced.
+
+depth of node = levels down from root
+height of node = levels up from leafs, starting from zero i.e. leafs are zero
+               = max(height(left child), height(right child)) + 1
+
+AVL trees store the heights (augmented BST).  When the heights differ 
+
+Rep Invariant = Height of left and right subtrees of every node differs by no
+more than 1
+
+|h(l) - h(r)| <=1
+
+We want to prove that for N nodes, how large can the height be (is it lg N)
+
+N(h) = min #nodes in an AVL tree of height h
+
+If we fix the height to h, what's the fewest nodes we can pack in?
+
+The worst case for a binary search tree is N(h) = h:
+
+      1             ^
+        2           |
+          3         | h
+            4       |
+              5     |
+
+The ideal case is N(h) = 2^h:
+
+                          16
+                8                    24
+         4           12        20          28
+      2    6     10    14   18     22    26   30
+    1  3  5  7  9 11 13 15 17 19 21 23 25 27 29 31
+
+but any constant to the power of h will do so that the inverse is log.
+
+Worst case is when right subtree has height 1 more than left for every node
+
+How do we analyse 
+
+T(n) =  
+
+      1         R
+
+      2     l       r
+
+      3   l   r    l   -
+
+      4 l   - l  - - -  -  -  
+
+2^h - 2^(h-2)
+
+h * h * h * h - h * h
+
+Recurrence
+
+N(h) = 1 + N(h-1) + N(h-2)
+
+Looks like Fibonacci (actually +1 at each level)
+
+N(h) > F(h) = Phi^h / 5^0.5
+
+We want to know how h relates to n, which is inverting the formula
+
+Phi^h/5^0.5 < n
+
+h < 1.440 lg n
+
+This is pretty good constant.  We would like 1, but 1.440 is still good.
+
+
