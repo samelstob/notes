@@ -513,6 +513,19 @@ the time you want it, with the quality you want."
 
 # Chapter 6: Recognizing and avoiding schedule games
 
+## 6.11 Bring Me a Rock
+
+The date you bring is not good enough.  "They" want it faster but don't tell
+you when or why.
+
+* Ask some questions: Woudl you prefer a short schedule or a longer one?  More
+  people or fewer?  how about fewer features?
+* Discover the reasons for the desired date.  Exlicit the strateic reasons for
+  this project, and learn what success means.
+* Include release criteria with your date.  What if we implemented this
+  feature with incredible performance, and ignore that feature?  Can our users
+live with more defects?
+
 # Chapter 7: Creating a Great Project Team
 
 * Diversity of experience, personality, and role will help the project team

@@ -385,3 +385,8 @@ h < 1.440 lg n
 This is pretty good constant.  We would like 1, but 1.440 is still good.
 
 
+## AVL Insert
+
+1. Simple BST insert
+2. Fix AVL property using rotations from the changed node up
+
