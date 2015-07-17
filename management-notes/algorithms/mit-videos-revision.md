@@ -66,4 +66,69 @@ Extract max:
   4       12    13   10    11
   8     
 
+# Counting Sort, Radix Sort
 
+Counting Sort (integer sorting)
+
+* In comparison model, O(n lg n) is lower bound
+* Can sort in O(n) if we use RAM model and can place constraints on the input
+* n items
+* keys are integers
+* k max key
+
+Create an array of buckets from k.min to k.max
+
+0
+1
+2
+3
+4
+5
+
+* For each key, append the value to the k'th bucket
+* Walk through the buckets in order to get the sorted list
+
+Counting sort only makes sense when n and k are similar in size
+
+## Radix Sort
+
+* Divide the key into d digits of base b
+* Apply d rounds of counting sort for each digit in turn, starting with the
+  least significant:
+
+  JFKA
+  MVHA
+  IANV
+  QPVK
+  INWK 
+     ^
+
+  JFKA
+  MVHA
+  QPVK
+  INWK 
+  IANV
+    ^
+
+  MVHA
+  JFKA
+  IANV
+  QPVK
+  INWK 
+    ^
+
+  IANV
+  JFKA
+  INWK 
+  QPVK
+  MVHA
+   ^
+
+  IANV
+  INWK 
+  JFKA
+  MVHA
+  QPVK
+  ^
+
+Radix sort needs a stable counting sort

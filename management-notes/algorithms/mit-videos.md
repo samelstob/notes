@@ -384,9 +384,267 @@ h < 1.440 lg n
 
 This is pretty good constant.  We would like 1, but 1.440 is still good.
 
-
 ## AVL Insert
 
 1. Simple BST insert
 2. Fix AVL property using rotations from the changed node up
+
+Insert 23
+
+                       4(4)
+
+            20(3)                   65(1)
+
+       11(0)   29(2)           50(0)
+
+              26(1)
+
+            23(0)
+
+### Rotations
+
+* O(1)
+* In-order traversal remains the same
+* Reversable
+
+Right rotate 29
+
+                       4(3)
+
+            20(2)                   65(1)
+
+       11(0)   26(1)           50(0)
+
+          23(0)   29(0)
+
+Insert 55
+
+                       4(3)
+
+            20(2)                   65(2)
+
+       11(0)   26(1)           50(1)      (-1)
+
+          23(0)   29(0)          55(0)
+
+Left Rotate 50
+
+                       4(3)
+
+            20(2)                   65(2)
+
+       11(0)   26(1)           55(1)    (-1)
+
+          23(0)   29(0)    50(0) 
+
+Right rotate 55
+
+                       4(3)
+
+            20(2)                   55(1)
+
+       11(0)   26(1)           50(0)      65(0)
+
+          23(0)   29(0)
+
+- if x's right child is right-heavy or balanced
+
+      x                         y   
+   A      y       LR(x)     x     C
+        B   C             A   B
+
+- else
+
+          x
+
+AVL sort
+
+1. Insert n items
+2. In-order traversal
+
+Abstract Data Type
+
+# R6. AVL Trees
+
+## BST operations
+
+* Find/Search
+* Insert
+* Delete
+* Next-larger/Next-smaler
+* Min
+* Max
+
+All operations are O(h)
+
+* AVL doesn't care about node count
+* Height of empty tree is -1
+
+AVL Rep Invariant
+
+For every node |h(r)-h(l)| <= 1
+
+## Proving the height is lg(n)
+
+Minimum number of nodes
+
+        n     0
+
+        n     1
+          n   0
+
+
+        n         2
+      n   n       1
+            n     0
+
+          0             3
+       1       1        2
+        2    2   2      1
+                  3     0
+
+      N(h) = N(h-1)+N(h-2)+1
+
+      N(h) ~ phi^h
+
+All the magic in AVL is in the rebalance (insert and delete are the same as a
+plain BST)
+
+* Calculate the new height
+
+Perfect BST - full except the last level
+
+## Rebalancing AVL
+
+# Lecture 7: Counting Sort, Radix Sort, Lower bounds for sorting
+
+## Comparison Model
+
+* All input items are black boxes (ADTs)
+* Only operations allowed are comparisons (<, <=, >, >=)
+* Time cost = #comparisons
+
+## Linear-time sorting
+
+(Integer sorting)
+
+### Counting Sort
+
+Relies on RAM model 
+
+* Create an array of k empty lists to "count" items with each key
+* Append value with key to list at position k 
+
+  3a 6a 3b 1a 2a 8a 2b 3c
+
+  1 -> 1a
+  2 -> 2a 2b
+  3 -> 3a 3b 3c
+  4
+  5
+  6 -> 6a
+  7
+  8 -> 8a
+
+### Radix Sort
+
+Apply d rounds of counting sort to a string of d digits starting from least
+significant
+
+Relies on stable counting sort
+
+# R7: Comparison Sort, Counting Sort, Radix Sort
+
+# R8: Hashing with Chaining
+
+Searching faster than lg n time
+
+O(1) with high probability
+
+"Two types of database, those that use hashing and those that use search
+trees"
+
+Prehash - map keys to integers.  At this point not worrying about
+how big those integers are
+
+## Analysis
+
+- Expected length of chain for n keys, m slots = n/m
+
+  = n/m = alpha = load factor
+  = O(1) if M = O(n)
+  = O(1 + |chain|)
+  = O(1 + alpha)
+
+## Hash functions
+
+1. Division method
+
+  h(k) = k mod m
+
+2. Multiplication method
+
+  h(k) = [(a.k) mod 2^w] >> (w-r)
+  
+  assuming w bit machine
+
+  Φ
+
+3. Universal hashing
+
+  h(k) = ((ak + b) mod p) mod  m)
+
+  p = prime > |u|
+
+  a,b {0,..,p-1}
+
+# R8. Simulation Algorithms
+
+# 9. Table Doubling
+
+We don't know the size of m (number of slots).
+
+Use table double to amortise cost of growing/shrinking the table
+
+= Θ(1 + 2 + 4 + 8 + .. n)
+
+Amortisation "Spread out the high cost so it's cheap on average"
+
+Randomised data structure
+
+If grew table by 1 then we would be
+
+## Deletion
+
+Don't want to shrink when it gets to half size (n=m/2) we will flip/flop between
+doubling and halving the table.
+
+Instead use e.g. m/4
+
+## Resizable arrays
+
+Use same technique
+
+## Grep (String matching)
+
+### Simple algorithm
+
+is s in t?
+
+any(s==t[i:i+len(s)]
+  for i in range(len(t)-len(s))
+
+  Θ(|s| * (|t|-|s|))
+  = O(|s| * |t)
+
+### Karp-Rabin
+
+  Rolling hash ADT
+
+  for c in 
+
+
+
+
+
 
