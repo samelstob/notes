@@ -641,10 +641,117 @@ any(s==t[i:i+len(s)]
 
   Rolling hash ADT
 
-  for c in 
+  - compute hash function of s (search string)
+  - use rolling hash function to calculate hash of first s characters of t
+  - if not equal, roll hash one character over in t
+  - if equal, do character by character check
+
+linear time for one match
+
+O(|s| + |t| + #match X |s|)
+
+#### Rolling hash function
+
+- division method
+= h(k) = k mod m
+- m use a random prime >= |s|
+
+to shift over, use 
+
+# R9: Rolling Hashes, Amortised Analysis
+
+n   the fox is in the hat
+
+k   "the" -> h(k)
+
+Naive string matching is O(|n||k|)
+
+* Computing hash of k
+* Computing rolling hash of first three characters of n.
+* Compare hashes of k and n
+* If not match, then roll hash of n along one character
+
+Can we make a hash function without duplicates?
+
+Universe of inputs:  number of characters ^ length of string e.g. 256^100000
+Universe of outputs: 2^64
+
+Rolling hash needs to be O(1) for this to work
+
+  3 14 15 29 65
+
+slide:xa
+
+## Multiplicative inverse
+
+Where p is prime
+
+  a {1 .. p-1}
+  a(-1) {1 .. p-1}  -- Multiplicative inverse
+
+  a X b X a(-1) = b mod p
+
+  a X a(-1) = 1 mod p
+
+e.g.
+
+  p = 23
+
+  6 X 4 = 24 mod 23 = 1
+
+## Amortised analysis
+
+Look at all the operations, rather than one operation at a time.  Make an
+argument for the average cost
+
+Table doubling
+
+  D I D I I D I I I D I I I I I I I D I I I I I I I I
+
+The cost of the expensive operation (table doubling) is evenly spread over
+cheap operations (insert).
+
+In-order traversal
+
+  min
+  while(successor)
+
+successor is O(h) (lg n if balanced) so this traversal algorithm should be
+O(n lg n)
+
+However, if you look at all the operations we only traverse each edge twice.
+
+There are O(n-1) edges so there are 2n traversals - O(n) asymptotoically
+
+# R9b DNA sequence matching
+
+With random inputs most hash functions will do a good job of producing a
+random output.  The problem is that real life inputs are not random.
+
+For example if you get pixels from a camera, the last few digits may be the
+same due to noise.
+
+If a non-random property of the input (e.g. evenness) is reflected in the output then that is a bad hash function.
+
+Although Shift may be quicker than mod, better hash functions (e.g. mod) give
+better performance overall.
 
 
 
 
+# 10. Open Addressing, Cryptographic Hashing
 
+## Open Addressing
+
+* Hash tables with no chaining!
+* Probe hash table until find an empty slot
+* Need a hash function that specifies the order of slots to probe
+
+## Cryptographic Hashing
+
+### Password storage
+
+* One-way.  Given h(x) it is very hard to find x
+
+# R10. Quiz 1 Review
 
