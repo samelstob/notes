@@ -341,30 +341,30 @@ Mind-map everything you know about the project.
 
 ### Hudson Bay Start
 
-"The Hudson Bay Start approach was originated by the Hudson Bay Compaby in the
+"The Hudson Bay Start approach was originated by the Hudson Bay Company in the
 1600-1700s in northeastern Canada.  The Hudson Bay Company outfitted fur
 traders.  To make sure the traders hadn't forgotten anything they needed, they
 left Hudson Bay and camped just a few miles away.  By making camp just a few
-miles away, the traders ensured they hadn't forgotton any tools or supplies -
+miles away, the traders ensured they hadn't forgotten any tools or supplies -
 before they abandoned civilization.  With just a short start to their journey,
-they had a better idea about their abilitiy to endure the winter."
+they had a better idea about their ability to endure the winter."
 
 A Hudson Bay Start is a technique that allows the project to team to push
-something through the project's enviornment.  You want this to be as small a
+something through the project's environment.  You want this to be as small a
 thing as possible.  The idea is for the project team to see what it would be
-like to start working in this enviornment with this product domain.
+like to start working in this environment with this product domain.
 
 If you and the team can't figure out what it would take to estimate any piece,
 timebox a Hudson Bay Start.  Start something you can complete in four hours or
 less (this doesn't have to be real functionality).  If the team knows only a
-little more, start wiht a short iteration, and then decide what to do.
+little more, start with a short iteration, and then decide what to do.
 
 * Team gains confidence they can accomplish something.
 * Team has a little insight into how to organise some tasks
 
 ### Start with a Short Iteration
 
-Use a short timeboxed iteration when the team understands the enviornment but
+Use a short timeboxed iteration when the team understands the environment but
 isn't sure how to esetimate the tasks.  A short iteration helps people see how
 much they can accomplish in one or two weeks, so their follow-on estimates are
 more accurate.
@@ -513,18 +513,112 @@ the time you want it, with the quality you want."
 
 # Chapter 6: Recognizing and avoiding schedule games
 
-## 6.11 Bring Me a Rock
+## 6.1 Bring Me a Rock
 
 The date you bring is not good enough.  "They" want it faster but don't tell
 you when or why.
 
-* Ask some questions: Woudl you prefer a short schedule or a longer one?  More
-  people or fewer?  how about fewer features?
-* Discover the reasons for the desired date.  Exlicit the strateic reasons for
+* Ask some questions: Would you prefer a short schedule or a longer one?  More
+  people or fewer?  How about fewer features?
+* Discover the reasons for the desired date.  Elicit the strategic reasons for
   this project, and learn what success means.
 * Include release criteria with your date.  What if we implemented this
   feature with incredible performance, and ignore that feature?  Can our users
 live with more defects?
+
+## 6.2 Hope is Our Most Important Strategy
+
+Hope is not enough to deliver a successful project.
+
+* Recognize and write down where you have risks.  You might have technical
+  risks (new language, new platform), schedule risks (shorter schedule, too
+few people), or most likely, both.
+
+* Choose any life cycle other than waterfall.  Why?  Because you don't have
+  any data that would allow you to be successful with the upfront planning
+that waterfall requires.  If you've never done anything like this before,
+iterate on some prototypes, or iterate on a few features, to see where your
+work takes you.
+
+* Consider a Hudson Bay Start to see whether you can create anything.  This is
+  especially good when you have a new technology such as a language, OS,
+database, and the like.
+
+* Make sure tha people have the technical functional skills and solution-space
+  domain experise.  If necessary, train people.  It's cheaper to train
+everyone on the project in a new language than waste time.
+
+* Plan to iterate on everything, especially planning and scheduling.
+
+* solicit help and information in areas wher eyou might lack experience.
+
+* Develop milestone criteria and review those critera at management review
+  meetings.  Even if management or your sponsors don't want management
+reviews, you can conduct those meetings.  Reviewing your progress regularly
+against milestones will help if you aren't sure how to make this project work.
+
+## 6.3 Queen of Denial
+
+* Us: We can't meet your schedule Them: "I'm sure if you put your mind to it,
+  you'll meet the date"
+* Denial:
+  - Manager wants to encourage the project - believe that when they set
+    ambitious/impossible dates, the project team will deliver sooner than they
+thought they could
+  - Fear - ostrich effect
+
+Some possibilities:
+  * Investigate why your manager is in denial.  Try some context-free
+    questions e.g. For this project, what does success look like?
+  * Write down your projects risks and their potential impact.  Use High, Medium, and Low not numbers (to reduce gaming)
+  * Show what you can do and measure the velocity
+  * Make sure people on the project have the domain expertise
+
+When the manager does see reality, make sure you have some part of the product
+working and some data to show that manager so you can discuss what to do next.
+This is a good time consider how little can you do.
+
+* Use timeboxed iterations, so you and everyone else can see project progress.
+* Develop a ranked backlog that will allow the team to implement by feature in
+  value order.
+
+## 6.5 Happy Date
+
+* Implicit agreement *not* to discuss the schedule.  Milestones, and dates are
+  missed initially without discussion.
+
+* "I certainly have seen persuasive managers intimidate, cajole, or use
+  political pressure to "convince" a project manager or team that they could
+meet the Happy Date - the date the manager wants.  Combine that with a culture
+of not discussing difficult topics, and you're ripe for the Dream Time/Happy
+Date schedule game"
+
+* Happy Date is related to, but not the same as, Queen of Denial - In Happy
+  Date both sets of people are in denial about the need to talk about the
+schedule.
+
+To prevent this schedule game:
+* Explain schedule ranges, especially if you're not using an iterative life
+  cycle.
+* Use an iterative lifecycle and confidence ranges: "We can do these ten
+  features and maybe these other three in the next month.  We'll let you know
+before the end of the month"
+* Use can agile life cycle with a ranked product backlog
+* Use short timeboxes, even in a staged-delivery life cycle, to help people
+  make progress, and make that progres visible.
+
+Constructive discussion (a.k.a constructive conflict) can make an organization
+stronger.  Avoid conflict and the necessary discussions makes an organization
+weaker.
+
+# 6.8 Schedule Equals Commitment
+
+* A reasonable schedule discussion requires discussing the rest of the project
+  dirvers, constraints, and flo90ats: at a minimum the feature set desired in
+that time and how good the feature set will be at that time.
+
+
+
 
 # Chapter 7: Creating a Great Project Team
 

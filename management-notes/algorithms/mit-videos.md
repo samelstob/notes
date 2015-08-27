@@ -729,11 +729,11 @@ With random inputs most hash functions will do a good job of producing a
 random output.  The problem is that real life inputs are not random.
 
 For example if you get pixels from a camera, the last few digits may be the
-same due to noise.
+same due to noise.  Strings may all start similarly (e.g. list of file paths)
 
 If a non-random property of the input (e.g. evenness) is reflected in the output then that is a bad hash function.
 
-Although Shift may be quicker than mod, better hash functions (e.g. mod) give
+Although shift may be quicker than mod, better hash functions (e.g. mod) give
 better performance overall.
 
 
@@ -754,4 +754,93 @@ better performance overall.
 * One-way.  Given h(x) it is very hard to find x
 
 # R10. Quiz 1 Review
+
+# 11. Integer Arithmetic, Karatsuba Multiplcation
+
+Sometimes we want to compute with numbers longer than word length
+
+## Irrationals
+
+Pythagoras "All is numbers".
+
+  \
+  |\
+  | \ √2 
+1 |  \
+  |   \
+  ------
+    1
+
+### Catalan Numbers
+
+Set P of balanced paraenthesis strings
+
+1) 
+
+wtf
+
+### Newton's method
+
+Let's say you have a function y = f(x)
+
+We are going to try and find the root of f(x) = 0 through successive
+approximation (i.e. where the function crosses the x-axis on a graph).
+
+f(x) = x²-a
+
+Newton's method uses tangents and successive approximation
+
+To find x[i+1]
+
+1. Find the gradient of the curve (the tangent) at x[i] (the deriviative).
+
+  derivative f(x) = f'(x)
+
+2. Follow the gradient linearly to the x-axis
+
+  tangent = opposite / adjacent
+
+  f'(x) = f(x[i]) / (x[i]-x[i+1]) 
+
+  f'(x) . (x[i]-x[i+1]) = f(x([i])
+
+  x[i]-x[i+1] = f(x[i]) / f'(x)
+
+  x[i] - f(x[i])/f'(x) = x[i+1]
+
+  y = f(x[i]) + f'(x[i]) . (x - x[i])
+
+  x[i+1] = x[i] - f(x[i])/f'(x[i])
+
+3. Use that x value as the input to the next iteration
+
+Note: Most division algorithms have multiplication as a subroutine
+
+Problem: Calculate √2 to d places
+
+### High Precision Multiplication
+
+# R10. Algorithm Design
+
+## Searching a shifted array
+
+# 12. Square Roots, Newton's Method
+
+## High Precision Division
+
+We want a/b
+
+We will compute R/b where R is a large value such that it is easy to divide by
+R (R=2^k)
+
+Newton's method for computing R/b
+
+f(x) = 1/x - b/R
+
+f'(x) = -1/x²
+
+Division: Quadratic convergence - # digits doubles at each step
+
+# R12 Karatsbua Multiplication, Newton's Method
+
 
