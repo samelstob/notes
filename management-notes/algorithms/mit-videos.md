@@ -794,21 +794,61 @@ To find x[i+1]
 
 1. Find the gradient of the curve (the tangent) at x[i] (the deriviative).
 
-  derivative f(x) = f'(x)
+  derivative f(x) = f'(x) (f prime)
 
 2. Follow the gradient linearly to the x-axis
 
+        |                          /
+        |                         /
+        |                       -/     y = f(x)
+        |                     -//| slope = f'(x)
+        |                   -/ / |
+        |                 --/ /  |
+        |              --/   /   |
+        |           --/     /    |
+  -----------------/-------------------------------
+        |      ---/   x[i+1]     x[i]
+        |  ---/
+       -+-/
+   ---/ |
+
+Equation for tangent line:
+
+  y = mx + b
+
+      ^    ^
+      |    |
+  slope    y-intercept
+
+  Slope = derivative = f'(x)
+
+  y-intercept: y = f(x) where x = i
+
+  Point-slope form
+
+  y - y[0] = m(x-x[0])
+
+  y - f(x[i]) = f'(x[i])(x-x[i]
+
+  y = f'(x[i])(x-x[i]) + f(x[i]
+
+Solve for y=0
+
+  0 = x[i+1]-x[i] + f(x[i])/f'(x[i]
+
+  x[i+1] = x[i] - f(x[i])/f'(x[i])
+
+Unit circle:
+
   tangent = opposite / adjacent
 
-  f'(x) = f(x[i]) / (x[i]-x[i+1]) 
+  f'(x[i]) = f(x[i]) / (x[i]-x[i+1]) 
 
-  f'(x) . (x[i]-x[i+1]) = f(x([i])
+  f'(x[i]) . (x[i]-x[i+1]) = f(x([i])
 
-  x[i]-x[i+1] = f(x[i]) / f'(x)
+  x[i]-x[i+1] = f(x[i]) / f'(x[i])
 
-  x[i] - f(x[i])/f'(x) = x[i+1]
-
-  y = f(x[i]) + f'(x[i]) . (x - x[i])
+  x[i] - f(x[i])/f'(x[i]) = x[i+1]
 
   x[i+1] = x[i] - f(x[i])/f'(x[i])
 
@@ -842,5 +882,93 @@ f'(x) = -1/x²
 Division: Quadratic convergence - # digits doubles at each step
 
 # R12 Karatsbua Multiplication, Newton's Method
+
+
+# 23: Computation Complexity
+
+Complexity classes
+
+set of {}
+P = { problems solvable in polynomial time }
+EXP = { " exponential time }
+R = { " finite time }
+
+# Examples
+
+- Negative-weight cycle detection P
+
+## EXP (!P)
+
+- nXn chess EXP
+- Tetris EXP (don't whether in P)
+
+
+
+# !R
+
+R = { problems solvable in finite time }
+
+- Halting problem (given a program, does it ever halt/stop) !R
+  i.e. there is no algorithm that solves it for all programs
+- Most decision problems are uncomputable
+  - Decision problems (answer is yes or no)
+ 
+# NP
+
+Non-deterministic polynomial
+
+{ decision problems solvable in polynomial time via a "lucky" algorithm }
+
+{ decision problems with solutions that can be "checked" in polynomial time }
+
+## Tetris
+
+Tetris is in NP
+
+We know how to solve in EXP time - just try all the options.
+
+The decision problem "can i survive is in NP" - If I make a guess about each
+decision (how to rotate, where to place) and there is a possible yes answer,
+then the guesses will find it.
+
+Whenever yes, you can prove & check proof in polynomial time
+
+Tetris = proof is sequence of moves to make
+
+The big question does P = NP?  Big conjecture
+
+"can't engineer luck"
+
+"solving problems is harder than checking solutions"
+
+# NP-hard
+
+As hard as every problem in NP (the hardest extreme of NP)
+
+# NP-complete
+
+Intersection of NP and NP-hard (like Tetris - just on the line)
+
+* Travelling salesman (shortest path that visits all vertices)
+* Longest common subsequence for 'n' strings
+* Minesweeper, Sudoko, most puzzles that are interesting
+* SAT
+  * Given a boolean formula, is there some setting that makes it true
+    (actually the first problem that was shown NP-Complete)
+* 3-colour graph colouring
+* Shortest path in 3D
+* Knapsack
+
+# Reductions
+
+Have a problem A, convert into problem B that you know how to solve (e.g.
+convert it into a graph problem)
+
+e.g. Dijkstra works with weighted paths, if you have unweighted you could set
+each weight to a constant
+
+e.g. Min-product path -> shortest path.  Solution: convert problem to use logs
+
+Longest path -> Shortest path - negate all the weights
 
 

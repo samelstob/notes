@@ -132,3 +132,26 @@ Counting sort only makes sense when n and k are similar in size
   ^
 
 Radix sort needs a stable counting sort
+
+Wednesday, 02 September 2015
+
+Newton's method
+
+Use the tangent line to a function to successively approximate the root of the
+function.  
+
+  Slope of tangent = f'(x)
+
+  Equation for tangent line
+
+  Point-line format:
+
+  y-y0 = m(x-x0)
+
+  y-y[i] = m(x-x[i])
+
+  y-f(x[i]) = f'(x[i])(x-x[i])
+
+  y = f(x[i]) + f'(x[i])(x-x[i])
+
+  Solve for y=0
