@@ -155,3 +155,21 @@ function.
   y = f(x[i]) + f'(x[i])(x-x[i])
 
   Solve for y=0
+
+# BFS
+
+// Set all vertices to white
+// Put starting vertex S on the Queue
+
+S.colour = grey
+
+while !Q.empty() {
+    u = Q.removeFront()
+    // For each node adjacent to u
+    for v = Adj[u]
+      if v.colour == white
+        v.colour = grey
+        Q.addBack(v)
+    // When all done, mark as black
+    u.colour = black;
+}

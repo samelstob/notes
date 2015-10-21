@@ -164,3 +164,50 @@ you
 
 * Relationships matter
 
+# Write A Job Advertisement?
+
+* Need a great first sentence.  Consider using a question?
+
+Graduate Software Engineer
+
+Do you want to work with some of the fastest growing online companies?
+
+At Triometric we build real-time data analytics solutions for the Online
+Travel Industry.  We work with some of the fastest growing online companies in the Hotel
+and Airline sector including GTA/Kuoni and Hotelbeds.com.
+
+Today Triometric technology monitors more than 500M searches and bookings per
+day for our clients.  As the Online Travel Industry continues to grow,
+Triometric technologies provide insight into the vast quantities of
+data powering this sector.
+
+As a Graduate Software Developer you will be joining our in-house Technical team to work on real-world projects building data analytics solutions for our clients.
+
+Team members at Triometric are valued for their ability to rapidly build solutions to
+real-customer problems.
+
+As a graduate you'll be expected to contribute quickly and will need to be
+prepared to learn as you go across a variety of technologies including: * Oracle SQL/PLSQL, * XML/XPath, Linux *  Java and web technologies (JSF/AngularJS, JavaScript, HTML, CSS).
+
+The role would suit those looking to build upon their degree with a range
+real-world technical experience.  You'll be supported by your mentor and
+expected to take responsibility early.  Our technical team members are highly
+valued and we have opportunities for increased responsibility and
+technical specialism as you progress with Triometric.
+
+Required Skills
+
+* 2:2 (2:1 preferred) in Computer Science.
+* Good understanding of CS fundamentals of data structures and algroithms
+* Good understanding of database theory and practical experience with SQL.  Oracle database technology is central to what we do and you will need to be ready to learn fast
+* Good knowledge of at least one high-level programming language (preferably Java) and a desire to learn and improve as a developer and write clean and maintanble code.
+
+Desired Skills
+
+* Knowledge and experience of XML and XPath - XML analytics are a big part of what we do
+* Knowledge of web application technologies (JavaScript, HTML5, CSS3, AngularJS) (We have a web application for visualisating and analysing data)
+* Knowledge of networking concepts and protocols (TCP/IP, HTTP) (We capture
+  and analyse API traffic)
+* Knowledge of hardware and operating system concepts (e.g. Data storage,
+  Processes and Threads)
+

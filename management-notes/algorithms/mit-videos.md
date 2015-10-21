@@ -883,6 +883,53 @@ Division: Quadratic convergence - # digits doubles at each step
 
 # R12 Karatsbua Multiplication, Newton's Method
 
+# 13: BFS
+
+## Graph search "exploring a graph"
+
+6042
+
+graph G=(V,E) directed or undirected
+
+### Pocket cube (2x2x2)
+
+#vertices = 8! x 3^8
+
+Configuration graph
+* Vertex for each possible state of the cube
+* Edge for each possible move (moves are reversible so the graph is
+  undirected)
+
+The worst case is the width of the graph (11 moves for 2x2x2, for 3x3x3 = 20)
+
+## Graph representation
+
+* Adjacency lists
+  * Array Adj of |v|
+  * Linked lists
+  * For each vertex u
+    * Adj[u] stores it's neighbours
+
+* For graph exploration this is what you want.
+* There are different ways to implement adjacency lists:
+  * Array
+  * Hash table
+  * v.neighbours
+  * Adj[u] is a function (i.e. not stored, computed)
+
+  |V|+|E| size
+
+Ideally our algorithms will run in V+E time - that's what you need just to
+look at the graph.
+
+* BFS
+  * Visit all nodes reachable from given starting point s
+  * O(V+E) time
+  * Careful to avoid duplicates (revisiting)
+
+
+
+
 
 # 23: Computation Complexity
 
@@ -901,8 +948,6 @@ R = { " finite time }
 
 - nXn chess EXP
 - Tetris EXP (don't whether in P)
-
-
 
 # !R
 
@@ -951,7 +996,7 @@ Intersection of NP and NP-hard (like Tetris - just on the line)
 
 * Travelling salesman (shortest path that visits all vertices)
 * Longest common subsequence for 'n' strings
-* Minesweeper, Sudoko, most puzzles that are interesting
+* Minesweeper, Sudoku, most puzzles that are interesting
 * SAT
   * Given a boolean formula, is there some setting that makes it true
     (actually the first problem that was shown NP-Complete)
@@ -971,4 +1016,32 @@ e.g. Min-product path -> shortest path.  Solution: convert problem to use logs
 
 Longest path -> Shortest path - negate all the weights
 
+3 Partition [Karp] is NP Complete
+
+All NP Complete problems you can reduce to each other
+
+# 24. Topics in Algorithm Research
+
+Problems in parallel architectures
+
+# Geometric Origami
+
+Hyperbolic parabola - Bauhaus
+Algorithmic Sculpture
+* There is an algorithm - any set of polygons on a plane you can fold and make
+  one straight cut and get exactly those polygons.
+
+Memory hierarchy
+
+# Cache oblivious algorithms (minimise number of transfers)
+* Search O(logB n) : B size of cache line
+* Sorting O(n/B
+ 
+Integer data structures
+
+n integers {0,..,u-1}
+
+Improving on trees for insert, delete, successor, predecessor 
+* O (lglgu)
+* Fusion trees O (lg
 
