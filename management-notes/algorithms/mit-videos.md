@@ -1,3 +1,5 @@
+digraph
+
 # Peak Finding
 
 * O - upper bound (worst case)
@@ -927,8 +929,69 @@ look at the graph.
   * O(V+E) time
   * Careful to avoid duplicates (revisiting)
 
+O(V+E) is essentially optimal - it's linear in the size of the graph.  Ideally
+all our algorithms will run in V+E time.
 
+BFS(s, adj)
+  level = {s:0}
+  parent = {s:None}
+  i=1
+  frontier=[s]
+  while frontier:
+    next = []
+    for u in frontier:
+      for v in Adj[u]:
+        if v not in level:
+          level[v]=i
+          parent[v]=u
+          next.append(v)
+  frontier=next
+  i+=1
 
+Parent pointers all lead to s and form a shortest path
+
+# 15: Single-Source Shortest Paths Problem
+
+G(V,E,W)
+Vertices
+Edges
+Weights W E->R
+
+* Complete graph - has an edge between each pair of vertices
+* Simple graph - at most one edge between any pair of vertices
+* Multi-graph - could have multiple edges between pairs of vertices
+
+An upper bound or E is V² (in a complete graph)
+
+* Optimal Substructure
+
+* Path
+  - Path must consist of edges in the graph
+  - (vi, vi+i) ϵ E for 0 
+  - Weight of path, is sum of weights of edges on the paths
+
+The problem is to find P with minimum weight
+
+Two algorithms
+
+* Dijkstra
+  ** non-negative edges
+  ** O(VlgV + E)
+
+* Bellman-Ford
+  ** positive and negative edges
+  ** O(VE)
+  ** E could be V² so O(V³)
+  ** When you can, use Dijkstra
+
+Neither algorithm is a function of weight.  The dynamic range of the weights
+can be very very large.
+
+With these algorithms you want the weight, but you also want the path as well.
+
+δ(u,v) = {min{w(p) u->v}} ∃ any such path otherwise ∞
+
+min of all possible paths from u to v
 
 
 # 23: Computation Complexity
