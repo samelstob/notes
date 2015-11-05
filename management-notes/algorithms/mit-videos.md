@@ -991,8 +991,25 @@ With these algorithms you want the weight, but you also want the path as well.
 
 δ(u,v) = {min{w(p) u->v}} ∃ any such path otherwise ∞
 
+∃ there exists
+
 min of all possible paths from u to v
 
+d(v) Value inside circle - current weight
+π(v) Predecessor on best path to v  π(s) = NIL
+
+Motivation for negative weights
+
+Negative cycles can make shortest path lengths indeterminate.  We want
+algorithm to mark these with -∞ 
+
+Relaxation
+
+## General Structure
+
+* Initialise for u
+* Repeat select edge (u,v)
+* "Relax" edge (u,v)
 
 # 23: Computation Complexity
 
