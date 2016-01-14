@@ -1,0 +1,164 @@
+# Brendan Gregg
+
+* iosnoop
+
+## Ten Performance Methodologies and Anti-Methodologies
+
+* Thinking Methodically About Performance ACMQ
+
+* USE method
+* Latency analysis
+
+## Methodologies
+
+* Beginners - provides a starting point
+* Experts - provides a reminder
+* Casual users - provides a checklist
+
+## Anti-methodologies
+
+## 1. Blame someone else Anti-method
+
+* Wasteful of other team resources
+* Identifiable by a lack of data analysis - or any data at all
+* Ask for screenshots, then take a second opinion
+
+## 2. Streetlight Anti-method
+
+* Pick a tool at hand, run tool, look for obvious issues
+* Inefficient, wasteful when investigating false-positives
+
+## 3. Ad-hoc checklist method
+
++ Easy to follow, can be fast
++ Consistent
++ Prescriptive
+- People don't necessarily understand what the are doing
+- Limited
+- Needs regular updates
+
+Pragmatic
+
+## 4. Problem Statement Method
+
+Ask questions
+
+1. What make you think these is a performance problem?
+2. Has the system ever performed well?
+3. What has changed recently?
+4. Can the performance degradation be expressed...latency?
+5. Does the problem affect other people or applications
+6. What is the environment?
+
++ Can be used first before other methodologies
++ Resolves a class of issues without further investigation
+- Limit scope
+
+## 5. Scientific Method
+
+1. Question e.g. What is causing slow database queries?
+2. Hypothesis e.g. noisy neighbours performing disk I/O 
+3. Prediction e.g. if file system I/O latency is measured during a query, it 
+   will show that it is responsible for slow queries
+4. Test e.g. dynamic tracing of database FS latency as a ratio of query 
+   latency shows less 5% is FS
+5. Analysis e.g. FS, and disks , are not reponsible for slow queries.  Go to 
+   2. and develop a new hypothesis
+
++ Encourages thought, develops understanding
+- Hypothesis requires expertise
+- Time consuming - more suited for harder issues
+
+## 6. Workload Characterisation Method
+
+1. Who is causing the load? PID, UID, IP addr?
+2. Why is the load called? Code path? Config?
+3. What is the load? IOPS, tput, type
+4. How is the load changing over time
+
++ Identifies issues of load
++ Best performance wins are from eliminating unnecessary work
++ Potentially largest wins
+- Don't assume you know what the workload is - characterize
+- Only solves a class of issues - load
+- Time consuming, and can be discouraging - most attributes examined will not 
+  be a problem
+
+## 6. Drill-Down Analysis Method
+
+1. Start at highest level
+2. Examine next-level details
+3. Pick most interesting breakdown
+4. If problem unsolved, go to 2
+
++ Will identify root cause
+- Time consuming
+
+## 7. Latency Analysis Method
+
+1. Measure operation time (latency)
+2. Divide into logical synchronous components
+3. Continue division until latency origin is identified
+4. Quantify - estimate speedup if problem fixed
+
+* Binary search
+* Spot the outlier from multiple layers
+
++ Latency matters, ultimately solve most issues
++ Also see Method R
+
+## 8. USE Method
+
+1. Utilisation: Time resource was busy, or degree used
+2. Saturation: Degree of queued extra work
+3. Errors: Any errors
+
+* Errors are often easier to interpret, and can be checked first
+* Definition of utilisation dependes on the resource type:
+    * I/O - time they were busy
+    * Capacity e.g. main memory - utilisation is space consumed
+* Try to get down to the smallest individual component
+
+### Utilisation
+
+* Beware of time intervals 
+
+* Quick system health check, early in investigation
+
++ Complete: all resource bottlenecks and errors 
++ Not limited in scope by your current toolset
++ No unknown unknowns - at least known unknowns
++ Efficient: Picks three metrics for each resource - from what may be dozens 
+  available
+- Limited to a class of issues
+
+## 9. Stack Profile Method
+
+1. Profile thread stack traces
+2. Coalesce
+3. Study stacks bottom-up
+
+## 
+
+## Relative 
+
+# Suggested ordering
+
+1. Problem Statement
+2. USE
+3. Stack Profile
+4. Workload Characterisation
+5. Drill-Down
+6. Latency Analysis
+
+## Final Remarks
+
+Methodologies Should
+* Solve real issues quickly
+* Not mislead or confuse
+* Be easily learned by others
+* Don't need to be followed strictly - they are a means to an end
+    * You can incorporate elements from multiple methodologies while working 
+      on an issue
+
+

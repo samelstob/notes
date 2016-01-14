@@ -162,14 +162,67 @@ function.
 // Put starting vertex S on the Queue
 
 S.colour = grey
+Q.pushTail(S)
+distance=0
 
 while !Q.empty() {
-    u = Q.removeFront()
+    u = Q.popHead()
     // For each node adjacent to u
     for v = Adj[u]
       if v.colour == white
         v.colour = grey
-        Q.addBack(v)
+        v.predecessor = u
+        v.distance = distance
+        Q.pushTail(v)
     // When all done, mark as black
     u.colour = black;
+    distance++
 }
+
+# DFS
+
+Set all nodes to white
+dfs-visit(u)
+  for v in adj[u]
+    if v.colour = grey|black // cycle
+    else if v.colour = white
+      v.colour = grey
+      v.parent = u
+      dfs-visit(v)
+  u.colour = black // topological sort
+
+# Dynamic programming
+
+Recursion + memoization
+
+Fibonacci
+
+fib(i)
+{
+  if i<0
+    return error
+  else if i<1
+    return i
+  else if memo[i] != null
+    return memo[i]
+  else 
+    memo[i] = fib(i-1) + fib(i-2)
+    return memo[i]
+}
+
+  S --1-> A --2-> B → 4 → C
+          | \     |       ↓ 
+          1   1   5       2
+          |     \ |       ↓
+          D --3-> E --1-> F --2-> G
+
+Triangle of inequality?
+
+A   C
+  B
+
+A->C <= A->B + B->C
+
+A shortest graph algorithm involves relaxing edges until they can be relaxed
+no more.  The key is to find an algorithm that does the reliably does the minimum number of relaxation steps.
+

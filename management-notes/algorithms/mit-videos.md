@@ -889,6 +889,14 @@ Division: Quadratic convergence - # digits doubles at each step
 
 ## Graph search "exploring a graph"
 
+* Web crawling
+* Social networking
+* Network broadcast
+* Garbage collection
+* Model checking
+* Checking mathematical conjecture
+* Solving puzzles and games
+
 6042
 
 graph G=(V,E) directed or undirected
@@ -945,10 +953,84 @@ BFS(s, adj)
           level[v]=i
           parent[v]=u
           next.append(v)
-  frontier=next
-  i+=1
+    frontier=next
+    i+=1
 
-Parent pointers all lead to s and form a shortest path
+* Parent pointers all lead to s and form a shortest path
+* Works on directed and undirected graphs
+* Could be used to detect which vertices can not be reached from S
+
+Sometimes you want to visit every vertex so you need another outer loop so you
+can iterate over all the vertices even if the graph is disconnected.
+
+# R13: BFS
+
+
+
+# 14. Depth-First Search (DFS), Topological Sort
+
+Like exploring a maze
+
+* Recursively explore graph, backtracking as necessary 
+
+parent = {S : None}
+dfs-visit(Adj):
+  for v in Adj[S]
+    if v not in parent:
+      parent[v] = S
+      dfs-visit(Adj[v])
+    
+dfs(V, Adj):
+  parent = {}
+  for S in V:
+    if S not in parent:
+      parent[S] = None
+    dfs-visit(V, Adj[v])
+
+## Analysis
+
+  Θ(V + E)
+
+Linear time just like BFS
+
+* BFS versus DFS
+** BFS great for shortest paths (e.g. fastest way to solve rubick's cube, DFS
+will not find it)
+** DFS - edge classification
+
+## Edge classification
+
+* Tree edges (parent pointers)
+  * When we visit a new vertex by this edge.  They form a directed tree (a
+    forest)
+* Forward edges: node->decedent in tree 
+* Backward edges: node->ancestor in tree (grey/currently exploring)
+* Cross edges: between two non-ancestor related subtrees
+
+Use counters (start/finish time) to determine cross edges from forward edges
+
+## Cycle detection
+
+G has a cycle if G has a back edge
+
+Detecting cycles is pretty easy in undirected graphs.  It's a little more
+subtle in direct graphs because you have to worry about edge direction.
+
+## Topological Sort
+
+Sorting vertices in a graph
+
+Job scheduling:
+
+* Given a DAG
+* Order vertices so that all edges point from lower order to higher order
+
+Solution:
+
+* Run DFS
+* Output the reverse of finishing times of vertices (every time you finish a
+  vertex, add it to a list)
+
 
 # 15: Single-Source Shortest Paths Problem
 
@@ -957,8 +1039,8 @@ Vertices
 Edges
 Weights W E->R
 
-* Complete graph - has an edge between each pair of vertices
 * Simple graph - at most one edge between any pair of vertices
+* Complete graph - has an edge between each pair of vertices
 * Multi-graph - could have multiple edges between pairs of vertices
 
 An upper bound or E is V² (in a complete graph)
@@ -967,7 +1049,7 @@ An upper bound or E is V² (in a complete graph)
 
 * Path
   - Path must consist of edges in the graph
-  - (vi, vi+i) ϵ E for 0 
+  - (v[i], v[i+1]) ϵ E for 0 
   - Weight of path, is sum of weights of edges on the paths
 
 The problem is to find P with minimum weight
@@ -998,18 +1080,174 @@ min of all possible paths from u to v
 d(v) Value inside circle - current weight
 π(v) Predecessor on best path to v  π(s) = NIL
 
+## Negative weights
+
 Motivation for negative weights
 
 Negative cycles can make shortest path lengths indeterminate.  We want
 algorithm to mark these with -∞ 
 
-Relaxation
+## Relaxation
 
-## General Structure
+General Structure:
 
 * Initialise for u
 * Repeat select edge (u,v)
 * "Relax" edge (u,v)
+
+  if d[v] > d[u] + w(u,v):
+    d[v] = d[u] + w(u,v)
+    π[v] <- u
+
+Until all edges have d[v] <= d[u] + w(u,v)
+
+## Optimum substructure
+
+* Sub paths of a shortest path are shortest paths
+
+# R15: Shortest Paths
+
+BFS works without weights.  Intuitively we want BFS to favour paths with
+lower weights.
+
+Could create dummy nodes to simulate weights.
+
+## Exponential number of paths
+
+There are potentially exponential number of paths for any graph
+
+      A       D       G
+  S       C       F       I
+      B       E       H
+
+      2       2       2
+
+      2       4       8
+
+    2^n i.e. exponential in the number of vertices
+
+
+# 16: Dijkstra
+
+Review
+
+  S(0) →1→ A(∞)
+   \       ↓
+     \     1
+       3   ↓
+         \ B(∞)
+
+  δ(S,v) = 2
+
+d[v]      length of current shortest path from source S to v
+δ(s,v)    length of a shortest path
+π[v]      predecessor of v in the shortest path from S to v.  Can follow the
+predecessor to construct the shortest path
+
+Relax(u,v,w)
+  if d[v] > d[u] + w(u,v)
+    d[v] = d[u] + w(u,v)
+    π[v] = u
+    
+Lemma: The relaxation operation maintains the invariant that d[v] >= δ(S,v)
+for all v ϵ V
+
+By △ inequality δ(S,v) <= δ(S,u) + δ(u,v)
+
+In other words, if there is a shortest path from S to v, then a shortest path
+from S to v that goes through node u must be no shorter (otherwise it would
+*be* the shortest path from S to v
+
+* δ(a,b) is the shortest path from a to b (it may be direct or indirect i.e.
+ travel through other nodes)
+
+  δ(S,v) <= d[u] + w(u,v) = d[v]
+
+## DAGs
+
+* Can't have cycles
+* Can have negative weights, just no cycles
+
+1) Topologically sort the DAG.  Path from u->v implies that is u is before v
+in the ordering
+2) One pass over vertices in topologically sorted order relaxing each edge that
+leaves each vertex.
+
+## Dijkstra
+
+Dijkstra is a greedy algorithm
+
+Dijkstra(G,W,S)
+  Initialise (G,S)
+
+# R16: Rubick's Cube, Starcraft Zero
+
+# 17: Bellman-Ford
+
+* Negative weights and negative cycles
+
+Naive SP algo:
+
+1. Can take EXP time
+2. With negative cycles, never completes
+
+* "Polynomial time is great, exponential time is bad, infinite time gets you
+  fired"
+
+    Initialization
+    for i=1 to |V| - 1
+        for each edge (u,v) ϵ E
+            Relax(u,v,w)
+    for each edge (u,v) ϵ E
+        if d[v] > d[u] + w(u,v)
+            then report -ve cycle exists
+
+Relax:
+  if d[v] > d[u] + w(u,v)
+      d[v] = d[u] + w(u,v)
+      π[v] = u
+
+If there are no negative cycles then after |V|-1 passes we will have the
+correct weights.
+
+E=O(V²)
+
+So Bellman-Ford could be V³
+
+Dijkstra can be linear complexity compared to Bellman-Ford which is cubic.
+
+If you can use Dijkstra, unless you have negative weight cycles.
+
+## Theorem
+
+If G=(V,E) contains no -ve weight cycles then after B-F executes then d[v] =
+δ(s,v) for all v ϵ V
+
+Corollary: If a value d[v] fails to converge after |v|-1 passes there exists a
+-ve weight cycle reachable from S
+
+After 1 pass through E we have d[v] = δ(S,v1) because we will relax edge
+(v0,v1)
+
+After k passes d[vk] = δ(S,k)
+
+Because we have optimum substructure
+
+Corollary proof:
+
+  After |V|-1 passes, we find an edge that can be relaxed then the current
+shortest path from S to some vertex is not simple (have a repeated vertex)
+
+## Longest paths
+
+* Can't naively translate positive weights to negative weights because we may
+  create negative weight cycles
+
+* If you have a graph with negative weight cycles it is NP-Hard
+
+# 18: Speeding up Dijkstra
+
+
 
 # 23: Computation Complexity
 
