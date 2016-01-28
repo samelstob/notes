@@ -1156,7 +1156,7 @@ By △ inequality δ(S,v) <= δ(S,u) + δ(u,v)
 
 In other words, if there is a shortest path from S to v, then a shortest path
 from S to v that goes through node u must be no shorter (otherwise it would
-*be* the shortest path from S to v
+*be* the shortest path from S to v)
 
 * δ(a,b) is the shortest path from a to b (it may be direct or indirect i.e.
  travel through other nodes)
@@ -1245,9 +1245,104 @@ shortest path from S to some vertex is not simple (have a repeated vertex)
 
 * If you have a graph with negative weight cycles it is NP-Hard
 
-# 18: Speeding up Dijkstra
+# 18: Shortest Paths IV: Speeding up Dijkstra
 
+Improving in real-world cases
 
+* Single-source, single target
+* Bi-directional search
+* All pairs shortest paths
+
+## Single-source, single target (s->t)
+
+Emphasise that worst-case complexity is unchanged
+
+  Initialize() <- d[s]=0, d[u != s]=∞
+  Q<-V[G]
+  while Q != empty
+    do u <- extract-min(Q)  # Stop if u=t
+    for each vertex V ϵ Adj[u] 
+      do relax(u, v, w)
+        π[v] <- u
+        d[v] = d[u] + w(u, v)
+
+Basically, stop Dijkstra when target is extracted from the queue. (Proof?)
+
+Runs no-slower than Dijkstra (if target is the last vertex you find).
+
+## Bi-directional search
+
+- Alternate forward search from S with backward search from t (following edges
+  backwards)
+
+df[u] : distances for forward search
+db[u] : distances for backward search
+
+Priority queues: Qf : forward
+                 Qb : backward
+
+πf: normal
+πb: following edges back
+
+Q: What is the terminating condition?
+
+Some vertex w has been processed both in the forward search and the backward
+search i.e. extracted from both Qf and Qb.
+
+w is intersection of two frontiers
+
+Q: How do we find the shortest path?
+
+Find S.P. from s to w using π[f]
+Find S.P from w to t using π[b] backwards
+
+However w may not be on the shortest path
+
+     3  (u)  3   (u')  3 
+ (s)                      (t)
+       5    (w)    5 
+
+If we run Dijkstra the shortest path is 9 (s->u->u'->t)
+
+                       Q
+  -----------------------------
+  s0                 | u3 w5
+  s0 u3              | w5 u'6
+  s0 u3 w5           | u'6 t10
+  s0 u3 w5 u'6       | t9
+  s0 u3 w5 u'6 t9    |
+
+However, bi-direction search would meet not on the shortest weight path, but
+the nearest (fewest nodes):
+
+  s0                 | u3 w5  
+  t0                 | u'3 w5
+
+  s0 u3              | w5 u'6
+  t0 u'3             | w5 u6
+
+  s0 u3 w5           | u'6 t10
+  t0 u'3 w5          | u6 s10
+
+Bi-directional search terminates because we have removed w from both
+directions.
+
+However, w is *not* on the shortest path from s->t.
+
+Instead we use the look for the node with the lowest distance from s+t that
+has been processed by at least one direction
+
+s(0+10) u(3+6) u'(3+6) w(5+5) t(10+0)
+
+## Goal Directed Search
+
+Modify edge weights with potential function
+
+If there is a landmark that you know you have to go through from s->t, modify
+the weights so that Dijkstra favours that path.
+
+Doesn't change the asymptomic complexity but in practice should visit fewer
+nodes before terminating.
 
 # 23: Computation Complexity
 
