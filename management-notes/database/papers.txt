@@ -1,0 +1,89 @@
+# Redbook
+
+JSON can be viewed in one of three ways
+
+1. A general purposes hierarchical data format.  
+
+2. A representation for sparse data
+
+3. As a mechanism for schema on read
+
+# What Goes Around Comes Around
+Michael Stonebraker
+Joey Hellerstein
+
+## Introduction
+
+We present data model proposals in nice historical ephocs
+
+1. Hierarhical (IMS): late 60's and 70's
+2. Directed graph (CODASYL): 70's
+3. Relational: 70's, early 80's
+4. Entity-relationship: 70's
+5. Extneded Relational: 80's
+6. Semantic: late 70's and 80's
+7. Object-oriented: 80's early 90's
+8. Object-relational: 80's and early 90's
+9. Semi-structured (XML): late 90's to present
+
+## II IMS
+
+IMS was released around 1968, and initially had a hierarchical data model.
+
+i) Record type is a collection of named fields with their associated data 
+types
+ii) Each instance of a record type is forced to obey the data description 
+indicated in the definition of the record type
+iii) Some subset of the named fields must uniquely specify a record instance, 
+i.e. they are required to be a key
+iv) Record types must be arranged in a tree, such that each record type (other 
+than the root) has a unique parent record type.
+
+* Lesson 1: Physical and logical data independence are highly desirable
+
+The ability of a data base application to continue to run, regardless of what 
+tuning is performed at the physical level will be calleed phyiscal data 
+independence.
+
+* LEsson 2: Tree structured data models are very restrictive
+
+* Lesson 3: It is a challenge to provide sophisitcated logical reorganizations 
+  of tree structured data
+* Lesson 4: A record-at-a-time user interface force the programmer to do 
+  manual query optimization, and this is often hard
+
+## III CODASYL Era
+
+
+
+
+16. Schema-later is probably a niche market
+
+e.g. Four classes of applications
+
+i) Rigidly structured data (most business applications) e.g. payroll
+ii) Rigidily structured data with some text fields e.g. employee records
+iii) Semi-structured data
+iv) Text e.g. web
+
+There are not that many applications in class iii
+
+17. XQuery is pretty much OR SQL with a different syntax
+
+18. XML will not solve the semantic heterogeneity either inside or outside the 
+    enterprise
+
+Semantic Heterogeneity e.g.
+
+i) <salary> without a schema this could mean salary in USD before tax or 
+salary in GBP after tax
+
+ii) <colour> red versus maroon
+
+Semantic heterogeneity has been with enterprises for a very long time.  They 
+spend vast sums on warehouse projects to design standard schemas and then 
+convert operational data to this standard.
+
+## XI Full Circle
+
+

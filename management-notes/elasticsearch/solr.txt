@@ -1,0 +1,30 @@
+# Solr at scale for time oriented data
+
+150B+ docs spanning 1 year (~= 500M a day) on 13 Big machines in EC2
+
+## Sharding
+
+Suggest don't shard time over the entire cluster.  Ever read would have to hit 
+all shards.
+
+Example given was sharding by day
+
+He mentioned you still need to limit the time range - example given was 2 
+months "haven't found a solution that's cheap where you can literally query 
+the entire collection at once when you're talking about 150B docs"
+
+Elasticsearch verseus Database
+
+Comes from the world of information retrieval (finding data, describing data) 
+versus databases
+
+Solr on HDFS (indexes on HDFS)
+
+Backups
+
+Adding a new field - have to reindex the entire collection!
+
+# Real time analytics with Solr (Yanik 
+
+* 
+

@@ -2,20 +2,20 @@
 
 * iosnoop
 
-## Ten Performance Methodologies and Anti-Methodologies
+# Ten Performance Methodologies and Anti-Methodologies
 
 * Thinking Methodically About Performance ACMQ
 
 * USE method
 * Latency analysis
 
-## Methodologies
+# Why Methodologies
 
 * Beginners - provides a starting point
 * Experts - provides a reminder
 * Casual users - provides a checklist
 
-## Anti-methodologies
+# Anti-methodologies
 
 ## 1. Blame someone else Anti-method
 
@@ -162,3 +162,4 @@ Methodologies Should
       on an issue
 
 
+# 

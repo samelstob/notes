@@ -1,0 +1,148 @@
+# Knowing matters, proving matters more
+
+## What is Performance?
+
+* Performance is the time it takes computer software to perform whateve task 
+  you ask it to do
+
+Task = business unit of work
+Throughput is important
+Response Time is IMportant
+
+## 3. Response Time vs Throughput
+
+Most people think throughput and response time are reciprocals.
+
+Throughput = tasks / time
+Response time = task / time
+
+However, they are not reciprocals.  To know them both, you have to measure 
+them both.
+
+e.g. consider machine with 10 "lanes"
+
+# Thinking Clearly About Performance
+
+* Axiom
+
+## 4. Percentile Specification
+
+Task blah must respond < x seconds in > y% of executions
+
+Customers feel the variance not the mean
+
+## 5. Problem Diagnosis
+
+1. What is the current state?
+2. What is the goal state?
+
+What if the goal state is impossible? How can you know?
+
+## 6. Sequence Diagram
+
+Draw them to scale and they can be useful as a performance diagnostic.
+
+Sequence diagrams don't scale
+
+"Nobody wants to see about ten rows of anything."
+
+# 7. The Profile
+
+Tabular representation of the sequence diagram
+
+## Amdahl's law
+
+* A task's response time can improve only in proportion to how much the task 
+  uses the thing you improve
+
+## Goal state
+
+e.g. Has to run in less than x second in 99% of instances
+
+* Assess the whole profile before deciding on your next step
+
+## 9. Skew
+
+Non-uniformity in any list of values
+
+Would you eliminate 50% of the time if you eliminated 50% of the calls?  We 
+don't know, it depends on the skew.
+
+## 10. Minimising Risk
+
+When everyone is happy except for you, make sure your local stuff is in order 
+before you go messing around with the global stuff that affects everyone else, 
+too.
+
+## Efficieny
+
+Efficiency is an inverse measure of waste.
+
+* The fastest way to do something is not do it at all
+* Is the apparant requirement really a legitimate requirement?
+* Improvements taht make your program more efficient can produce tremendous 
+  benefits for everybody else on the system.
+
+## Load
+
+Load is competetion for a resource by concurrent task executions.
+
+Two types of waiting
+
+* Queueing Delay
+* Coherencey Delay
+
+## Queueing
+
+Response Time = Queueing Time + Service Time
+
+Response time degrades hyperbolicaly
+
+Two performance goals:
+* Response Time
+* Throughput
+
+Mathematically, the knee, is where utilissation/response time is at a miniumum
+
+* Left of the knee, response time is stable and consistent
+* Right of the kneww, performance is unstable and problematic
+
+## 16. Capacity Planning
+
+To perform well you must manage load so that utilisations do not exceed their 
+knees.
+
+If load exceeds a knee you need to reschedule load, eliminate waste or 
+increase capacity.
+
+## 17. Random Arrivals
+
+* With deterministic arrivals you can run up to 100% utilisation.
+* With random arrivals you must pay attention to your knees.
+
+## 18. Coherency Delay
+
+* The duration that a task spends communicating and coordinating access to a 
+  shared resource
+
+In Oracle:
+* Log file sync, enqueue, buffer busy, latch free
+
+## 19. Performance Testing
+
+How can you test all of them
+
+1. You'll catch more problems if you try than if you don't
+2. You'll never catch them all
+
+## 21. Performance is a feature
+
+You need to write your app so it's easy to fix performance in production
+
+"The software designer who integrates performance measurement into their 
+product is much more like to implement a fast application, and an app that 
+becomes faster over time"
+
+
+
+
