@@ -1,0 +1,46 @@
+# Hadoop: Past, Present and Future with Mike Cafarella
+
+HDFS or something like will be around for a very long time.  A distributed, 
+low cost, hierarchical file system that exposes a hierarchal unix style 
+interface to the user - that's going to be around for ever.
+
+There's a handful of performance improvements you would like to ahve e.g. can 
+I haz indexes.
+
+We are seeing the slow agnosing death of Map Reduce.  People are not really 
+writing Map Reduce jobs any more.
+
+Map Reduce was envisioned as "a for loop replacement" - the use case was 
+building web crawler inverted indexes.  It was not envisioned for analytics.
+
+Objections from Stonebraker et al. "one step forward, two steps back" - in 
+retrospect the need for higher language was correct
+
+"The projects with the biggest impact have an element of system building and 
+element of intellectual contribution.  If you want the biggest possible impact 
+on the world you have to use both weapons.  There is always a way to figure 
+out how to do it no matter what venue you are in"
+
+Yarn
+
+Dryad (Microsoft Research) had a very clean distinction between the 
+programming model it exposed and the execution framework.
+
+If you want a data flow that doesn't look like the traditional map reduce data 
+flow (disk -> mapper -> shuffle -> reducer) if you want five loops of that in 
+a row for some ML task that data flow graph can be more complicated than map 
+reduce ever imagined.  Pig tends to tie itself in knots trying to do this - 
+it's not the most natural way to do it.
+
+Spark - unbelievable impact on things.  People were using MapReduce in a way 
+that the MR implementation was not really keeping up with.
+
+Spark performance is better but it's the terminal interaction that I think is 
+best thing.
+
+Could have been designed without a central coordinator?  You can a single 
+node, or a group of nodes, or some kind of cooperation over the entire 
+cluster.
+
+Nowadays no one runs a single name node, but does it have to be the entire 
+cluster?

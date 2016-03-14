@@ -1107,10 +1107,9 @@ Until all edges have d[v] <= d[u] + w(u,v)
 
 # R15: Shortest Paths
 
-BFS works without weights.  Intuitively we want BFS to favour paths with
-lower weights.
+BFS find shortest paths without weights.
 
-Could create dummy nodes to simulate weights.
+Intuitively we want BFS to favour paths with lower weights.
 
 ## Exponential number of paths
 
@@ -1126,6 +1125,51 @@ There are potentially exponential number of paths for any graph
 
     2^n i.e. exponential in the number of vertices
 
+Think of some alternative ways to create a SSSP algorithm:
+
+In real-life you will not be creating new algorithms e.g. have to do analysis on running time and correctness, have to create proof
+
+You are more likely to be using algorithms as black box and transforming the
+problem to fit
+
+e.g. Could create dummy nodes to simulate weights.  Run BFS.  Remove dummy
+nodes.
+
+New running time is:
+
+   E = O(W'E')
+   V = O(W'E' + V')
+     = O(V' + W'E')
+
+  Dijkstra  O(E lg V)    -- With fancy data structure O(VlgV + E)
+  BF        O(V.E)
+
+If W <= lg V this algorithm is on par with Dijkstra
+
+## Consider a problem where two drivers alternate but one must do the first leg
+and the last leg.
+
+* Need a SP with odd number of edges
+* Modify the input and then run Dijkstra
+  * Duplicate each node
+  * Construct even and odd graphs from original 
+
+## Highway with traffic
+
+* Each edge has two additional considerations
+  * time cost ()
+  * fuel cost ()
+
+Take a variable and make it a state
+
+Make time a state
+
+* For each vertex, duplicate it M times (number of minutes in a day)
+* Modify the input graph to create M copies
+* Allow for waiting - at each vertex, create an edge t+1 which loops back
+
+  E' = EM + VM
+  V' = VM
 
 # 16: Dijkstra
 
@@ -1181,6 +1225,41 @@ Dijkstra(G,W,S)
   Initialise (G,S)
 
 # R16: Rubick's Cube, Starcraft Zero
+
+2x2x2 Rubik's cube
+
+2^3 cubes =  8
+half the faces are not visible so 8x3 faces = 24
+
+How many configurations are there?
+
+24 faces can be mapped in any of the 24 available positions
+
+Permutations - 24!
+
+Can we afford to build the graph and then run BFS? Nope.  Going to have to
+operate on an implicit graph representation.
+
+## Inverse Permutations
+
+  1 2 3 4 5 = π
+  3 4 1 5 2
+
+  a b c d e
+  c d a e b = inverse π
+  a b c d e
+
+  Swap and sort the original permutation
+
+  3 4 1 5 2
+  1 2 3 4 5
+
+  1 2 3 4 5
+  3 5 1 2 4
+  
+## Starcraft
+
+
 
 # 17: Bellman-Ford
 
@@ -1329,7 +1408,7 @@ directions.
 
 However, w is *not* on the shortest path from s->t.
 
-Instead we use the look for the node with the lowest distance from s+t that
+Instead we look for the node with the lowest distance from s+t that
 has been processed by at least one direction
 
 s(0+10) u(3+6) u'(3+6) w(5+5) t(10+0)
@@ -1341,8 +1420,9 @@ Modify edge weights with potential function
 If there is a landmark that you know you have to go through from s->t, modify
 the weights so that Dijkstra favours that path.
 
-Doesn't change the asymptomic complexity but in practice should visit fewer
+Doesn't change the asymptotic complexity but in practice should visit fewer
 nodes before terminating.
+
 
 # 23: Computation Complexity
 
