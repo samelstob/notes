@@ -1,0 +1,47 @@
+
+python generate.py problem.py 3 3
+
+python main.py problem.py
+
+i still don't understand why divide and conquer is better than linear for peak 
+finding
+
+with two randomly generated numbers what is the probability that b>=a
+
+A - range of random numbers for a
+B - range of " " b
+
+Number of combinations = AB
+
+e.g. 10 X 10 = 100
+
+0 0-9 - 10 possibilities
+1 1-9 - 9 possibilities
+2 2-9 - 9 "
+
+9 9 -  1 
+
+sum of 1-10 = (n+1)*n/2 = (10+1)*10/2 = 11 * 5 = 55/100
+
+0 1-9 - 9
+1 2-9 - 8
+2 3-9 - 7
+9 -   - 0
+
+sum of 1-9 = 45
+
+    45%  10%  45%
+
+Probabiliyt of a and b being equal is |∩(A B)|/|A|.|B|
+
+e.g.            |∩([0-9] [0-9])| / |[0-9].|[0-9]|
+            =   10 / 10.10
+            =   10/100 
+
+if A and B are equal then
+
+probability of a and b being equal is |A| / |A|²
+
+for large numbers a>b verus a>=b is the same
+
+so why is divide and conquer better than linear search?
