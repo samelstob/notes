@@ -44,3 +44,78 @@ cluster.
 
 Nowadays no one runs a single name node, but does it have to be the entire 
 cluster?
+
+# 2015/10/12 Replacing Hadoop with Joe Doliner
+
+https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emocljp6
+
+* A number of things are outdated about Hadoop
+    - The software project is developed by a million different companies with 
+      a million different goals.  You don't get this cohesive API that's 
+      really fun to use.
+    - From a software engineering level - they basically had to create all of 
+      the distributed systems code from sctactch because nothing like that 
+      existed.  They have their own scheduler (Yarn), discovery service.  You 
+      really want someone dedicated to making them generic and good.
+
+* Facebook forked Hadoop six years ago and kept it closed source.  "A bunch of 
+  little things that didn't quite fit their use case.  No big ideolical 
+  difference about merging - just too many man hours"
+
+* "At Airbnb - a huge number of outages from Zookeeper.  No one we could talk 
+  to - no company has Zookeeper as their product.  These things never get 
+  fixed and they never get really good."
+
+* "Zookeeper is coupled to Hadoop because of they have been in close proximity 
+  for a very long time - little specific things that Hadoop needs have crept 
+  into Zookeeper."
+
+* Containerising Hadoop is problematic
+
+* Maintaining a consistent enviornment is one of the big challenges of running 
+  a Hadoop cluster.  You are getting a string of emails from data scientists 
+  "I just wrote this job that requires Python 2.3".  It isn't a fun job to 
+  install dependencies on a 1000 machine Hadoop customer."
+
+* HDFS Namenode - writing a bunch of small files swamps the name node
+
+* Pachyderm File System (PFS) is a COW filesystem like git.  This allows 
+  collaboration.
+
+* A best practice in Hadoop land is to run entirely separate clusters.  
+  Production and dev.  Moving things over from dev to prod is a hugely manual 
+  process.
+
+* In Hadoop it's this very internal magical thing that allows them to achieve 
+  data locality.
+
+* Hadoop uses - very different picture in each company.  Like MS Word - 
+  billion features and each user uses a different 5%.
+
+* "There are a lot more people who have the problem Hadoop solves, than there 
+  are using Hadoop."
+
+* "At Airbnb we thought we were going to setup a Hadoop cluster.  2.5 years 
+  later this was a team of 20 people and we still weren't quite to the point 
+  where we felt like we have it under control and it just works for us.  You 
+  can't run a Hadoop cluster without this team of 20 people that basically 
+  just kick it when it falls over."
+
+* "Cloudera makes it easier, but it is still incredibly complicated.  Cloudera 
+  have built a ML classifier which classifies configurations as stable or 
+  unstable.  Configuring Hadoop is so incredibly complicated that there is no 
+  human who understands what makes a configuration stable or unstable.  We have 
+  actually had to resort to a classifier to solve that problem".
+
+* "Cloudera definitely offers a lot of really good resources to make running 
+  Hadoop easier but I don't think they are solving the fundamental problem.  
+  To solve that we need a big leap forward."
+
+* "I want you guys to become sales engineers."
+
+* Letters of intent - removes "there is nobody in the world who has the 
+  slightest bit of interest in this"
+
+
+
+
