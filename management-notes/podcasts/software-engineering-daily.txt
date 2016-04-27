@@ -54,7 +54,7 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
       a million different goals.  You don't get this cohesive API that's 
       really fun to use.
     - From a software engineering level - they basically had to create all of 
-      the distributed systems code from sctactch because nothing like that 
+      the distributed systems code from scratch because nothing like that 
       existed.  They have their own scheduler (Yarn), discovery service.  You 
       really want someone dedicated to making them generic and good.
 
@@ -116,6 +116,57 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
 * Letters of intent - removes "there is nobody in the world who has the 
   slightest bit of interest in this"
 
+# 2016/03/15 State of Programming with Jeff Atwood
 
+* 37 signals didn't think about deployment.  RoR didn't think about 
+  deployment.  Docker allowed discourse to solve deployment problems.
+    - "Went from being a support nightmare
+* "Ruby virtualised awfully - like 40% performance loss"
+* Stack Overflow SQL server licensing $0.5M licensing fees per year
+* SQL server "optimise for unknown" (don't use stats - sounds like RBO or 
+  dynamic sampling)
+* "Linux is free if your time is worthless"
+* "Co-location is insanely cheap"
 
+# 2016/04/26 Azure Event Hubs and Kafka with Dan Rosanova
+
+* DOn't want a direct dependenciy between publisher and subscriber (or 
+  producer consumer) because they will have to be matched scale and speed 
+  wise.
+
+* May want to read events more than once
+
+* EventHubs and Kafka chose not to use HTTP
+
+* Typical message queues - every message that comes in, you acknowledge when 
+  it's been read
+* With EH you don't acknowledge individual messages, it's a time retention 
+  buffer
+* Replication between regions with ordering consistency and low latency is 
+  very difficult (laws of physics)
+* Load balancing in Kafka is manual, in EH it is included
+* Kafka uses a proprietary protocol, EH uses AMQP
+* HTTP limits what you can do with flow control and retransmission - these 
+  shortcomings are bad when you get to high scale system.
+* AMQP is an ISO, IEC, OASIS standard
+    - Even though it can be a difficult protocol to undetand, the flow control 
+      system is excellent.  It is a credit based system
+* EventHubs was always designed to be a sub-second system wheras Kinesis was 
+  not
+* Kinesis, pay hourly rate per shard
+* Google Cloud Pub-Sub - Kind of like EH, kind of like ServiceBus.  Each of 
+  the big players has taken a slightly different approach to this challenge.
+* Pub-Sub allows many many many subscribers.  EH is less about subscribers but 
+  more about throughput.
+* Azure is not Windows specific
+* Polyglot cloud started with SaaS
+* Microsoft is not trying to run the car business and the television business, 
+  we are trying to put a platform in place that people on those industries can 
+  run their platforms on.  Building a scalable highly available platform is 
+  very challenging.  If we can do a little bit to alleviate the cost and pain 
+  of that then we will rapidly increase the seped at which innovation happens 
+  on top of that platform.
+* The people on those industries are the ones who will drive innovation.  
+  Until we make it easy for them to do that they have to make very risky big 
+  bets.
 
