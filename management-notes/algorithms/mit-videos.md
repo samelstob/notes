@@ -1,5 +1,15 @@
 digraph
 
+# 6.006
+
+* Efficient procedures for solving large problems.
+* Scalability
+* Classic data structures
+* Real implementations in Python
+
+"By fun I don't mean easy, I mean challenging and worthwhile so at the end of
+it you feel like you have learnt something"
+
 # Peak Finding
 
 * O - upper bound (worst case)
@@ -9,7 +19,33 @@ digraph
 * Local peak - surrounding by numbers which are smaller or equal
 * 1d peak finding - binary search
 
+What is the recurrence relation?
+
+  T(n) = T(n/2) + Θ(1)
+
+Base case
+
+  T(1) = Θ(1)
+
+Complexity
+
+  Θ(log₂n)
+
+This is the difference between 2^n and n
+
 ## 2d peak finding
+
+1. Greedy ascent algorithm - Θ(mn) complexity
+
+i.e. it's possible to touch every element
+
+2. Try to jam binary search into 2d version
+
+Find a 1D peak on column, then use that column to find one peak on row
+
+This algorithm is incorrect.  A 2D peak may not exist on row i
+
+3. 
 
 * Pick middle column
 * Find 1d peak

@@ -13,7 +13,7 @@ He mentioned you still need to limit the time range - example given was 2
 months "haven't found a solution that's cheap where you can literally query 
 the entire collection at once when you're talking about 150B docs"
 
-Elasticsearch verseus Database
+Elasticsearch versus Database
 
 Comes from the world of information retrieval (finding data, describing data) 
 versus databases
@@ -24,7 +24,7 @@ Backups
 
 Adding a new field - have to reindex the entire collection!
 
-# Real time analytics with Solr (Yanik 
+# Real time analytics with Solr (Yanik)
 
 * 
 

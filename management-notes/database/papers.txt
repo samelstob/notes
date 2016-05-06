@@ -9,18 +9,19 @@ JSON can be viewed in one of three ways
 3. As a mechanism for schema on read
 
 # What Goes Around Comes Around
+
 Michael Stonebraker
 Joey Hellerstein
 
 ## Introduction
 
-We present data model proposals in nice historical ephocs
+We present data model proposals in nine historical ephocs
 
-1. Hierarhical (IMS): late 60's and 70's
+1. Hierarchical (IMS): late 60's and 70's
 2. Directed graph (CODASYL): 70's
 3. Relational: 70's, early 80's
 4. Entity-relationship: 70's
-5. Extneded Relational: 80's
+5. Extended Relational: 80's
 6. Semantic: late 70's and 80's
 7. Object-oriented: 80's early 90's
 8. Object-relational: 80's and early 90's
@@ -42,48 +43,282 @@ than the root) has a unique parent record type.
 * Lesson 1: Physical and logical data independence are highly desirable
 
 The ability of a data base application to continue to run, regardless of what 
-tuning is performed at the physical level will be calleed phyiscal data 
+tuning is performed at the physical level will be called physical data 
 independence.
 
-* LEsson 2: Tree structured data models are very restrictive
+* Lesson 2: Tree structured data models are very restrictive
 
-* Lesson 3: It is a challenge to provide sophisitcated logical reorganizations 
+i) Data may be duplicated: e.g. Supplier->Part - Parts are duplicated for 
+every supplier
+ii) Every record is forced to have a parent record.  e.g. Part->Supplier - it 
+is impossible to have a supplier that suppliers no parts
+
+* Lesson 3: It is a challenge to provide sophisticated logical reorganizations 
   of tree structured data
+
 * Lesson 4: A record-at-a-time user interface force the programmer to do 
   manual query optimization, and this is often hard
 
 ## III CODASYL Era
 
+In 1969 the CODASYL (Committee on Data Systems Languages) released their first 
+report.  CODASYL was an ad hoc committee that championed a directed graph data 
+model along with a record-at-a-time data manipulation language.
 
+This model organised a collection of record types, each with keys, into a 
+directed graph rather than a tree.  Hence a given record can have multiple 
+parents rather than a single one as in IMS.
 
+The direct graph approach solves many of the problems of the hierarchical data 
+model of IMS.  For example it is now possible to have e.g. a supplier that 
+supplies no parts.
 
-16. Schema-later is probably a niche market
+There are still situations that are hard to model in IMS.  Relationships are 
+two-way.  A three-way relationship e.g. bridg
 
-e.g. Four classes of applications
+The CODASYSL proposal provided essentially no physical data independence.  For 
+example if the key of a record is changed (and hence the hash storage).  With 
+regard to logical data independence, CODASYSL proposed the notioin of a 
+logical data base, which is constrained to be a subset of the reocrd types and 
+set types in a physical data base.
 
-i) Rigidly structured data (most business applications) e.g. payroll
-ii) Rigidily structured data with some text fields e.g. employee records
-iii) Semi-structured data
-iv) Text e.g. web
+* Lesson 5: Directed graphs are more flexible than hierarchies but more 
+  complex
 
-There are not that many applications in class iii
+The CODASYSL proposal trades increased complexity for the possibility of 
+easily representing non-hierarhical data.  CODASYSL offers poorer logical and 
+physical data independence than IMS.
 
-17. XQuery is pretty much OR SQL with a different syntax
+* Lession 6: Loading and recovering directed graphs is more complex than 
+  hierarchies
 
-18. XML will not solve the semantic heterogeneity either inside or outside the 
-    enterprise
+In CODASYSL all the data was typicaly in one large network which had to be 
+bulk-loaded all at once.  If a CODASYSL data base became corrupted, it was 
+necessary to reload all of it from a dump.
 
-Semantic Heterogeneity e.g.
+A CODASYL load program tended to be complex because large numbers of records 
+had to be assembled into sets, adn this usually entailed many disk seeks.  As 
+such, it was usually important to think carefully about the load algorithm to 
+optmize performance.
 
-i) <salary> without a schema this could mean salary in USD before tax or 
-salary in GBP after tax
+## IV Relational Era
 
-ii) <colour> red versus maroon
+Ted Codd proposed his relational model in 1970.  In a conversation with him 
+yeears later, he indicated that the driver for his research was the fact that 
+IMS programmers were spending large amounts of time doing maintenance on IMS 
+applications, when logical or physical changes occurred.  Hence, he was 
+focused on providing better data independence.
 
-Semantic heterogeneity has been with enterprises for a very long time.  They 
-spend vast sums on warehouse projects to design standard schemas and then 
-convert operational data to this standard.
+His proposal was threefold:
 
-## XI Full Circle
+i) Store the data in a simple data structure (tables)
+ii) Access it through a high level set-at-a-time DML
+iv) No need for a physical storage proposal
 
+The relational model is flexible enough to represent almost anythng.  Hence, 
+the existence dependencies that plauged IMS can be easily handled e.g. a 
+supplier with no parts.  Three way relationships that were difficult in 
+CODASYSL are easily represnted.
 
+Codd made several (increasingly sophisiticated) relational model proposals 
+over the years.  His early DML proposals were the relational calculus and the 
+relational algebra.  His DML proposals were rigorous and formal, but not 
+necessary for mere mortals to understand.
+
+Codd's proposal immediately touched off "the great debate" which lasted for a 
+good part of the 1970's.
+
+Tedd Codd and followers (mostly researchers and academics):
+
+a) Nothing as complex as CODASYL can possibly be a good idea
+b) CODASYSL does not provide acceptable data independence
+c) Record-at-a-time programming is too hard to optimize
+d) CODASYL and IMS are not flexible enough to easily represnt common 
+situations (e.g marriage ceremonies)
+
+Charlie Bachman and followers (mostly DBMS practicioners):
+
+a) COBOL programmers cannot possibly understand the new-fangled realtional 
+languages
+b) It is impossible to implement the relational model efficiently
+c) CODASYSL can represent tables, so what's the big deal?
+
+In the next couple of years:
+
+Relational advocates:
+
+a) Relational calculus and algebra are not user friendly - SQL and QUEL are 
+more user friendly
+b) System R and INGRES provie that efficient implementations of Codd's ideas 
+are possible.  Moreover, query optimizers can be built that are competitive 
+with all but the best programmers at constructing query plans.
+c) 
+
+CODASYL
+
+Dec
+
+IMS and CODASYSL were written for Mainframe systems such as IBM and were part 
+of the batch processing era.  e.g. IDMS (CODASYSL) were written in IBM 
+assembly and not easily portable.
+
+Mini-computers came along bringing interactive computing.  The early relation 
+systems had the VAX market to themselves.  Serious data processing was still 
+done on mainframes in IMS or CODASYL.
+
+In 1984 IBM created a relational database DB/2 which used SQL.  IBM's adoption 
+of SQL and the relational model was the death of IMS and CODASYL.  Other 
+(possibly better) query langueags, such as QUEL, were immediately dead.
+
+Note: IBM attempted to provide a relational front end on top of IMS.  
+Unfortunately, it provied too hard to implement SQL on top of the IMS notion 
+of logical data bases, because of semantic issues.
+
+a) the success of the VAX
+b) the non-pportability of CODASYSL engines
+c) the complexity of the IMS logical data bases
+
+* Lesson 7: Set-a-time languages are good, regardless of the data model, since 
+  they offer much improved physical data independence.
+
+* Lesson 8: Logical data independence is easier with a simple data model than 
+  with a complex one
+
+* Lesson 9: Technical debates are usually settled by the elephants of the 
+  marketplace, and often for reasons that have little to do with technology
+
+* Lesson 10: Query optimizers can beat all but the best record-at-a-time DBMS 
+  application programmers
+
+## V The Entity-Relationship Era
+
+In the mid 1970's Peter Chen proposed the ER data model as an alternative to 
+the relational, CODASYSL and hierarchical data models.
+
+The E-R model never gained acceptance as the underlying data model taht is 
+implemented by a DBMS.  However, it has been successfuly in data bas schema 
+design.
+
+Chen's papers contained a methodology for constructing an initial E-R diagram.  
+in adition, it was straightforward to convert an E-R diagram into a collection 
+of tables in third normal form.
+
+* Lesson 11: Functional dependencies are too difficult for mere mortals to 
+  undertsand.  Another reason for KISS
+
+## VI R++ Era
+
+Beginning in the early 1980's a sizable collection of papers appeared:
+
+i) Consider an application, call it X
+ii) Try to implement X on a relational DBMS
+iii) Show why queries are difficult or why poor performance is observed
+iv) Add a new "feature" to the relational model to correct the problem
+
+Many X's were investigated including mechanical CAD, VLSI CAD, text management, 
+time and computer graphics.
+
+Gem was one such paper that offered extensions.
+
+The problem with extensions of this sort is that while they allowed easier 
+query formulation than was available in the conventional relational model, the 
+offered very little performance improvement.
+
+In the early 1980's the relational vendors were singularly focused on 
+improving transaction performance and scalability of their systems so that 
+they could be used for the large scale business data processing applications.
+
+* Lesson 12: Unless there is a big performance or functionality advantage, new 
+  constructs will go nowhere
+
+## VII The Semantic Data Model Era
+
+* Another school of thought suggested the relational data model is 
+  "semantically impoversihed", i.e. incapable of easily expressing a class of 
+  data of interest.  Hence, there is a need for a "post-relational" data 
+  model.
+* Post-relational data models were typically called semantic data models.
+* SDM from Hammer and McLeod is arguably the more elaborate semantic data 
+  model.
+* "Most semantic data models were very complex, and were generally paper 
+  proposals.  Several years after SDM was defined, Univac explored an 
+  implementation of Hammer and McLeod's ideas.  However, they quickly 
+  discovered that SQL was an intergalatic satndard, and their incompatable 
+  system was not very successful in the marketplace."
+* "In our opinion, SDMs had same problems as R+:"
+    - Lot of machinary that was easy to simulate on relational systems
+    - Established vendors were focussed on transaction processing performance
+* Semantic Data models had little long term influence.
+
+## VIII OO Era
+
+* "Beginning in the mid 1980's there was a "tidal wave" of interest in OODB.  
+  Basically, this community pointed to an "impedance mismatch" between 
+  relational data bases and languages like `C++` "
+* It would seem cleaner to integrate DBMS into a persistent programming 
+  language i.e. one where the variables in the language could represent 
+  disk-based data as constructs.
+    - Several prototype persistent languages were developed in the late 1970's 
+      including Pascal-R, Rigel, and a language embedding PL/1.
+* "Programming language experts have consistently refused to focus on I/O in 
+  general and DBMS functionality in particular."
+* mid 80's - resurgance of interest in persistent programming languages: OODB 
+  - mainly persistent `C++`.
+    - Garden, Exodus, Ontologic, Object Design, Versant
+    - General form was support C++ as a data model: any C++ structure could be 
+      persisted.  Extend C++ with relationships.
+* OODB targets engineering CAD
+* Loader would "swizzel" disk-based representation into a memory C++ object.
+* Reqs:
+    - No query language
+    - No transaction management.  This market is largely one-user-at-a-time 
+      processing large engineering objects.  Versioning would be nice.
+    - Run-time had to competitive with convential C++ and a customer loader.
+* Market was niche.  Most OODB vendors have failed or repositioned.
+    - Absense of leveage: avoid writing a load/unload is not a big money 
+      feature
+    - No standards
+    - Relink if anything changed
+    - Tied to a single language
+
+## Lesson 13: Packages will not sell to users unless they are in "major pain"
+
+## IX The Object-Relational Era
+
+* GIS doesn't fit relational well
+    - B-tree's are one dimensional: awful performance for GIS
+    - SImple GIS queries are difficult to epxress in SQL 
+    - Need Quad trees or R-trees
+* Need to add custom types, operators, functions, access methods
+* UDF - User defined functions
+    - Postgres figured out the mechanisms required to support this 
+      extensibility
+
+* Stored procedures
+    - Sybase pioneered.  Idea to offer high performance on TPC-B by reducing 
+      roudn trips
+    - To go fast on standard benchmarks such as TPC-B all vendors implemented 
+      stored procedures.
+* Postgres UDTs and UDFs allow code to be written in a conventional 
+  programming language and be called in hte mideel of processing convential 
+  SQL queries
+
+Illustra + Informix
+
+a) Inside every OR application, there is a transaction processing 
+sub-application.
+b) 
+
+* "OR technology is gradually finding market acceptance.  It is more effective 
+  to implement data mining algorithms as UDFs: adopted by Redbrik and Oracl.  
+  Move processing to teh data.  OR technology is also being used to support 
+  XML processing"
+* Absence of standards.  Most vendors support Java, Microsoft does not.
+
+## Lesson 14: The major benefits of OR is two-fold: putting code in the data 
+base (and thereby bluring the distinction between code and data) and a general 
+purpose extension mechanism that allows OR DBMs to quickly respond to market 
+requirements.
+
+## Lesson 15: Widespread adoption of new technology requires either standards 
+and/or an elephant pushing hard.

@@ -123,6 +123,48 @@ In the case that a is larger than b, we choose to look in the left half
 
 "Homework question: Argue that any array will always have a peak"
 
+For divide and conquer to work correctly, each subproblem must be an instance 
+of the larger problem
+
+In our case
+
+    a b c d e
+
+The end points a and e are special in that only one half needs to be checked.
+
+This rule means that the divide and conque step correctly creates subproblems.
+
+    a b c d e f g h i
+
+If d > e then the sub problem a..d is an instance of the larger problem 
+
+Argue that any array will always have a peak
+
+    a       a is a peak
+
+    a b     2 = higher
+            1 = same
+            0 = lower than element to left
+
+    1       a
+
+    1 0     a
+    1 1     a b
+    1 2     b
+
+For an array not to have a peak, every element must be lower than it's left or 
+right neighbours
+
+    1 0 0 0 0 0 0 - first element is a peak
+
+    2 2 2 2 2 2 2 - last element is a peak
+
+    1 1 1 1 1 1 1 - every element is a peak
+
+Because of the rule that end is a peak if it is not lower than it's only 
+neightbour, every array has a peak.
+
+
 What is the conclusion?
 
 1d PoP isn't a very interesting problem

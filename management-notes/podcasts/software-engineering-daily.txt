@@ -164,9 +164,43 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
   we are trying to put a platform in place that people on those industries can 
   run their platforms on.  Building a scalable highly available platform is 
   very challenging.  If we can do a little bit to alleviate the cost and pain 
-  of that then we will rapidly increase the seped at which innovation happens 
+  of that then we will rapidly increase the speed at which innovation happens 
   on top of that platform.
 * The people on those industries are the ones who will drive innovation.  
   Until we make it easy for them to do that they have to make very risky big 
   bets.
+
+# 2016/01/08 Language Design with Brian Kernighan
+
+* AWK - still widely used - core unix tool
+* 50 years - Forton, COBOL, BASIC
+* Java - strongly hyped
+* Co-routines
+* "OS pushing it - not sure about memory management, but if I were going to 
+  write a compiler I'd think pretty seriously about Go"
+* "It's hard to write books and it's hard to learn a language.  It takes a 
+  long time to internalise a language and play it back in a form that will be 
+  useful for another programmer."
+* Writing a book about a programming language "Difficult to find linear path 
+  through something that is not intrinsically linear".
+* Getting a good collection of examples that are realistic, big enough to be 
+  interesting (not just syntax) is tough
+* Plan 9 - attempt to take lessons learned in Unix and make something 
+  cleaner, better, more elegant
+    - Pushed idea of filesystem as unifying model: Network connections, shell 
+      environment variables - environment is a directory, shell variables were 
+      files, windows system - various windows were files
+    - Portability - run code without any change on different architectures
+    - Unicode - UTF-8 - Invented by Ken Thomson and Rob Pike
+* Plan 9 wasn't going to make your life X10 better
+* Plan 9 didn't make it easy if you don't do it their way e.g. didn't support 
+  stdio
+* Linear pipelines (Unix) work well for certain kinds of tasks but not others
+* K&R
+    - 1973 - first version of C
+    - 1978 - K&R book
+    - Tutorial I had written formed first chapter
+    - Often computer science ends up in whichever department had the first 
+      computer
+* MIght be a level of literacy that everyone will have
 
