@@ -128,7 +128,7 @@ necessary for mere mortals to understand.
 Codd's proposal immediately touched off "the great debate" which lasted for a 
 good part of the 1970's.
 
-Tedd Codd and followers (mostly researchers and academics):
+Ted Codd and followers (mostly researchers and academics):
 
 a) Nothing as complex as CODASYL can possibly be a good idea
 b) CODASYL does not provide acceptable data independence
@@ -281,7 +281,7 @@ they could be used for the large scale business data processing applications.
     - Relink if anything changed
     - Tied to a single language
 
-## Lesson 13: Packages will not sell to users unless they are in "major pain"
+* Lesson 13: Packages will not sell to users unless they are in "major pain"
 
 ## IX The Object-Relational Era
 
@@ -315,10 +315,98 @@ b)
   XML processing"
 * Absence of standards.  Most vendors support Java, Microsoft does not.
 
-## Lesson 14: The major benefits of OR is two-fold: putting code in the data 
-base (and thereby blurring the distinction between code and data) and a 
-general purpose extension mechanism that allows OR DBMS to quickly respond to 
-market requirements.
+* Lesson 14: The major benefits of OR is two-fold: putting code in the data
+  base (and thereby blurring the distinction between code and data) and a
+  general purpose extension mechanism that allows OR DBMS to quickly respond to
+  market requirements.
 
-## Lesson 15: Widespread adoption of new technology requires either standards 
-and/or an elephant pushing hard.
+* Lesson 15: Widespread adoption of new technology requires either standards
+  and/or an elephant pushing hard.
+
+## X Semi-Structured Data
+
+### 10.1 Schema Later
+
+* Schema Later
+  * Really schema later
+  * Easy schema evolution: A schema exists in advance, but it should be
+    trivial to evolve the schema as the meaning of the data changes.
+* Really schema Later
+  - Without a self-describing format, a record is merely "a bucket of bits"
+
+* Semantic heterogeneity: where information on a common object does not
+  conform to a common representation
+  - No structure on which to base indexing decisions and query execution
+    strategies
+
+* "We present the following scheme that classifies applications into four
+  buckets"
+  i) Ones with rigidly structured data
+  ii) Ones with rigidly structured data with some text fields
+  iii) Ones with semi structured data
+  iv) Ones with text
+
+i) Essentially all data on which business processes must operate e.g. payroll
+data base
+ii) e.g. Personnel data
+iii) e.g. entered as text, then parsed to find information of interest
+iv) Pure text, IR (schema not at all)
+
+* "Schema-later proposals deal only with the third class of data in our
+  classification system"
+
+  - Arguable since this was written, system and application logs are the
+    killer use case for schema later (although many logs fit into i) or ii)
+
+* "Semantic heterogeneity has been with enterprises for a very long time.
+  They  spend vast sums on warehouse projects to design standard schemas and
+then convert operational data to this standard."
+
+## 10.1.2 Schema Evolution
+
+* "Current relational data bases have fairly primitive and rigid facilities for
+  schema evolution." e.g. ALTER TABLE.  Oracle has online redefinition but
+I've never investigated this.
+
+* It would be nice if ALTER TABLE style schema changes was a background
+  operation (or was not needed i.e. new data uses new schema)
+
+* Data lineage in e.g. scientific data base community.  Interesting that
+  Pachyderm File System deals with this to some degree (a decade later it is
+still an unsolved problem).
+
+## 10.2 XML Data Model
+
+* "DTDs and XML Schema were intended to deal with the structure of formatted
+  documents (and hence the word "document" in DTDs).  As a result they look
+like a markup lagnuage, in particular a subset of SGML... As a document
+specification system, we have no quarrel with these standards... As a data
+model for structured ddata we believe both stadards are seriously flawed."
+
+* "To a first approximation, these standards have everything that was ever
+  specified in any previous data model proposal.  In addition, they contain
+additional features that are complex enough, taht nobody in the DBMS community
+has ever seriously proposed them in a data model."
+
+1) XML records can be hierarchical, as in IMS
+2) XML reccords can have "links" (references to) other records, as in
+CODASYL, GEM and SDM
+3) XML records can have set-based attributes, as in SDM
+4) XML records can inherit from other records in several ways, as in SDM
+
+"XMLSchema has several features which are well known in the DBMS community but
+never attempted in previous data models because of complexity.  One xample is
+*union types*, that is, an attribute in a record can be of one of a set of
+possible types."
+
+* SE: What happened to XMLSchema?
+
+## 10.3 Summary
+
+* XML will be a popular "on the wire" format for data movement across a
+  network: XML goes through firewalls, and other formats do not
+  * Since there is always a firewall between the machines of any two
+    enterprises, it follows that cross-enterprise data movement will use XML
+* "RPCs that go through firewalls are much more useful than ones that don't.
+  Hence, SOAP will dominate other RPC proposals"
+* "W
