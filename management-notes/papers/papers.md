@@ -154,7 +154,7 @@ load when there is less traffic."
 
 ### 5.3 Consistent Hashing
 
-* "Magleve hashing provides almost perfect load balancing no matter what the
+* "Maglev hashing provides almost perfect load balancing no matter what the
   table size is.  When table size is 65537 Karger and Rendezvous require
 backends to be overprovisioned by 29.7% amd 49.5% respectively.  The numbers
 drop to 10.3% and 12.3% as the table size grows to 655373.

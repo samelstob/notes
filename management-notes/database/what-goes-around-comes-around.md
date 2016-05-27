@@ -406,7 +406,58 @@ possible types."
 * XML will be a popular "on the wire" format for data movement across a
   network: XML goes through firewalls, and other formats do not
   * Since there is always a firewall between the machines of any two
-    enterprises, it follows that cross-enterprise data movement will use XML
+    enterprises, it follows that cross-enterprise data movement will use XML.
 * "RPCs that go through firewalls are much more useful than ones that don't.
   Hence, SOAP will dominate other RPC proposals"
-* "W
+* "It is possible that native XML DBMSs will become popular, but we doubt it.
+  We expect native XML DBMSs to be a niche market."
+* "Consider now XQuery.  A (sane) subset is readily mappable to the OR SQL
+  systems of several of the vendors."
+* "XML is sometimes marketed as the solution to the semantic heterogeneity
+  problem.  Nothing could be further from the truth.  Just because two people
+tag a data element as a salary does not mean that the two data elements are
+comparable.  One could be salary after taxes in French Francs including a
+lunch allowance, while the other could be salary before taxes in US dollar.
+Furthermore, if you call them "rubber gloves" and I call them "latex hand
+protectors" then XML will be useless in deciding that they are the same
+concept.  Hence, the role of XML will be limited to providing the vocabulary
+in which common schemas can be constructed"
+* "We believe that cross-enterprise data sharing using common schemas will be
+  slow in coming, because semantic heterogeneity issues are so difficult to
+resolve. We believe that cross-enterprise information sharing willbe limited
+to:
+
+1. Enterprises that have high economic value in co-operating.  After all, the
+   airlines have been sharing data across disparate reservation systems for
+years.
+
+2. Applications that are semantically simple (such as e-mail) where the main
+   data type is text and there are no complex semantic mappings involved.
+
+3. Applications where there is an "elephant".  Enterprises like WalMart and
+   Dell have little difficulty in sharing data with their suppliers.  They
+simply say "if you want to sell to me; here is how you will interact with my
+information systems"
+
+"We claim that technological advances keep changing the rules.  For example,
+it is clear that the micro-sensor technology coming to the market in the next
+few years will have a huge impact on system software, and we expect DBMSs and
+their itnerfaces to be affected in some (yet to be figured out) way."
+
+"In such an ever changing world, it is crucial that a DBMS be very adaptable,
+so it can deal with whatever the next "big ting" is.  OR DBMSs have that
+characteristic; native XML DBMSs do not."
+
+* Lesson 16: Schema-later is probably a niche market
+
+* Lesson 17: XQuery is pretty much OR SQL with a different sysntax
+
+* Lesson 18: XML will not solve the semantic heterogeneity either inside or
+  outside the enterprise
+
+## XI Full Circle
+
+* "If native XML DBMSs gain traction, then customers will have problems with
+  logical data independence and complexity"
+
+* "We see few new data model ideas.  
