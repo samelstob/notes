@@ -204,3 +204,51 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
       computer
 * MIght be a level of literacy that everyone will have
 
+# Origin of Devops with Johan and Damon from DevOps Cafe 2016/08/31
+
+Damon: Fast talking!, John medium
+
+* Damon "It's a cultural-professional movement.  It's not a specific 
+  methodology or set of tools.  It's a concept that we are all part of the 
+  value stream.  Ideas turned into running features in customer facing 
+  environments.  Bottlenecks, inefficiencies, risk - things that get in the way 
+  of us delivering quicker and more reliably.  Devops is about identifying 
+  what those tings are, talking about those problems, figuring them out 
+  together, and going and solving them so people can deliver software and 
+  services faster and more reliably."
+* John "Directly lineage to lean.  All the things that came out of 
+  manufacturing - flow and delivery maps to lean."
+* Damon "Devops is not about the technology - it's about the business - it's 
+  about solving the problems that we are here to solve - giving the customer 
+  what they want, when they want it, at the lowest cost possible"
+* History of Devops - Patric Dubois - wanted to do every kind of job.  
+  Velocity 2009 - "Dev and Ops 10 + deploys a day at Flikr".  Patrick put 
+  together an event - DevOpsDays.  Conversation continued as #devops
+* John "A lot of us who had been in operations for years we felt like we had 
+  not really been helping anybody."
+* Eric Ries - Lean startup.
+* Convergence called devops
+* Less wasted effort, less wasted time, less stuff getting in the way.  
+  Picture the delivery process as a factory - a supply chain.  What are the 
+  things that get in the way, what are the things that slow us down, cause 
+  re-work to come back at us, what are the things that cause long delays, what 
+  causes us to undermine oursleves and cause instability.  Stop doing them.
+* "Agile got reduced to scrum and missed the point in the first place.  If all 
+  you do is scrum and read the agile manifesto you would think they are two 
+  different things.  Scrum became a specific thing, a project management 
+  methodology.  It got so focussed on that particular domain that it missed 
+  the end to end picture.
+* "Most business are not in the business of writing software.  If you are not 
+  looking at the end to end picture you may not have the best service delivery 
+  capabilities.
+* "You see a lot of big organisations stuck in water-scrum-fall.  massive 
+  batch planning up front, agile dev, then batched up to monthly or quaerterly 
+  releases to operations.  Step back - you are not agile as an organisation.  
+  Still back in the old waterfall - we just develop the software differently."
+* "Has anything changed for the customer, no not really"
+* "Trying to eliminate waste.  Trying to see the full value stream."
+* Most important design patterns
+* "What would it take to get a single idea (a single line of code) to get 
+  through the standard process"
+
+Jez Humble - The Lean Enterprise

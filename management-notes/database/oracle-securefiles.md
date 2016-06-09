@@ -1,25 +1,26 @@
-# Oracle SecureFiles: Prepared for the Digital Deluge
+ Oracle SecureFiles: Prepared for the Digital Deluge
 
 * vldb 2009
 
-* Filesystems have generall been preferred for large objects
-* Filesystems don't have database features like transactional atomicity, consistency, durability, queriability
+* Filesystems have generally been preferred for large objects
+* Filesystems don't have database features like transactional atomicity,
+  consistency, durability, query-ability
 * Studies from 2005, 2006 suggested 256kB has the break even point for moving
   to a filesystem
 * Primary focus of paper is on scalability on I/O bound filesystem like
   operations
 * 2008 secure files paper
-* A SecureFiles object uses CoW semantics i.e. Updates and overwrites are never in place
+* A SecureFiles object uses CoW semantics i.e. Updates and overwrites are
+  never in place
 * Write Gather Cache (WGC)
   - Server processes allocate buffer from process private memory pools (sounds
     like PGA)
   - WGC Buffer writes
   - Write performance throughputs scale up with the number of server processes
-  running concurrently - Yes I think we see that with JLL
+    running concurrently - Yes I think we see that with JLL
 * Compression 
   - Compression automatically turned off for objects that don't compress well
-* De-dupe
-    the entire object
+* De-dupe the entire object
   - Hashes are stored in an Oracle index
   - Byte-by-byte comparison if hashes match
 * Free Space Management
@@ -66,7 +67,6 @@
   - To BLOB or not to BLOB
   - The problem with unstructured data
   - Oracle SecureFiles system
-  - :w
 * Thoughts
   - We don't make use of transactional capabilities of SecureFiles
   - Small files (5-14 kB) performance was not great - hopefully extended data
@@ -74,18 +74,19 @@
   - Ingest performance of large files looks good
   - Concurrency of ingest looks good - this is consistent with our experience
   - Not sure how temporary LOBs are handled
-  - Lots of SF complexity is about ACID and modifications e.g. CoW, CR, space management
+  - Lots of SF complexity is about ACID and modifications e.g. CoW, CR, space
+    management
   - We don't actually make modifications
 
 insert first
   table 1 blah
   table 2 blah
 
-* Oracle SecureFIles System
+# Oracle SecureFiles System
   - Mukherjee, Aleti
   - vldb 200
 
-* Most journalling FS do not provide the recovry that one might expect from
+* Most journalling FS do not provide the recovery that one might expect from
   them
 * MSSQL and DB2 provide support for LOBs
 * LOBs are ANSI SQL data types BLOB, CLOB, NCLOB
@@ -97,8 +98,8 @@ insert first
 * BFILE - many limitations, slower than accessing file directly
 * GFS, BigTable, ZFS - not much discussion
 * SecureFiles
-  - 100% backwrad compatab with LOB APIs
-  - Delta updates - 
+  - 100% backward compatible with LOB APIs
+  - Delta updates
   - Flashback archive
 * Stonebraker "Implementation of a specialised solution - 10X gain"
 * SecureFiles Object
@@ -121,7 +122,7 @@ of the first few chunks for the underlying data if sufficiently small
   -  
 * Architecture
   - Six major components
-  - Delta UPdate
+  - Delta Update
   - Write Gather Cache
   - Transformation Management
   - Inode Management
@@ -134,15 +135,15 @@ of the first few chunks for the underlying data if sufficiently small
   - Buffer data before writing
 * Transformation Management
   - Compression, encryption, de-dupe
-  - Compression is performed when bufferred contiguous data exceeds a
+  - Compression is performed when buffered contiguous data exceeds a
     configured boudnary threshold
   - Compression is performed piecewise such that efficient random access of
     large files is possible
 * Inode Management
-  - Inode managemenet layer is responsible for initiating on-disk storage and
+  - Inode management layer is responsible for initiating on-disk storage and
     access operations on SecureFile object buffers being communicated by the
 upper layers in the SF architecture
-  - Requests free space from the Space Managment Layer
+  - Requests free space from the Space Management Layer
   - Inode Manager stores metadata either in row or the most current header of
     the SF object
   - Metadata includes start block address and length of a chunk as well as
@@ -162,11 +163,11 @@ efficiently
 * Transaction Atomicity
   - CoW for larger updates and overwrites
   - Small updates generate undo records 
-  - When a transaction aborts metadata and space managemetn metadata roll back
+  - When a transaction aborts metadata and space management metadata roll back
     using undo records.  As a result SecureFile object locators point to the
 previous image
   - Seems to say that nocache lobs do not need to log, but cache lobs do 
-* FLash
+* Flash
   - CoW fits well with flash
   
 
