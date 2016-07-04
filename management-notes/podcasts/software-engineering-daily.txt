@@ -118,21 +118,38 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
 
 # 2016/03/15 State of Programming with Jeff Atwood
 
+* "How do I build something that will look like a smart choice 10 years from 
+  now"
+* "Look at usage.  Look at what people have built using x or y"
 * 37 signals didn't think about deployment.  RoR didn't think about 
   deployment.  Docker allowed discourse to solve deployment problems.
     - "Went from being a support nightmare
 * "Ruby virtualised awfully - like 40% performance loss"
+* .NET "When you start has a huge impact on where you go" MS are so late to 
+  the Open Source party.
 * Stack Overflow SQL server licensing $0.5M licensing fees per year
 * SQL server "optimise for unknown" (don't use stats - sounds like RBO or 
   dynamic sampling)
 * "Linux is free if your time is worthless"
 * "Co-location is insanely cheap"
+* "Code is low on my list of problems"
+* Email is identity.  Open ID failed because people didn't understand a URL as 
+  an identity
+* Facebook versus Google "Don't listen to what they tell you, watch what they 
+  actually do"
+* "If you want to figure out if you really know your stuff, try to teach it 
+  somebody, then you will find very rapidly whether you really know your 
+  stuff"
+* "All we are really doing is pushing the boulder along so people can stand on 
+  our shoulders"
+* "The next billion users - diversity
+* "If everybody on your team knows every word of lord of the rings, it's not 
+  really a diverse team"
 
 # 2016/04/26 Azure Event Hubs and Kafka with Dan Rosanova
 
-* DOn't want a direct dependenciy between publisher and subscriber (or 
-  producer consumer) because they will have to be matched scale and speed 
-  wise.
+* Don't want a direct dependency between publisher and subscriber (or producer 
+  consumer) because they will have to be matched scale and speed wise.
 
 * May want to read events more than once
 
