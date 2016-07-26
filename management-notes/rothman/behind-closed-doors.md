@@ -1,8 +1,6 @@
-Behind Closed Doors
-===================
+# Behind Closed Doors
 
-Week Five - Discovering Lurking Problems
-----------------------------------------
+## Week Five - Discovering Lurking Problems
 
 * Not every problem is an individual problem.  Some problems are part of a
   system and can be solved only by a group of people.
@@ -40,4 +38,41 @@ time to do it, and the person attempts to do all the work anyway.
 
 ### Solving Problems as a Management Team
 
+Groups become teams when they realize they are interdependent, trust each
+other, and have shared goals.
 
+* Engage group creativity.  Prescribing solutions does not work.
+
+* Describe the problem.  Start by describing what the issue is and how it
+  affects members of the group to create a shared understanding of the problem
+
+* Collect data.  Before you jump to solutions, collect some data.  Data
+  collection doesn't have to be formal.  Look for quantitate and qualitative
+data.
+
+* Write it down.  Don't rely on memory.  Make the data visible.
+
+* Brainstorm possible solutions.  It's tempting to stop with the first
+  reasonable option that pops into your head.  Generating multiple options
+leads to a richer understanding of the problem and potential solutions.
+
+* Document the decision.
+
+* Look for areas where you can act.  Even when a full solution involves areas
+  outside your control, don't rely on others to start working on the issue.
+Look for areas where you can act within your own department.
+
+* Develop an action plan.  People don't implement solutions that don't have
+  action plans.  Plan the steps, assign people and dates, track progress (Who
+does what by when)
+
+## Week Six - Building Capability
+
+### Learning to Delegate
+
+* Giving up technical work is difficult for many technical people because
+  technical work fuels a sense of competence and satisfaction.  It's easier to
+know when technical work is complete than to know when management work is
+complete.
+
+* Consider delegating an investment
