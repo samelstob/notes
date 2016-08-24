@@ -8,10 +8,10 @@ JSON can be viewed in one of three ways
 
 3. As a mechanism for schema on read
 
-# What Goes Around Comes Around
-
+# What Goes Around Comes Around (2005)
 Michael Stonebraker
 Joey Hellerstein
+http://pages.cs.wisc.edu/~anhai/courses/764-sp07-anhai/datamodel.pdf
 
 ## Introduction
 
@@ -123,7 +123,7 @@ CODASYL are easily represented.
 Codd made several (increasingly sophisticated) relational model proposals 
 over the years.  His early DML proposals were the relational calculus and the 
 relational algebra.  His DML proposals were rigorous and formal, but not 
-necessary for mere mortals to understand.
+necessarily for mere mortals to understand.
 
 Codd's proposal immediately touched off "the great debate" which lasted for a 
 good part of the 1970's.
@@ -195,7 +195,7 @@ c) the complexity of the IMS logical data bases
 In the mid 1970's Peter Chen proposed the ER data model as an alternative to 
 the relational, CODASYL and hierarchical data models.
 
-The E-R model never gained acceptance as the underlying data model taht is 
+The E-R model never gained acceptance as the underlying data model that is 
 implemented by a DBMS.  However, it has been successfully in data base schema 
 design.
 
@@ -273,7 +273,7 @@ they could be used for the large scale business data processing applications.
     - No query language
     - No transaction management.  This market is largely one-user-at-a-time 
       processing large engineering objects.  Versioning would be nice.
-    - Run-time had to competitive with conventional C++ and a customer loader.
+    - Run-time had to competitive with conventional C++ and a custom loader.
 * Market was niche.  Most OODB vendors have failed or repositioned.
     - Absence of leverage: avoid writing a load/unload is not a big money 
       feature
@@ -297,8 +297,7 @@ they could be used for the large scale business data processing applications.
 * Stored procedures
     - Sybase pioneered.  Idea to offer high performance on TPC-B by reducing 
       round trips
-    - To go fast on standard benchmarks such as TPC-B all vendors implemented 
-      stored procedures.
+    - *To go fast on standard benchmarks such as TPC-B all vendors implemented stored procedures.*
 * Postgres UDTs and UDFs allow code to be written in a conventional 
   programming language and be called in the middle of processing conventional 
   SQL queries
@@ -329,7 +328,7 @@ b)
 
 * Schema Later
   * Really schema later
-  * Easy schema evolution: A schema exists in advance, but it should be
+  * *Easy schema evolution*: A schema exists in advance, but it should be
     trivial to evolve the schema as the meaning of the data changes.
 * Really schema Later
   - Without a self-describing format, a record is merely "a bucket of bits"
@@ -359,7 +358,7 @@ iv) Pure text, IR (schema not at all)
     killer use case for schema later (although many logs fit into i) or ii)
 
 * "Semantic heterogeneity has been with enterprises for a very long time.
-  They  spend vast sums on warehouse projects to design standard schemas and
+  They spend vast sums on warehouse projects to design standard schemas and
 then convert operational data to this standard."
 
 ## 10.1.2 Schema Evolution
@@ -379,23 +378,23 @@ still an unsolved problem).
 
 * "DTDs and XML Schema were intended to deal with the structure of formatted
   documents (and hence the word "document" in DTDs).  As a result they look
-like a markup lagnuage, in particular a subset of SGML... As a document
+like a markup language, in particular a subset of SGML... As a document
 specification system, we have no quarrel with these standards... As a data
-model for structured ddata we believe both stadards are seriously flawed."
+model for structured data we believe both standards are seriously flawed."
 
 * "To a first approximation, these standards have everything that was ever
   specified in any previous data model proposal.  In addition, they contain
-additional features that are complex enough, taht nobody in the DBMS community
+additional features that are complex enough, that nobody in the DBMS community
 has ever seriously proposed them in a data model."
 
 1) XML records can be hierarchical, as in IMS
-2) XML reccords can have "links" (references to) other records, as in
+2) XML records can have "links" (references to) other records, as in
 CODASYL, GEM and SDM
 3) XML records can have set-based attributes, as in SDM
 4) XML records can inherit from other records in several ways, as in SDM
 
 "XMLSchema has several features which are well known in the DBMS community but
-never attempted in previous data models because of complexity.  One xample is
+never attempted in previous data models because of complexity.  One example is
 *union types*, that is, an attribute in a record can be of one of a set of
 possible types."
 
@@ -404,7 +403,7 @@ possible types."
 ## 10.3 Summary
 
 * XML will be a popular "on the wire" format for data movement across a
-  network: XML goes through firewalls, and other formats do not
+  network: *XML goes through firewalls, and other formats do not*
   * Since there is always a firewall between the machines of any two
     enterprises, it follows that cross-enterprise data movement will use XML.
 * "RPCs that go through firewalls are much more useful than ones that don't.
@@ -424,7 +423,7 @@ concept.  Hence, the role of XML will be limited to providing the vocabulary
 in which common schemas can be constructed"
 * "We believe that cross-enterprise data sharing using common schemas will be
   slow in coming, because semantic heterogeneity issues are so difficult to
-resolve. We believe that cross-enterprise information sharing willbe limited
+resolve. We believe that cross-enterprise information sharing will be limited
 to:
 
 1. Enterprises that have high economic value in co-operating.  After all, the
@@ -442,7 +441,7 @@ information systems"
 "We claim that technological advances keep changing the rules.  For example,
 it is clear that the micro-sensor technology coming to the market in the next
 few years will have a huge impact on system software, and we expect DBMSs and
-their itnerfaces to be affected in some (yet to be figured out) way."
+their interfaces to be affected in some (yet to be figured out) way."
 
 "In such an ever changing world, it is crucial that a DBMS be very adaptable,
 so it can deal with whatever the next "big ting" is.  OR DBMSs have that
@@ -450,7 +449,7 @@ characteristic; native XML DBMSs do not."
 
 * Lesson 16: Schema-later is probably a niche market
 
-* Lesson 17: XQuery is pretty much OR SQL with a different sysntax
+* Lesson 17: XQuery is pretty much OR SQL with a different syntax
 
 * Lesson 18: XML will not solve the semantic heterogeneity either inside or
   outside the enterprise
