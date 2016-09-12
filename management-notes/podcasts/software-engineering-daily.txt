@@ -230,7 +230,7 @@ Damon: Fast talking!, John medium
   value stream.  Ideas turned into running features in customer facing 
   environments.  Bottlenecks, inefficiencies, risk - things that get in the way 
   of us delivering quicker and more reliably.  Devops is about identifying 
-  what those tings are, talking about those problems, figuring them out 
+  what those things are, talking about those problems, figuring them out 
   together, and going and solving them so people can deliver software and 
   services faster and more reliably."
 * John "Directly lineage to lean.  All the things that came out of 
@@ -249,7 +249,7 @@ Damon: Fast talking!, John medium
   Picture the delivery process as a factory - a supply chain.  What are the 
   things that get in the way, what are the things that slow us down, cause 
   re-work to come back at us, what are the things that cause long delays, what 
-  causes us to undermine oursleves and cause instability.  Stop doing them.
+  causes us to undermine ourselves and cause instability.  Stop doing them.
 * "Agile got reduced to scrum and missed the point in the first place.  If all 
   you do is scrum and read the agile manifesto you would think they are two 
   different things.  Scrum became a specific thing, a project management 
@@ -258,8 +258,8 @@ Damon: Fast talking!, John medium
 * "Most business are not in the business of writing software.  If you are not 
   looking at the end to end picture you may not have the best service delivery 
   capabilities.
-* "You see a lot of big organisations stuck in water-scrum-fall.  massive 
-  batch planning up front, agile dev, then batched up to monthly or quaerterly 
+* "You see a lot of big organisations stuck in water-scrum-fall.  Massive 
+  batch planning up front, agile dev, then batched up to monthly or quarterly 
   releases to operations.  Step back - you are not agile as an organisation.  
   Still back in the old waterfall - we just develop the software differently."
 * "Has anything changed for the customer, no not really"
@@ -268,4 +268,10 @@ Damon: Fast talking!, John medium
 * "What would it take to get a single idea (a single line of code) to get 
   through the standard process"
 
-Jez Humble - The Lean Enterprise
+# Distributed Tracing with Reshmi Krishna
+
+* Breaking an application into microservices creates a debugging challenge
+* Latency analysis across microservices - need to have a baseline
+* Span = a single call
+* Zipkin - open source tracing - collector, storage, query, web UI
+* 

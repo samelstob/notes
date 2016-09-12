@@ -70,3 +70,59 @@ information (metadata), membership information
 * Need to manage a logical and a physical schema for each table 
 * Partition tables by date - mostly daily
 * Correct data in Redshift, unload to S3, then reprocess into Parquet
+
+# ISM303: Migrating Your Enterprise Data Warehouse to Amazon Redshift
+
+* Multiple ways to get data in: S3, ETL, Kinesis Streaming, Direct Connect,
+  Import/Export tool (fedex), Snowball - send the data, Amazon Data Migration
+services, System integration partners
+* DS2 - HDD, DC1 - SSD 
+* Don't just lift and shift - think about what you want
+* EMR for less structured data
+* COPY command - highly parallel - if used correctly will scale with the size
+  of the cluster
+* UPSERT/MERGE not directly supported.  Need to DELETE then INSERT
+* COMPUPDATE - analyze data and recommend a compression type - a variety of
+  algorithms are available
+* PKs are not enforced but define keys for efficient query plans
+* Manifest JSON file for S3 - ensure load what you intend to
+
+## Boingo Wireless
+
+* Previously Oracle11gR2
+* Used SAP data services to ingest into Oracle ($55k/yr)
+* Business Objects front end
+* Were looking for low TCO
+* 15TB +2-3TB/yr
+* Evaluated Oracle Exadata, SAP HANA, AWS
+* Fully managed, no upfront CapEx
+* Cost: ETL, UI, migration
+* ETL: Evaluated Informatica and Talend as a service ($6.5k/yr)
+* Estimated needed 50DB servers - $48.5
+* 2 months to migrate
+* Dense storage $1k/yr
+* Dense compute $5.5k/yr
+* Cut down the data after starting - saved money!
+* Reserved instances
+* Replaced ETL tool with Python scripts
+* Monitor using cloud watch
+* AWS Trusted advisor - evaluates unused instances, security, etc.
+* Running multiple instances for test
+
+## Edmunds
+* Car info
+* 30 node Redshift cluster
+* 1/5th cost
+* Painfully slow queries after a few months
+  - Didn't design structure using best practices
+  - Didn't invest in real-time monitoring
+  - Need additional investment over what Redshift provides
+  - Monitor and trend everything
+* Some syntactical differences
+* Resizing - 2 days of downtime
+* Design tables - ensure sort key is correct e.g. timestamp, distribution key,
+  compression
+* Use single COPY command from S3
+* Vacuum - run after loading the data
+* Redshift utils 
+
