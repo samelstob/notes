@@ -56,10 +56,12 @@ updates for later reconciliation"
   people love the ACID properties and are distant to give them up.
 
 1. Little reason to forfeit C or A when the system is not partitioned
+
 2. Choice between C and A can occur many times within the same system at very
    fine granularity; subsystems can make different choices, the choice can
 change according to the operation or even the specific data or user involved
-3. CAP properties are not vinary
+
+3. CAP properties are not binary
   - Availability 0-100%
   - Even partition have nuances, including disagreement within the system
     about whether a partition exists
@@ -68,8 +70,8 @@ change according to the operation or even the specific data or user involved
 
 * Latency and partitions are deeply related.  The essences of CAP takes place
   during a timeout - the *partition decision*
-  C - Cancel the operation and thus decrease Availability
   A - Proceed with the operation and thus risk Consistency
+  C - Cancel the operation and thus decrease Availability
 
 Retrying communication e.g. via Paxos or 2PC just delays the decision.  At some
 point the program must make a decision - retrying indefinitely is choosing C
@@ -80,9 +82,9 @@ over A.
 * Nodes that detect a partition can enter a *partition mode*
 
 * Yahoo - PNUTS
-  - master copies are local - maintain remote copies asynchornously
+  - Master copies are local - maintain remote copies asynchornously
 * Facebook
-  - master copy in one location, updates go to master so users must read from
+  - Master copy in one location, updates go to master so users must read from
     master for e.g 20 seconds after an update until local copy is consistent
 
 ## Managing Partitions
@@ -90,20 +92,59 @@ over A.
 Challenging case for designers is to mitigate a partition's effects on C and A
 
 1. Detect the start of a (network) partition
-2. Enter an explicit *partition mode* that may limit some operations (A)
+2. Enter an explicit *partition mode* that may limit some operations (tradeoff A versus C)
 3. Initiate partition recovery when communication is restored (C)
   - a plan for all invariants that might be violated
 
 Partition mode:
-1. Limit some operations (A)
+1. Limit some operations (prohibit, delay or modify) (A)
 2. Record extra information about operations that will be helpful during
    partition recovery (C)
 
 ## Which Operations Should Proceed?
 
+* Decide whether to maintain invariant or risk violating it with the intent of
+  restoring it during recovery.
+  - Unique keys - duplicate keys easy to detect during recovery.  Easy to
+    restore assuming they can be merged.
 * Externalized events e.g. charging a credit card
   a. Record the intent and execute it after the recovery
+  - User interface challenge - communicate that tasks are in progress but not
+    complete
+* It is easier to analyze the impact of higher-level operations than just
+  reads and writes (e.g. add to kart, checkout)
+ 
+## Partition Recovery
 
+1 The state of both sides must become consistent
+2 There must be compensation for the mistakes made during partition mode
+
+* Using commutative operations is the closest approach to a general framework
+  for automatic state convergance.  The system concatenates logs, sorts them
+into some order, and then executes them.
+
+### CRDTs
+
+* Commutative REplicated Data Types
+  - A class of data structures that provable converge after a partition
+
+e.g. Two sets
+Added:    A B C D E F B
+Deleted:  D B
+Set: A C E F B
+
+This works if we can only delete an element that exists
+
+## Compenssating for mistakes
+
+Refunding a duplicate purpose (due to a network partition) is an example of taking a compensation action.
+
+Compensation is needed if a mistake is externalised e.g. airlines seats
+overbooked, balance goes overdrawn and may need human escalation
+
+### ATMs
+
+* Stand-in mode (partition mode) - modern ATMs bound the risk by limiting the net withdrawal
 
 
 ## CAP Confusion
@@ -115,16 +156,15 @@ Partition mode:
   - In Google, the primary partition usually resides within one datacentre;
     however Paxos is used on the wide area to ensure global consensus, as in
 Chubby and Megastore.
-* In pratice, most groups assume that a datacentre (single site) has no
+* In practice, most groups assume that a datacentre (single site) has no
   partitions and thus design for CA within a single site.
   - Although partitions are less likely they are possible.
   - Given high latency across WAN it is relatively common to forfeit perfect
     consistency for performance
 * A hidden cost of forfeiting C is the need to know the system's invariants.
-  - In a consistent system invariants tend to hold even when a designer does
-    not know what they are.
-  - A requires restoring invariants after a partition so designers must be
-    explciit about all the ivnariatns, which is both challenging and prone to
+  - *In a consistent system invariants tend to hold even when a designer does not know what they are*
+  - *A* requires restoring invariants after a partition so designers must be
+    explciit about all the invariants, which is both challenging and prone to
 error.
 
  
