@@ -145,6 +145,8 @@ overbooked, balance goes overdrawn and may need human escalation
 ### ATMs
 
 * Stand-in mode (partition mode) - modern ATMs bound the risk by limiting the net withdrawal
+* Check Kiting - withdraw money from lots of branches before they have a
+  chance to communicate
 
 
 ## CAP Confusion
