@@ -2,12 +2,12 @@
 
 ## What is Performance?
 
-* Performance is the time it takes computer software to perform whateve task 
+* Performance is the time it takes computer software to perform whatever task 
   you ask it to do
 
 Task = business unit of work
 Throughput is important
-Response Time is IMportant
+Response Time is Important
 
 ## 3. Response Time vs Throughput
 
@@ -19,7 +19,7 @@ Response time = task / time
 However, they are not reciprocals.  To know them both, you have to measure 
 them both.
 
-e.g. consider machine with 10 "lanes"
+e.g. Consider machine with 10 "lanes"
 
 # Thinking Clearly About Performance
 
@@ -74,38 +74,38 @@ When everyone is happy except for you, make sure your local stuff is in order
 before you go messing around with the global stuff that affects everyone else, 
 too.
 
-## Efficieny
+## Efficiency
 
 Efficiency is an inverse measure of waste.
 
 * The fastest way to do something is not do it at all
-* Is the apparant requirement really a legitimate requirement?
-* Improvements taht make your program more efficient can produce tremendous 
+* Is the apparent requirement really a legitimate requirement?
+* Improvements that make your program more efficient can produce tremendous 
   benefits for everybody else on the system.
 
 ## Load
 
-Load is competetion for a resource by concurrent task executions.
+Load is competition for a resource by concurrent task executions.
 
 Two types of waiting
 
 * Queueing Delay
-* Coherencey Delay
+* Coherence Delay
 
 ## Queueing
 
 Response Time = Queueing Time + Service Time
 
-Response time degrades hyperbolicaly
+Response time degrades hyperbolically
 
 Two performance goals:
 * Response Time
 * Throughput
 
-Mathematically, the knee, is where utilissation/response time is at a miniumum
+Mathematically, the knee, is where utilization/response time is at a minimum
 
 * Left of the knee, response time is stable and consistent
-* Right of the kneww, performance is unstable and problematic
+* Right of the knee, performance is unstable and problematic
 
 ## 16. Capacity Planning
 
@@ -142,7 +142,4 @@ You need to write your app so it's easy to fix performance in production
 "The software designer who integrates performance measurement into their 
 product is much more like to implement a fast application, and an app that 
 becomes faster over time"
-
-
-
 
