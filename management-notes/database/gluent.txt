@@ -1,0 +1,4 @@
+# InMemory
+
+* Can't we just cache the database in RAM
+* 
