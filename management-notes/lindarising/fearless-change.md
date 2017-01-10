@@ -154,3 +154,55 @@ messenger of a new idea.
   Encourage them to talk with you one-on-one to protect yourself from a verbal
 attack in public that can end up damaging your cause.
 
+# Bridge Builder
+
+Pair those who have accepted the new idea with those who have not
+
+* Some won't listen to even the most enthusiastic proponent if it's someone they don't know or trust
+
+* "Many veterans will not listen to a newcomer, no matter how knowledgable that person may be.  Veterans need to hear from one of their own, someone they trust.  People like people who are similar in opinion, personality, background, or lifestyle"
+
+* Match a skeptic with an adopter he knows and respects.  It may not be possible to convince a strong skeptic.  In this case, it may be just as important for the Bridge-Builder to allow the person's viewpoint to be heard by someone he respects.
+
+* It can take a lot of time and energy to find the right Bridge-Builder for every one, so you may want to reserve use of this pattern for only the key people.
+
+* Don't become discouraged if this pattern does not work for everyone.  The last to come around, the laggards, usually accpet an innovation only after most or all of their co-workers have adopted it.  It might be the best use of your limited resources to simply wait for them to come raound, rif they ever do, rather than putting a lot of effort into trying to persuade them.
+
+* Rember to say thanks to the Bridge-Builder
+
+* Make sure that the Bridge-Builder is someone who is truely convinced of the innovation and strong enough to work with a potentially argumentative skeptic.
+
+# Corridor Politics
+
+*Informally work on decision makers and key influencers before an important vote to make sure they fully understand the consequences of the decision.   Try to get the approval of anyone who can kill the new idea*
+
+*It's difficult to address the concerns of all decision makers when a new idea is raised in a large meeting*
+
+It's hard to change the decision of a group once it is made.  Yet, decision makers are not likely to agree with a new idea immediately.  They must first get the opportunity to voice their individual conerns and ask questions.  This is difficult ot do in a group meeting and much easier and more effective to do one-on-on.
+
+* Approach the decision maker gently by briefly explaining the issue and then asking if he has any questions.  Listen to his concerns.  Be clear about what you hope will happen.  Tell a story to make the issue real.  Don't distort the facts just to win the vote; that will come back to haunt you later.
+
+* Let each person know if a decision maker who is a manager or local guru has already given support.
+
+* Don't present the issue as controversial.  No naming, no blaming.
+* Don't use this pattern for personal issues.
+* Don't use this pattern to get around a powerful person.  That powerful person may become angry if his perception is that the issue is being steamrolled past him.
+
+* Know when to compromise.  Don't be a fanatic.  Making concessions during an interaction is an effective way to win an argument.
+
+* Build a relationship with the decision maker.
+
+* If you are short on time, your key contacts should be the fence sitters, those who are uncommitted and could vote either way.
+
+If the decision doesn't go your way, remember "No permanent friends, no permanent enemies"  If someone supports you, remember to listen when he has an issue that is important to him.
+
+This pattern creates one-on-one communication with decision makers.  It helps you provide information before a meeting to encourage a vote to go your way.
+
+## Risks
+
+* People you talk may expect a favor in the future.
+* Can be perceived as underhanded politics.  You want to be as aboveboard as possible.  Using this approach for selfish reasons is likely to backfire.  The pattern is most effective when it is driven by what is best for the community.
+
+# Dedicated Champion
+
+
