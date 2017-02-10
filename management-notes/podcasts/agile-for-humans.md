@@ -76,6 +76,9 @@ as software professionals.
   - It's not the centre of our job but it's an important secondary skill.  A
     true professional is going to try to develop some competence in both those
 primary skill areas and those secondary skill areas.
+  - Some technical people tend to use their necessary areas of expertise as
+    coding, designing testing.  I do think some of these other skills end up
+mattering or affecting peoples lives just as much or on some cases more.
 
 ## Competent estimation - budgeting context
 
@@ -89,14 +92,14 @@ also going to involve estimation of the cost
   - We don't live in a world where every idea is a good idea and we actually
     have the resoureces to do every idea that anybody ever comes up with.  We
 have to choose.  That's an important planning function of any business.
-  - Before the project even starts there is a need to comup with an estimate
+  - Before the project even starts there is a need to come up with an estimate
     for the project.  The business has a legitmate need to com eup with an
 estimate for the project.
 * This estimate does not need to involve individuals on the scrum team -
   that's the wrong kind of estimation practice too early in the project.
-* As the project gets
+  - The scrum team may not even exist at this point
 
-## Anchoring effect
+## Initial estimates and Anchoring effect
 
 * "An early estimate, no matter how poorly founded, becomes an anchor against
   which every estimate throughout the rest of the project gets compared"
@@ -105,8 +108,58 @@ estimate for the project.
     later we have a much better estimate.
   - Most large mature organisations have some kind of defined stage-gate
     process if it's used well can be supportive of effective estimation and
-an effective committemtn process
+an effective commitment process
   - We see cases where people don't know how to work their own organisations
     stage-gate process effectively.  In an organisation where the staff
-understand how to use their stage-gate proccess their doesn't have to be a lot
+understand how to use their stage-gate process their doesn't have to be a lot
 of turmoil
+
+## Project Approval Process
+
+* Coarse grained decision making
+  - Should we start this project now or should we start it six months from now
+  - How does it fit into our priority queue
+  - How many should we put on the project
+* Once the project finally hits that gate where the funding has been approved
+  and the project official gets authorized the role of estimation really
+changes significantly at that point
+* Now the role estimation is more inward looking.  It's for the team to manage
+  itself.  It's for the team to assess how it's progress is going and whether
+the progress is going according to plan.
+* If a gap opens up between the original estimates and the re-estimates on the
+  ground then we have to go back and tell the project sponsors - overrunning
+the budget, overrunning the schedule or under running the functionality 
+* If the scrum team is calculating velocity, having a release burndown - once
+  the team is performing effectively as a team we have a pretty good ability
+to create a longer range forecast of when we are going to be done.
+  - Forecast, project, estimate - they all mean the same thing in this context
+* Bad news delivered early is always better than bad news delivered late
+
+## Changes to estimates
+
+* If there is an initial anchor of 75 staff-months and then some more work was
+  done and it really looks like the answer is ore like 125 staff months.  What
+happened to not get that 125 staff-months re-estimate accepted
+* One factor can be the business doesn't have a good commitment process.  The
+  business may have already committed on the basis of that very premature
+estimate - that is a problem that needs to be addressed at the business level.
+* They shouldn't have been presenting such a precise number - a range or a
+  coarser number - e.g. At this point we think it's about 10 staff-years
+* Technical staff have a personality flaw in which they expect the business to
+  be happy and cooperative when the business receives bad news. We cannot
+realistically expect the business to be happy about receiving bad news.  We
+can expect the business to probe and question and try to problem solve to get
+back to what they thought they were going to get.  That's a natural, healthy
+process.  If the business just rolled over and said "yeah that's fine we just
+increased by 50 staff-months" I don't think the business is doing it's job if
+it does that.
+* Part of the businesses job is to try to figure out how to get the work done
+  for a cost that makes sense
+
+## Estimates, targets, and commitments
+
+* "If the commitment is for cost, schedule and functionality our estimate is
+  telling you we have got early notice that we are not going to deliver on
+that commitment."
+* If the commitment was for schedule and cost but not details of functionality we can
+  pair down the functionality. 
