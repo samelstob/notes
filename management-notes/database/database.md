@@ -65,3 +65,36 @@ on DSS but offer better performance
   - XXXSE The market did decide this - NoSQL - although this was as much about
     scaling number of "users" to web scale as it was to OLTP versus DSS
  
+# A Decomposition Storage Model
+Copeland, Khoshafian
+1985
+4/5
+
+* Compares NSM (N-ary storage model i.e. the typical row based storage model)
+  with DSM (Columnar storage).
+* Compares the two models on many different aspects:
+## Simplicity and generality
+* Support for multivalued attributes
+* Support for entities
+* Support for multi-partent relations
+* Support for heterogeneous records
+* Support for directed graphs
+* Differential files and Temporal Support
+* Storage structures
+* Access methods
+* Physical Data Independence and Availability
+* Reliability and Recovery
+## Storage Requirements
+* Data Storage Requirements 
+* Index Storage Requirements
+* Total Storage Requirements
+## Update Performance
+* Modifying an Attribute
+* Inserting or deleting a record
+## Retrieval Performance
+* Conjunctive Retrieval Patterns
+* Effect of Limited Buffer Space
+* Potential Concurrency
+* Multiple Disks
+
+  
