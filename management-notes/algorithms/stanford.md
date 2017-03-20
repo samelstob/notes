@@ -35,7 +35,7 @@ highest priority.
 
 * Pointer based versus contiguous memory
   - Have a good idea of what going to a pointer based data structure buys you
-    and what it costs you relative to contiguous memoryo
+    and what it costs you relative to contiguous memory
 
 ## MVPs
 
@@ -65,7 +65,7 @@ highest priority.
 * Ballparking
   - Back of the envelope calculations
   - "In the era of computers it's easy to get distanced from numbers - punch
-    numbes into formulas and not have intuition of whether what comes out is
+    numbers into formulas and not have intuition of whether what comes out is
 the right number, whether that number makes sense, whether that number is
 grounded, whether that number is an order of magnitude off."
   - "Do some predictions, do some time trials, do some more sketching on your
