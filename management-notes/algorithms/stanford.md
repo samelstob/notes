@@ -64,7 +64,7 @@ highest priority.
 * Algorithmic thinking
 * Ballparking
   - Back of the envelope calculations
-  - "In the era of computers it's easy to get distanced from numbers - punch
+  - "In the era of computers it's easy to get distanced from numbers; punch
     numbers into formulas and not have intuition of whether what comes out is
 the right number, whether that number makes sense, whether that number is
 grounded, whether that number is an order of magnitude off."
@@ -73,7 +73,7 @@ grounded, whether that number is an order of magnitude off."
 and theory are reinforcing each other."
   - "Don't get too distanced from the fact those numbers play out in the real
     world in ways that are interesting and not just let the numbers themselves
-tell the story - there really is more to connect it up with."
+tell the story; there really is more to connect it up with."
 * Tradeoffs
   - The answer to most questions is "it depends".
   - Space/time and many other factors

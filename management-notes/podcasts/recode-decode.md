@@ -24,4 +24,8 @@ have a living wage job, or if they don't have access to healthcare that child
 is going to struggle and not make it.  Safe housing, living wage, access to
 healthcare." 
 * "We need to do better by a lot of people"
-*  
+* 8000-10000 homeless in a given night, 1700 chronic homeless.  They cost
+  $80k per year.  If you house them it costs $20k/year.  We think the city is
+spending $500M-$600M/year on homelessness.
+* "Every person in this city should commit to helping solve this issue"
+* 
