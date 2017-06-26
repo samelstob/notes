@@ -18,7 +18,7 @@
   * 
   * Data structure brainstorm
   * Best Conceivable Runtime
-* Walk trhough
+* Walk through
 * Test
 * Implement
   - Well factored
