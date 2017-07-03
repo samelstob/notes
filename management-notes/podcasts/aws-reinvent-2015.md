@@ -126,3 +126,13 @@ services, System integration partners
 * Vacuum - run after loading the data
 * Redshift utils 
 
+# AWS STG304 Amazon EBS Design for Performance
+
+* Network block storage as a service
+* Queuing theory
+  - Little's law
+  - Wait Time = Queue Length / Arrival Rate
+
+EBS performance is related to this law
+
+
