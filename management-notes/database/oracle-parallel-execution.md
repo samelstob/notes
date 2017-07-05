@@ -13,7 +13,7 @@ Randolf Geist
 * Producer / Consumer model
   - Child DFO (Producer) -> Parent DFO (consumer)
   - Two sets of PX servers required
-  - Table queue (sometimes valled virtual table) is the Oracle construct that
+  - Table queue (sometimes called virtual table) is the Oracle construct that
     is used to exchange data between child and parent.  It is in memory
 allocated from the shared pool or large pool
   - This is not a zero cost operation!  It costs time, memory and potentially
@@ -21,27 +21,42 @@ allocated from the shared pool or large pool
 in serial.
   - Partition Wise operations can minimise this overhead
 
+## XXXSE Charateristics of a "good" PX execution
+
+* Workers are kept busy throughout the execution
+* Right number of workers (too many and they are waiting, too few and there
+  are unused resources)
+* Stable
+* Minimal temp tablespace usage (although could this be reduced with dedicated SSD
+  temp?)
+  - Minimal buffered operations?
+* Efficient - ideally 1/nth the time of the serial version
+* Skew - even distribution of work through all operations
+* One DFO tree - to avoid complications of multiple trees
+* What about CPU, memory and I/O usage?
+* Can scale to more PX servers as traffic increases
+
 ## Method - SQL Monitoring
 
-* Look at Activity tab and check how the actual degree of parallelism
+1. Look at Activity tab and check the actual degree of parallelism
   throughout the execution
 
-* Look at the Parallel tab and check for skew
+2. Look at the Parallel tab and check for skew
 
-* Look at Plan Statistics tab
+3. Look at Plan Statistics tab
 
 ## PX Distribution and Skew
 
-* PX skew is not uncommon but hard detect and measure and therefore possible
+* PX skew is not uncommon but hard detect and measure and therefore possibly
   one of the most overlooked and underestimated performance problems.
 
 * Look at the Parallel tab in SQL Monitoring to check skew
 
 * ASH can be used for analysing PX skew - XPLAN_ASH
 
-* Methods for influence skew
+* Methods for influencing skew
   - Data volume estimates
-  - Query hint - PQ_DISTRIBUTE, join order
+  - Query hints - PQ_DISTRIBUTE, join order
   - Partition wise operations
   - Rewrite queries
   - Change application design
@@ -56,8 +71,9 @@ in serial.
 * Each DFO tree is identified by the TQ number before the comma e.g. Q1, or
   TQ1
 * Most plans have one DFO tree (and this is generally what you want for
-  simplicity).  If you do have multiple DFO trees you might end up with more
-parallel slave sets active at the same time than expected.
+  as there are complications with multiple DFO trees).
+  - If you do have multiple DFO trees you might end up with more parallel
+    slave sets active at the same time than expected.
 * Each DFO tree is optimised separately, has it's own parallel slave sets
   assigned, and can have it's own degree
 * 12c has improvements to eliminate situations where multiple DFO trees are
@@ -78,6 +94,8 @@ parallel slave sets active at the same time than expected.
 
 e.g. HASH JOIN BUFFERED
 
+XXXSE Is a PX hash join always buffered?  What about outer joins?
+
 Two send operations can not be active at the same time (e.g. sending to the hash
 join and sending to the QC).
 
@@ -87,7 +105,7 @@ sent from the second row source.
 
 A hash join usually operates that the estimated larger data volume will be
 performed as the second row source because this means the smaller row source
-will be attempted to be kept in memory.
+will be attempted to be kept in memory (to build the hash table).
 
 The larger row source due to this buffering now also needs to be kept in
 memory.  In most cases this simply doesn't work - there isn't sufficient PGA
@@ -110,10 +128,10 @@ Randolf Geist, James Murtagho
 
 * Number of workers assigned matters
   - Too few can be bad
-  = Too many can be bad, too
+  0 Too many can be bad, too
 
 * Communication between worker units required - data needs to be (re-)
-  ristributed (overhead!)
+  distributed (overhead!)
 
 * It's not trivial to keep you workers busy all the time (think of e.g. a
   merge sort)
@@ -124,7 +142,7 @@ Randolf Geist, James Murtagho
 * Can all assigned workers be kept busy all the time?
 
   - Possibly only a few or a single worker will be active and have to do all
-    the worker.  In this case PX can actually be slower than serial execution.
+    the work.  In this case PX can actually be *slower* than serial execution.
   - Need to *measure* how busy the workers are kept
 
 ## Keeping workers busy
@@ -151,7 +169,7 @@ Randolf Geist, James Murtagho
 1. Use - Activity tab
   - For most of the execution time you want to see at least as many active
     servers as you have a degree
-  - In 12c can select "by plan line" from the drop down - altough still
+  - In 12c can select "by plan line" from the drop down - although still
     dificult to see if these lines were the cause or the effect of the skew
   - Under Plan Statistics can filter by individual PX slaves
   - Under the parallel tab it is possible that different servers had skew at
@@ -162,16 +180,27 @@ activity in overall!
 
 ## Multiple DFO trees
 
-  - Multiple DFO trees are not displayed correctly in SQL Monitoring -
-    different trees can have different degrees of parallelism
+* Different trees can have different degrees of parallelism
 
-- Under the Parallel tab you will see Parall Group which shows the degree of
+  - Another consequence is that you get multiple child cursors
+
+* Multiple DFO trees are not displayed correctly in SQL Monitoring.  What
+    initially looks like skew could be multiple DFO trees with different
+degrees.
+
+* To confirm multiple DFO trees: Under the Parallel tab you will see Parallel Group which shows the degree of
   each set
 
-- You can look careful at the Plan Statistics e.g. PX BROADCAST executions to
+* You can also look carefully at the Plan Statistics e.g. PX BROADCAST executions to
   see the degree of each tree
 
-- Another consequence is that you get multiple child cursors
-
-- Check that you really do have skew and the Activity chart is not skewed due
+* Check that you really do have skew and the Activity chart is not skewed due
   to multiple DFO trees with different parallel degrees
+
+## XPLAN_ASH
+
+* PX Skew by plan line
+* If SQL Monitoring information has not been aged out - look at Parallel
+  Distribution ASH column
+
+
