@@ -47,9 +47,9 @@
   - Each LUN (146GB 15k) has max throughput of 50MB/s for 1MB writes and
     60MB/s for 1MB reads
   - Email workload 5-14kB
-  - Document workload 80-110
-  - Low res images - 900 1.2MB
-  - Hi res - 8.5 - 11.3
+  - Document workload 80-110kB
+  - Low res images - 900kB-1.2MB
+  - Hi res - 8.5MB-11.3MB
   - Video 97MB
   * Email workload
     - write 54MB/s, read 93MB/s  - CPU bound
