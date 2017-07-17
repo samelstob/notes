@@ -145,7 +145,7 @@ My summary: A highly skewed column which is a foreign key is joined to it's
 parent table and filtered on a single value using a predicate on the parent
 table.  The optimiser knows that the data in the FK is skewed and knows that
 we are filtering on one value but it doesn't know what value the skewed FK
-will join to so doesn't underestimates the join cardinality.
+will join to so underestimates the join cardinality.
 
 XXXSE Is this equivalent to a predicate on a lookup dimension?  Is this why a
 star query transformation is useful because it allows the optimiser to know
@@ -167,10 +167,12 @@ XXXSE Can statistics be gathered for this case i.e. on a FK?
 
 ### Example - index range scan
 
-A range scan of 1000 rows in the worse case has to access 1000 table blocks
+An index range scan of 1000 rows in the worse case has to access 1000 table blocks
 
 e.g. 
   1000 * 5ms = 5s
+
+XXXSE How does this change with SSD at all?
 
 1000 rows visiting 10 table blocks (because they are clustered) = 10 * 5 =
 50ms = 100X difference
@@ -208,6 +210,9 @@ clustering in a data warehouse
 * There is a reason why Oracle internal data dictionary uses clusters all over
   the place
 
+XXXSE However PX by default bypasses the buffer cache so clustered tables
+would *increase* the amount of I/O required to do a single table FTS
+
 ### Clustering and CBO
 
 * There is only a single measure of clustering in Oracle - the index
@@ -219,8 +224,63 @@ ICF is calculated by walking the leaf rows and incrementing every time the
 block changes.  ICF can be as low as the number of blocks or as high as the
 number of rows covered by the index.
 
+* ICF doesn't account for the number of distinct blocks - it may be possible
+  to have very few distinct blocks yet have a high ICF
+
 ### Clustering Challenges
 
 * There is no inter-table clustering measurement
 * The optimiser therefore doesn't really have a clue about the clustering of joins
+
+  XXX Does this mean "clustered table joins"
+
 * You may need to influence the optimiser's decisions
+
+## Caching
+
+* The optimizer's model by default doesn't consider caching of data
+
+* Every I/O is assumed to be physical I/O
+
+* But there is a huge difference between logical I/O (measured in microseconds)
+  and physical I/O (measured in milliseconds)
+
+* You might have knowledge of particular application data that is "hot" and
+  usually stays in the BC
+
+* Therefore certain queries against this "hot" data can be designed based on
+  that knowledge
+
+* The optimizer doesn't know about this.  You may need to influence the
+  optimizer's decisions.
+
+## Caching considerations
+
+* It is important to point out that even logical I/O is not "free"
+
+* So even putting all objects entirely in the BC inefficient execution plans
+  may still lead to poor performance
+
+* Excessive logical I/O, in particular on "hot blocks", can lead to latch
+  contention and CPU starvation
+
+## Summary
+
+* Cardinality and Clustering determine whether the "Big job" or "Small job"
+  strategy should be preferred
+
+* If the optimiser gets these estimates right, the resulting execution plan
+  will be efficient within the boundaries of the given access paths
+
+* Know your data and business questions
+
+## Notes
+
+* Jonathan Lewis' "Designing Efficient SQL"
+* Christian Antognini "Troubleshooting Oracle Performance Ch. 6"
+
+* Be aware of Query Transformations.  The optimiser might rewrite your query
+  to something that is semantically equivalent but potentially more efficient
+
+* This might take you by surprise when trying to understand the execution plan
+  favored by the optimizer
