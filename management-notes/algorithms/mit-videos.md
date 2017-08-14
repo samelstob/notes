@@ -1459,8 +1459,97 @@ the weights so that Dijkstra favours that path.
 Doesn't change the asymptotic complexity but in practice should visit fewer
 nodes before terminating.
 
+# 19. Dynamic Programming I - Fibonacci, Shortest Paths
 
-# 23: Computation Complexity
+Especially good at optimisation problems - e.g. finding the minimum or
+maximum.
+
+D.P is sort of "careful bruteforce".  There are lot of problems where
+essentially the only known polynomial time algorithm is a DP algorithm
+
+D.P is sort of subproblems + "re-use"
+
+Take a problem, split it into sub-problems, solve those sub-problems, and
+re-use those solution to sub-problems
+
+## Why is it called DP?
+
+Invented by Richard Bellman (of Bellman-Ford algorithm).
+
+Bellman invented the name to hide the fact he was doing mathematical research.
+
+## Fibonacci numbers
+
+F1 = F2 = 1
+Fn = Fn-1 + fn-2
+
+Goal: Compute Fn
+
+### Naive recursive algorithm
+
+fib(n):
+  if n <= 2:
+    f=1
+  else:
+    f=fib(n-1)+fib(n-2)
+  return f
+
+Exponential time (EXP)
+
+T(n) = T(n-1) + T(n-2) + O(1)
+    >= Fn ~ goldenratio^n
+            φ
+
+T(n) >= 2T(n-2)
+      = 2^(n/2)
+
+### Memoized DP algorithm:
+
+memo = {}
+  if n <= 2:
+    f=1
+  else if n in memo:
+    f=memo[n]
+  else:
+    f=fib(n-1)+fib(n-2)
+    memo[n] = f
+  return f
+
+T(n) = T(n-1) + O(1)
+
+Recursion Tree
+
+                Fn
+        Fn-1            Fn-2
+
+    Fn-2    Fn-3     Fn-3    Fn-4
+    
+fib(k) only recurses the first time it's called ∀k
+
+- memoized calls cost O(1)
+- # non memoized calls is n
+
+So it's O(n)?
+
+(Best algorithm for Fibonacci is logn (wtf?)
+
+### DP ~ recursion + memoization
+
+- Memoize (remember) & reuse solutions to subproblems that help solve the
+  problem
+
+- Time = # subproblems X time/sub-problem
+- Don't count memoized recusrions
+
+### Bottom up DP algorithm
+
+  fib = {}
+  for k in range(k)
+    if k<=2:
+      f=1
+    else:
+
+# 23: Computational Complexity
 
 Complexity classes
 
