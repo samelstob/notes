@@ -1260,6 +1260,17 @@ Dijkstra is a greedy algorithm
 Dijkstra(G,W,S)
   Initialise (G,S)
 
+  Q.add(s)
+  for each v in adj[u]
+    Q.add(v)    # queue is ordered by weight ascending
+    Relax(u,v,w)
+
+  while Q:
+    u=Q.remove  
+  # Once we have traversed all edges from v, remove v from q
+  Q.remove(v)
+
+
 # R16: Rubick's Cube, Starcraft Zero
 
 2x2x2 Rubik's cube
@@ -1533,21 +1544,194 @@ So it's O(n)?
 
 (Best algorithm for Fibonacci is logn (wtf?)
 
-### DP ~ recursion + memoization
+### DP ~ recursion + memoization + guessing
 
-- Memoize (remember) & reuse solutions to subproblems that help solve the
+- Memoize (remember - like a memo pad) & reuse solutions to subproblems that help solve the
   problem
 
 - Time = # subproblems X time/sub-problem
 - Don't count memoized recusrions
 
-### Bottom up DP algorithm
+### Bottom up DP algorithm (no recursion)
 
   fib = {}
   for k in range(k)
     if k<=2:
       f=1
     else:
+
+* Exactly same computation
+* Topological sort of subproblem dependency DAG
+  - In the case of Fibonacci the dependency DAG is very simple
+* Can often save space
+
+XXXSE Thinking about this some more: i) we don't need a hash table - just an
+array would do as the keys are the integers ii) we only need to remember the
+last 2 results (Constant space not linear) to calculate the next Fibonacci number, we don't need a
+complete history - anyway I understand that the point is to illustrate to
+general principal of recursion + memoization
+
+In the bottom-up version it is more obvious that it is linear time
+
+## Shortest paths
+
+Single source shortest path:
+
+  δ(s,v) ∀ v
+
+Guessing: Don't know the answer? guess - try all guesses & take best one
+
+Sub paths of shortest paths are shortest paths - optimal sub-structure.
+
+CLRS has a succint definition of Optimal Sub-structure - something like
+"The global optimal solution contains optimal solutions to sub-problems"
+
+Guess the last edge u->v in the shortest path from s->v.  Minimise over all
+the possible u->v choices
+
+  δ(s,v) = δ(s,u) + w(u,v)
+          ∀ (u,v) ε E
+
+XXXSE So are they saying that to compute the S.P., calculate the shortest path
+to u of all incoming edges, of all incoming edges, of all incoming edges.  I
+don't really get it - how do we know when we are done?  Oh well if we have
+done all incoming edges, then there is other way to reach u.
+
+                         u''->u
+                               \
+      s                  u'->u->v
+                           \   / 
+                            \ /
+                             u
+v
+  for all u with incoming edges to v
+    δ(u,v) = min( δ(s,u) + w(u,v) )
+  # Now we have done all incoming edges, we know the shortest paths from all
+u->v
+  # Now for all u with incoming edges to each of those u
+    δ(s,v) = δ(s,u') + 
+
+I think I nearly get the idea but I don't see how we can practically calculate the δ(u,v) as we need to wait until all of the results from δ(u,v) δ(u',u) δ(u'',u') are in.
+   
+  shortest_path(s,v)
+    if (s == v)
+      return 0
+    for all u in (u,v) ε E
+      δ(s,v) = shortest_path(s,u) + w(u,v)
+    return δ(s,v)
+
+This looks EXP with the base being the avg number of incoming edges (indegree)
+
+XXXSE Doesn't starting at the end and working backwards mean that we could
+visit lots of nodes that are not even on a path from S
+
+Will memoization improve this algorithm?  It depends on how much "reuse" there
+is?
+
+Infinite time on graphs with cycles
+
+Lesson: Sub-problem dependencies should be acyclic
+
+DAGS: O(V+E)
+
+"This is really the same as DFS to do a topological sort to do one round of
+Bellman-Ford.  The min is doing the same thing as the relaxation step.  The
+same algorithm but we come at it from a different perspective"
+
+XXXSE Shortest Path
+
+All weights are 1
+
+      S -> v
+
+      δ(S,v) = min( δ(S,u) + w(u,v) )
+
+      1
+
+      S -> u -> v
+
+      δ(S,v) = min( δ(S,u) + w(u,v) )
+      δ(S,v) = min( δ(S,u) + 1 )
+      δ(S,u) = min( δ(S,u) ) = δ(S,u) = 1
+      δ(S,v) = min( 1 + 1 ) = 2
+
+      S -> d -> u -> v
+
+      δ(S,v) = min( δ(S,u) + w(u,v) )
+      δ(S,v) = min( δ(S,u) + 1) )
+      δ(S,u) = min( δ(S,d) + w(d,u) )
+      δ(S,u) = min( δ(S,d) + 1 )
+      δ(S,d) = min( δ(S,d) ) = w(S,d) = 1
+      δ(S,d) = min( min( w(S,d) + w(d,u)) + w(u,v) )
+
+        1-> a 1-> d 3->
+      S 2-> b 2-------> v
+        1-> c 2------->
+
+      for u in v where there exists an edge from u to v 
+        δ(S,v) = min( δ(S,u) + w(u,v) )
+
+      δ(S,v) = min( δ(S,d) + w(d,v),
+                    δ(S,b) + w(b,v),
+                    δ(S,c) + w(c,v) )
+
+      δ(S,d) = min( δ(S,a) + w(a,d) )
+
+      δ(S,d) = min( 1 + 1 ) = 2
+
+      δ(S,a) = w(s,a) = 1
+
+      δ(S,b) = w(S,b) = 2
+
+      δ(S,c) = w(S,c) = 1
+
+      δ(S,v) = min( (2 + 3),
+                    (2 + 2),
+                    (1 + 2) ) = 3
+
+      S -> u -> v           S -> d -> u -> v
+           a ->                  e -> a
+           b ->                  f ------>
+
+Why doesn't this work from the other end?
+
+1. For all outgoing edges
+    δ(S,v) = min( w(S,u) + δ(u,v) )
+
+      3-> 
+    S     u 1-> v
+      1-> 
+
+    δ(S,v) = δ(S,u) + δ(u,v)
+
+This is incorrect.  The shortest path to v may not pass through u.  This is
+shortest path to v that passes through u.
+
+But - SSSP finds the shortest path to all vertices from S, so it seems
+intuitve that we would start from S.  Dijkstra starts from S doesn't it?
+
+I need to understand Dijkstra and Bellman-Ford better to compare.
+
+
+# Lecture 20: Dynamic Programming II: Text Justification, Blackjack
+
+DP ~ "Careful brute force"
+  - Reduce the exponential search space to a polynomial one
+DP ~ Guessing + recursion + memoization
+DP ~ Shortest paths in some DAG
+
+## 5 easy steps
+
+1. Define subproblems
+2. Guess (part of solution)
+3. Relate subproblem solutions
+4. Recurse & memoize
+  OR
+   Build DP table bottom-up
+5. Solve original problem 
+
+## Text justification
+## Blackjack
 
 # 23: Computational Complexity
 
