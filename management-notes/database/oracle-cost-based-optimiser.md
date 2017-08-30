@@ -277,6 +277,7 @@ number of rows covered by the index.
 ## Notes
 
 * Jonathan Lewis' "Designing Efficient SQL"
+
 * Christian Antognini "Troubleshooting Oracle Performance Ch. 6"
 
 * Be aware of Query Transformations.  The optimiser might rewrite your query
@@ -284,3 +285,11 @@ number of rows covered by the index.
 
 * This might take you by surprise when trying to understand the execution plan
   favored by the optimizer
+
+# Oracle Cost-Based Optimizer - Advanced
+
+## Clustering Factor
+
+## Statistics/Histograms
+
+## Datatype issues

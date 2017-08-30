@@ -226,3 +226,195 @@ A->C <= A->B + B->C
 A shortest graph algorithm involves relaxing edges until they can be relaxed
 no more.  The key is to find an algorithm that does the reliably does the minimum number of relaxation steps.
 
+A sort of BFS/DFS that favours lower weight paths.
+
+In practice, we use a priority queue to implement.
+
+Dijkstra is a greedy algorithm
+
+for u in G:
+  u.colour = black
+  u.predecessor = null
+  u.distance = 0
+
+Q.append(S)
+
+while Q is not empty:
+  u = Q.extract_min()
+  for v in adj[u]:
+    if u.colour == white:
+      # already visited
+    if u.colour == grey:
+      # already in queue
+    if u.colour == black:
+      relax(u,v,w)
+      Q.append(v)
+  u.colour == white
+
+relax(u,v,w):
+  if u.distance + w < v.distance:
+    v.predecessor = u
+    v.distance = u.distance + w 
+
+  S -> v
+
+  S -> a > v
+
+   --3- a -1---c --
+  |     |          \
+` S     2           2
+  |     |            \
+   --2- b -5- d - 1 - v
+
+
+DFS
+
+BFS
+
+for u in G:
+  u.colour = black
+  u.predecessor = null
+  u.distance = 0
+
+Q.pushTail(S)
+while Q is not empty:
+  u = Q.popHead()
+  for v in adj[u]:
+    if v.colour == white:
+      # already visited
+    if v.colour == grey:
+      # in the queue but not yet visited
+    if v.colour == black:
+      # never visited
+      v.precedessor = u
+      v.distance = u.distance + 1
+      v.colour = grey
+      Q.pushTail(v)
+  u.colour = white
+
+# In BFS we need to set the distance before pushing the node onto the queue.
+# In BFS we need to distinuish between three types of nodes:
+  1) Never visited
+  2) Seen but not yet visited
+  3) Visited (i.e. we have traversed all edges leaving this node)
+
+  S
+
+  S -> v
+
+    ->  
+  S    v
+    -> 
+
+What's the point of BFS?  Erm - visits all nodes?  Avoids cycles?  Does it
+turn it into a tree?  Presumably yes because we have a predecessor node?
+Shortest paths with equal weights?
+
+   --3- a -1---c --
+  |     |          \
+` S     2           2
+  |     |            \
+   --2- b -5- d - 1 - v
+
+  Visited     Q
+              [S]
+
+  S           [a,b]
+  S,a         [b,c]
+  S,a,b       [c,d]
+  S,a,b,c     [d,v]
+  S,a,b,c,d   [v]
+
+DFS
+
+* Find cycles
+* Topological sort
+
+# Initialise all nodes
+
+for u in G:
+  u.colour = black
+  u.predecessor = null
+  u.distance = 0
+dfs-visit(S)
+
+function dfs-visit(u)
+  u.colour = grey
+  for v in adj[u]:
+    if v == black:
+      # never visited
+      v.predecessor = u
+      v.distance = u.distance + 1
+      dfs-visit(v)
+    if v == grey:
+      # back edge (already seen)
+      # cycle detected
+    if v == white:
+      # already visited (cross edge?)
+  v.colour = white
+
+Test
+
+  S
+
+  S->v
+
+  S -> u -> v
+
+    - a
+  S     - v
+    - b
+
+  / - a
+  S     - v
+  ^ - b
+  |--/ 
+
+    - a       d
+  S     - c -   - v
+    - b       e
+
+Initialise
+  for u in G:
+    u.colour=black
+    u.predecessor = null
+    u.δ = infinity 
+
+def Relax(u,v,w):
+  assert(w >= 0, "Dijkstra does not deal with negative weights")
+  if u.δ + w(u,v) < v.δ
+    v.δ = u.δ + w(u,v)
+    v.predecessor = u
+
+Dijkstra(G,W,S)
+  Initialise (G,S)
+
+  S.δ = 0
+  Q.append(S)
+
+  while Q:
+    u=Q.extract_min
+    for each v in adj[u]
+      Relax(u,v,w)
+      if (u.colour == black)
+        u.colour = grey
+        Q.append(v)    # queue is ordered by δ ascending
+    u.colour = white
+
+  S
+
+  S -1- a
+
+    -2- a
+  S       -1- c
+    -1- b
+
+    -1- a
+  S       -2- c
+    -2- b     |
+              |
+    -3--------|
+
+Tests:
+  Boundary
+  Error

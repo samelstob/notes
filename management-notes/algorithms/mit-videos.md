@@ -1141,6 +1141,11 @@ Until all edges have d[v] <= d[u] + w(u,v)
 
 * Sub paths of a shortest path are shortest paths
 
+* Triangle inequality
+
+These two facts are enough to create a linear time algorithm for S.P with no
+negative weights
+
 # R15: Shortest Paths
 
 BFS find shortest paths without weights.
@@ -1209,7 +1214,7 @@ Make time a state
 
 # 16: Dijkstra
 
-Review
+## Review
 
   S(0) →1→ A(∞)
    \       ↓
@@ -1217,7 +1222,7 @@ Review
        3   ↓
          \ B(∞)
 
-  δ(S,v) = 2
+  δ(S,B) = 2
 
 d[v]      length of current shortest path from source S to v
 δ(s,v)    length of a shortest path
@@ -1232,11 +1237,42 @@ Relax(u,v,w)
 Lemma: The relaxation operation maintains the invariant that d[v] >= δ(S,v)
 for all v ϵ V
 
-By △ inequality δ(S,v) <= δ(S,u) + δ(u,v)
+Proof: By induction on the number of steps
+
+Base case:
+
+  d[v] >= δ(S,v)
+
+  δ(S,v) <= δ(S,u) + δ(u,v)
+
+Subsitute d[u] because d[u] >= δ(S,u)
+  δ(S,v) <= d[u] + δ(u,v)
+
+  δ(S,v) <= d[u] + w(u,v) = d[v]
+
+### Triangle △ inequality:
+
+   δ(S,v) <= δ(S,u) + δ(u,v)
 
 In other words, if there is a shortest path from S to v, then a shortest path
 from S to v that goes through node u must be no shorter (otherwise it would
 *be* the shortest path from S to v)
+
+Note: The triangle inequality is about the shortest paths not the single edge
+weights
+
+XXXSE in other words going from S to v via u must either *be* a shortest path to v or be greater than a shortest path.  It cannot be less than a shortest path because then it would *be* a shortest path!
+
+XXXSE in other words the distance from S to u plus the distance from u to v
+must either be a shortest path from S to v or be greater than it
+
+XXXSE This seems to say something very obvious
+
+  δ(S,v) - δ(u,v) <= δ(S,u)
+
+  δ(S,u) + δ(u,v) >= δ(S,v)
+
+XXXSE: Is this still true for negative weights?
 
 * δ(a,b) is the shortest path from a to b (it may be direct or indirect i.e.
  travel through other nodes)
@@ -1254,21 +1290,6 @@ in the ordering
 leaves each vertex.
 
 ## Dijkstra
-
-Dijkstra is a greedy algorithm
-
-Dijkstra(G,W,S)
-  Initialise (G,S)
-
-  Q.add(s)
-  for each v in adj[u]
-    Q.add(v)    # queue is ordered by weight ascending
-    Relax(u,v,w)
-
-  while Q:
-    u=Q.remove  
-  # Once we have traversed all edges from v, remove v from q
-  Q.remove(v)
 
 
 # R16: Rubick's Cube, Starcraft Zero
