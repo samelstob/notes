@@ -1141,7 +1141,10 @@ Until all edges have d[v] <= d[u] + w(u,v)
 
 * Sub paths of a shortest path are shortest paths
 
-* Triangle inequality
+* Triangle inequality - the length of one side must less than or equal to the
+  sum of the length of the other two sides.  In terms of S.P the shortest path
+from S to V via U must be greater than or equal to the shortest path from S to
+V
 
 These two facts are enough to create a linear time algorithm for S.P with no
 negative weights
@@ -1245,7 +1248,8 @@ Base case:
 
   δ(S,v) <= δ(S,u) + δ(u,v)
 
-Subsitute d[u] because d[u] >= δ(S,u)
+    Substitute d[u] because d[u] >= δ(S,u)
+
   δ(S,v) <= d[u] + δ(u,v)
 
   δ(S,v) <= d[u] + w(u,v) = d[v]
@@ -1282,14 +1286,27 @@ XXXSE: Is this still true for negative weights?
 ## DAGs
 
 * Can't have cycles
-* Can have negative weights, just no cycles
+* *Can have negative weights* - just no cycles
 
-1) Topologically sort the DAG.  Path from u->v implies that is u is before v
+"Whenever you have a DAG the first thing you want to try is topological sort - it is a fine hammer to use when you have a DAG"
+
+1) Topologically sort the DAG.  Path from u->v implies that u is before v
 in the ordering
 2) One pass over vertices in topologically sorted order relaxing each edge that
 leaves each vertex.
 
+Time: O(V+E) (DFS - touching each vertex and each edge once)
+
+"Once you have topologically sorted it you can always draw a DAG in linear
+form"
+
+This doesn't say anything about the starting vertex.  Once you have sorted it
+you can choose any starting vertex and the algorithm will calculate S.P
+reachable from that vertex.
+
 ## Dijkstra
+
+Dijkstra is a greedy algorithm
 
 
 # R16: Rubick's Cube, Starcraft Zero
