@@ -39,16 +39,16 @@ to people's way of life and their personal biases and preferences
 ever see him again.  I left my country because we had lost it to the enemies.
 I left everything I had worked on or for since the age of six.  I set foot
 in America only to find I had become both dumb and deaf because I cannot
-understand and cannot speak the language  We gave up everything for a chance
+understand and cannot speak the language.  We gave up everything for a chance
 of freedom... The basic freedom that every human being deserves but only those
 fortunate enough can enjoy as our right at birth whereas people in other
 countries have to fight for with their courage and often with their lives."
 
 "I dreamed of being the best student possible.  During the day I cooked and
 cleaned for an entire family of nine.  I tutored and babysat my younger
-brothers, sisters and nephew.  At night at studied by translating each word
+brothers, sisters and nephew.  At night I studied by translating each word
 from English to Vietnamese.  With that dream and hard work four years later at
-my high school graduation I step up not to receive my high school diploma but
+my high school graduation I stepped up not to receive my high school diploma but
 to deliver the valedictorian speech at 16"
 
 "That same year I broke the golden Asian rule - I moved away from my family -
@@ -66,12 +66,19 @@ over is the personal limitation that life brings us or sometimes we self
 impose"
 
 "When I talk about collaborating with ourselves and breaking our own personal
-limitation I'm talking about the willingness to assess our inner potential and
-the courage to let it rise and shine.  The clarity to not let the situation
-that we are in cloud our vision to see beyond the present impossibility.  I'm
-talking about the confidence and the faith in our own dreams - chase them
-accomplish them and do good with that.  The wisdom as we go through life to not
-only believe in ourselves but even more important to believe in others"
+limitation I'm talking about
+
+i) the willingness to assess our inner potential and the courage to let it
+rise and shine.
+
+ii) The clarity to not let the situation that we are in cloud our vision to
+see beyond the present impossibility.
+
+iii) I'm talking about the confidence and the faith in our own dreams - chase
+them accomplish them and do good with that.
+
+iv) The wisdom as we go through life to not only believe in ourselves but even
+more important to believe in others"
 
 "I worry about the younger workforce and the scale of importance of
 relationship building in their mind and their know-how of how to go about
