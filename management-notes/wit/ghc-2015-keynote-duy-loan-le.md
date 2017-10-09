@@ -114,53 +114,58 @@ successful in that second job without their help"
 
 "Relationship building requires face-to-face interaction.  Even in the world
 of technology advancement human relationships are still the key to successful
-colloboration.  To build long lasting relationships you have to do it the old
+collaboration.  To build long lasting relationships you have to do it the old
 fashioned way - face-to-face.  Of course once the relationship is built you
 can leverage technology to keep it going"
 
-## Excellence and Culturual Boundaries
+## Excellence and Cultural Boundaries
 
 "When we collaborate across the boundaries with other people and other culture
-- what is considered excellence in one culuture does not necessarily translate
-  into another culuture"
+- what is considered excellence in one culture does not necessarily translate
+  into another culture"
 
 "In this country we value independence, individualism, assertiveness.
 Crossing over to the other culture across the pacific ocean the same
 attributes can be perceived as disrepectful, non-collaborative, and even
 outright arrogant."
 
-"Let me make it claer I did not succeed because I am smarter, or carry a more
+"Let me make it clear I did not succeed because I am smarter, or carry a more
 important title.  I succeeded simply because I modified the way we ask for
-help.  I remember that even though we are negotitate, talking, engaging in
+help.  I remember that even though we are negotiate, talking, engaging in
 technology it is still people we are dealing with.  People with custom,
-feeling, history, certain way of working, living, thinking and colloborating."
+feeling, history, certain way of working, living, thinking and collaborating."
 
-## Cross Culturual Competency
+## Cross Cultural Competency
 
 A persons linguistic ability and travel frequency does not necessarily
-translate into a person cross culturual competency.  To be cross-culutural
-copetent you have to understand the culture, think the culuture, and honour
-the cultuure"
+translate into a person cross cultural competency.  To be cross-cultural
+competent you have to understand the culture, think the culture, and honour
+the culture"
 
 # Summary
 
 "When we can break our own personal limitation we will be less likely to let
 the colour of people's skin, the gender that they were born with, the religion
-that they practice, or the culuture that they were borught up with cloud our
+that they practice, or the culture that they were brought up with cloud our
 ability to see their potential to rise and shine.  We will see people not
 through the lenses of impossibility but through the lenses of possibility
 because we have seen it in ourselves.  When we believe in ourselves and we
-believe in others it is much easier to galvanaize people towards a common
+believe in others it is much easier to galvanize people towards a common
 cause.  Believing in others is an attribute of an effective leader in any
 culture than I know of"
 
 "How many of you love to go shopping, or movies, or having tea, or playing
-golf with people that you don't like?  The reason is very simple you have to feel a sense of commorraderie - friendship with people you do it with.  When you colloborate accorss the bounadray with different people that sense of commorraderi is still very much needed and it starts with relationship building.  Relationship buuiliding cannot be done via technology gadgets alone it requires face-to-face human interaction"
+golf with people that you don't like?  The reason is very simple you have to feel a sense of camaraderie - friendship with people you do it with.  When you collaborate across the boundaries with different people that sense of camaraderie is still very much needed and it starts with relationship building.  Relationship building cannot be done via technology gadgets alone it requires face-to-face human interaction"
 
-"At the end one's life it is the reltaionship with family, friends, mentors,
+"At the end one's life it is the relationship with family, friends, mentors,
 colleagues that we wish we had spent more time on"
 
 "It is very easy to think that our business is technology but at the core every business it's really about people.  In order to
-successfully collobrate across the boudary of people we have to understand
+successfully collaborate across the boundary of people we have to understand
 their lenses of life, respect their way of living, and honour their way of
 thinking."
+
+"People have different definitions of personal space and that in turn defines
+that boundaries that we should not cross if we want collaboration for life"
+
+
