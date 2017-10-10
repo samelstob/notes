@@ -99,7 +99,7 @@ literature in our receptions
 * The media affects our performance and perpetuates sterotypes
 * Literature in receptions - "Study shows computer science no longer dominated
   by geeks"
-* THe words used in job ads - "excellence"
+* The words used in job ads - "excellence"
 * FTSE 100 company changed a job ad title from "technology manager" to
   "digital manager" - increased number of women who applied by 30%
 *  

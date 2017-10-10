@@ -24,7 +24,7 @@ first one
 if you draw a new vector from the tail of the first one to the tip of the
 second one, that new vector is their sum
 
-Each vector represents a certain movvement.
+Each vector represents a certain movement.
 
 ## Scalar multiplication
 
@@ -106,7 +106,7 @@ The word "transformation" suggests that you think using movement
 We only need to understand how the basis vectors are transformed (i^, j^) -
 then everything else falls into place
 
-A 2 dimensional linear transformaion is defined by a 2x2 matrix
+A 2 dimensional linear transformation is defined by a 2x2 matrix
 
   ac place where first basis vector lands
   bd place where second basis vector lands

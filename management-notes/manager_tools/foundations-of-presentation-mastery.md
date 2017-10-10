@@ -23,7 +23,7 @@
   - I have an idea in my head that I want the other person to share in their
     head
   - Idea -> Pictures -> Words -> Hearing -> Translation -> Pictures ->  Idea
-  - Asking a question to supplimenet, translate, or rearrange the information
+  - Asking a question to supplement, translate, or rearrange the information
 
 ## Part II
 

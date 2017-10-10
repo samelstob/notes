@@ -1588,7 +1588,7 @@ So it's O(n)?
   problem
 
 - Time = # subproblems X time/sub-problem
-- Don't count memoized recusrions
+- Don't count memoized recursions
 
 ### Bottom up DP algorithm (no recursion)
 
@@ -1633,7 +1633,7 @@ the possible u->v choices
 XXXSE So are they saying that to compute the S.P., calculate the shortest path
 to u of all incoming edges, of all incoming edges, of all incoming edges.  I
 don't really get it - how do we know when we are done?  Oh well if we have
-done all incoming edges, then there is other way to reach u.
+done all incoming edges, then there is no other way to reach u.
 
                          u''->u
                                \
@@ -1675,6 +1675,9 @@ DAGS: O(V+E)
 "This is really the same as DFS to do a topological sort to do one round of
 Bellman-Ford.  The min is doing the same thing as the relaxation step.  The
 same algorithm but we come at it from a different perspective"
+
+XXXSE Yay this makes a little more sense now after having gone back and done
+Dijkstra
 
 XXXSE Shortest Path
 

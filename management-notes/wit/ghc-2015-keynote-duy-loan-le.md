@@ -5,8 +5,8 @@ Collaboration across the boundaries
 
 TI - 2002 elected Senior Fellow - joining only four men worldwide in 80 year history
 
-"All my life, in my work, in my community, and even my family I'm surronded
-men - and you get tire looking at them"
+"All my life, in my work, in my community, and even my family I'm surrounded
+men - and you get tired looking at them"
 
 "8 years later I remain the first and only one.  Let me make it clear - it does
 me know good to be the first and the last.  So when I was elected I gave
