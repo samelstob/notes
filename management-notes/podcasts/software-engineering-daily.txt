@@ -1,13 +1,13 @@
 # Hadoop: Past, Present and Future with Mike Cafarella
 
 HDFS or something like will be around for a very long time.  A distributed, 
-low cost, hierarchical file system that exposes a hierarchal unix style 
+low cost, hierarchical file system that exposes a hierarchical unix style 
 interface to the user - that's going to be around for ever.
 
-There's a handful of performance improvements you would like to ahve e.g. can 
-I haz indexes.
+There's a handful of performance improvements you would like to have e.g. can 
+I have indexes.
 
-We are seeing the slow agnosing death of Map Reduce.  People are not really 
+We are seeing the slow agonising death of Map Reduce.  People are not really 
 writing Map Reduce jobs any more.
 
 Map Reduce was envisioned as "a for loop replacement" - the use case was 
@@ -59,20 +59,20 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
       really want someone dedicated to making them generic and good.
 
 * Facebook forked Hadoop six years ago and kept it closed source.  "A bunch of 
-  little things that didn't quite fit their use case.  No big ideolical 
+  little things that didn't quite fit their use case.  No big ideological 
   difference about merging - just too many man hours"
 
 * "At Airbnb - a huge number of outages from Zookeeper.  No one we could talk 
   to - no company has Zookeeper as their product.  These things never get 
   fixed and they never get really good."
 
-* "Zookeeper is coupled to Hadoop because of they have been in close proximity 
+* "Zookeeper is coupled to Hadoop because they have been in close proximity 
   for a very long time - little specific things that Hadoop needs have crept 
   into Zookeeper."
 
 * Containerising Hadoop is problematic
 
-* Maintaining a consistent enviornment is one of the big challenges of running 
+* Maintaining a consistent environment is one of the big challenges of running 
   a Hadoop cluster.  You are getting a string of emails from data scientists 
   "I just wrote this job that requires Python 2.3".  It isn't a fun job to 
   install dependencies on a 1000 machine Hadoop customer."
@@ -166,9 +166,9 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
 * HTTP limits what you can do with flow control and retransmission - these 
   shortcomings are bad when you get to high scale system.
 * AMQP is an ISO, IEC, OASIS standard
-    - Even though it can be a difficult protocol to undetand, the flow control 
-      system is excellent.  It is a credit based system
-* EventHubs was always designed to be a sub-second system wheras Kinesis was 
+    - Even though it can be a difficult protocol to undertand, the flow 
+      control system is excellent.  It is a credit based system
+* EventHubs was always designed to be a sub-second system whereas Kinesis was 
   not
 * Kinesis, pay hourly rate per shard
 * Google Cloud Pub-Sub - Kind of like EH, kind of like ServiceBus.  Each of 
@@ -219,7 +219,7 @@ https://medium.com/pachyderm-data/lets-build-a-modern-hadoop-4fc160f8d74f#.3emoc
     - Tutorial I had written formed first chapter
     - Often computer science ends up in whichever department had the first 
       computer
-* MIght be a level of literacy that everyone will have
+* Might be a level of literacy that everyone will have
 
 # Origin of Devops with Johan and Damon from DevOps Cafe 2016/08/31
 
@@ -233,37 +233,49 @@ Damon: Fast talking!, John medium
   what those things are, talking about those problems, figuring them out 
   together, and going and solving them so people can deliver software and 
   services faster and more reliably."
+
 * John "Directly lineage to lean.  All the things that came out of 
   manufacturing - flow and delivery maps to lean."
+
 * Damon "Devops is not about the technology - it's about the business - it's 
   about solving the problems that we are here to solve - giving the customer 
   what they want, when they want it, at the lowest cost possible"
+
 * History of Devops - Patric Dubois - wanted to do every kind of job.  
   Velocity 2009 - "Dev and Ops 10 + deploys a day at Flikr".  Patrick put 
   together an event - DevOpsDays.  Conversation continued as #devops
+
 * John "A lot of us who had been in operations for years we felt like we had 
   not really been helping anybody."
+
 * Eric Ries - Lean startup.
 * Convergence called devops
+
 * Less wasted effort, less wasted time, less stuff getting in the way.  
   Picture the delivery process as a factory - a supply chain.  What are the 
   things that get in the way, what are the things that slow us down, cause 
   re-work to come back at us, what are the things that cause long delays, what 
   causes us to undermine ourselves and cause instability.  Stop doing them.
+
 * "Agile got reduced to scrum and missed the point in the first place.  If all 
   you do is scrum and read the agile manifesto you would think they are two 
   different things.  Scrum became a specific thing, a project management 
   methodology.  It got so focussed on that particular domain that it missed 
   the end to end picture.
+
 * "Most business are not in the business of writing software.  If you are not 
   looking at the end to end picture you may not have the best service delivery 
   capabilities.
+
 * "You see a lot of big organisations stuck in water-scrum-fall.  Massive 
   batch planning up front, agile dev, then batched up to monthly or quarterly 
   releases to operations.  Step back - you are not agile as an organisation.  
   Still back in the old waterfall - we just develop the software differently."
+
 * "Has anything changed for the customer, no not really"
+
 * "Trying to eliminate waste.  Trying to see the full value stream."
+
 * Most important design patterns
 * "What would it take to get a single idea (a single line of code) to get 
   through the standard process"
