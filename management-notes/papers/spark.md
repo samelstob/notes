@@ -6,8 +6,11 @@ Matei Zaharia, Mosharaf Chowdhury, et. al.
 Describes RDDs which are the central abstraction of Spark and key to it's
 performance as compared to Hadoop.
 
-RDDs are a partitioned, in memory, read-only, data set that tracks it's lineage - not
-sure how.
+RDDs are a partitioned, in memory, read-only, data set that tracks it's lineage.
+
+RDD provide an API to perform bulk transformations - i.e. apply
+the same operation to all data items - that are used for "map reduce" and
+machine learning types of processing
 
 ### Key insights/takeaways
 
@@ -18,11 +21,12 @@ cluster and can allow a much more agile approach e.g. REPL
 * REPL  - again this idea would not have occurred to me - by combining the
   ability to send compiled Classes to the cluster with the Scala REPL they
 were able to create an interactive Big Data cluster
-* It supports Python and Java but not in the same operation (as far as I can tell) - i.e. either of these languages can interact with RDDs but there is no cross-language data interchange (except through RDDs I suppose)
-* Failures - optimistic approach - Checkpoints are not used (I think) -
+* It supports Python and Java but not in the same operation (as far as I can tell) - i.e. either of these languages can interact with RDDs but there is no cross-language data interchange (except through serialized RDDs I suppose)
+* Failures - optimistic approach - Checkpoints are not used (except when
+  specified to reduce recovery time)  -
   instead upon failure an RDD is reconstructed from it's lineage.  In the case
 of no failures there is no performance penalty.
-* RDDs are read-only - with all the benefits that brings - very much like functional programming
+* RDDs are read-only - with all the benefits that brings (concurrency, caching) - very much like functional programming
 * Spark's performance over Hadoop seems to come through two key points -
   neither that surprising
   i) Significantly reducing disk access
@@ -30,8 +34,8 @@ of no failures there is no performance penalty.
 
 i) Spark RDDs are in-memory.  I think they can also spill to disk if they get
 large?
-ii) Spark can represent data as bogo Java objects (i.e. not serialized) to reduce overhead
-* Although RDDs are a sort of "share memory" by restricting the way that
+ii) Spark RDDs represent data as bogo Java objects (i.e. not serialized) to reduce overhead
+* Although RDDs are a sort of "shared memory" by restricting the way that
   programs interact with it to "coarse-grained transformations" it can be made
 much more efficient
 * RDDs as compared to general shared memory recognize that the key use case is
@@ -70,7 +74,7 @@ can be used interactively to query big datasets from the Scala interpreter.
 
 ## 2. RDDs
 
-* Formally, an RDD is a read-only, partitioned collectio nof records.  RDDs
+* Formally, an RDD is a read-only, partitioned collection of records.  RDDs
   can only be created through deterministic operations on either (1) data in
 stable storage or (2) other RDDs.
 * Example transformations include map, filter, and join

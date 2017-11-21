@@ -113,3 +113,13 @@ A 2 dimensional linear transformation is defined by a 2x2 matrix
 
           a b
           c d
+
+Matrix-vector multiplication
+
+# 4. Matrix Multiplication as Composition
+
+Linear transformations are functions with vectors as inputs and outputs
+
+# 5. Linear Transformations in Three Dimensions
+
+

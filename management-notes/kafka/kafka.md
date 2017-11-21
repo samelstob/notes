@@ -64,3 +64,5 @@ NY 2016
 * One JVM: 1 task per partition, number of worker threads set by the developer
 * Multi-JVM: Consumer group, 1 consumer per JVM
   - Partition reassignment when a consumer is stopped or dies
+
+## KStream vs Ktable
