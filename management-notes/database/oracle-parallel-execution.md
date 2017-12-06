@@ -21,7 +21,7 @@ allocated from the shared pool or large pool
 in serial.
   - Partition Wise operations can minimise this overhead
 
-## XXXSE Charateristics of a "good" PX execution
+## XXXSE Characteristics of a "good" PX execution
 
 * Workers are kept busy throughout the execution
 * Right number of workers (too many and they are waiting, too few and there
@@ -31,7 +31,7 @@ in serial.
   temp?)
   - Minimal buffered operations?
 * Efficient - ideally 1/nth the time of the serial version
-* Skew - even distribution of work through all operations
+* Skew - even distribution of work across PX servers through all operations
 * One DFO tree - to avoid complications of multiple trees
 * What about CPU, memory and I/O usage?
 * Can scale to more PX servers as traffic increases
@@ -128,7 +128,7 @@ Randolf Geist, James Murtagho
 
 * Number of workers assigned matters
   - Too few can be bad
-  0 Too many can be bad, too
+  - Too many can be bad, too
 
 * Communication between worker units required - data needs to be (re-)
   distributed (overhead!)
@@ -150,7 +150,7 @@ Randolf Geist, James Murtagho
 * Busy workers doesn't tell you anything about the efficiency of the actual
   operation / execution plan
 
-  - It's possible to have a completely inefficient execution [plan that keeps
+  - It's possible to have a completely inefficient execution plan that keeps
     all the workers happily busy
 
 * An efficient PX plan can only scale if the expected number of workers is
@@ -188,8 +188,8 @@ activity in overall!
     initially looks like skew could be multiple DFO trees with different
 degrees.
 
-* To confirm multiple DFO trees: Under the Parallel tab you will see Parallel Group which shows the degree of
-  each set
+* To confirm multiple DFO trees: Under the Parallel tab you will see Parallel
+  Group which shows the degree of each set
 
 * You can also look carefully at the Plan Statistics e.g. PX BROADCAST executions to
   see the degree of each tree
