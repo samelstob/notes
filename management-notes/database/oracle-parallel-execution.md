@@ -203,4 +203,8 @@ degrees.
 * If SQL Monitoring information has not been aged out - look at Parallel
   Distribution ASH column
 
+# Things I still don't understand
 
+* Even when a plan is fixed what happens in the parsing phase?  Do we still
+  need to determine the DOP each time?  Is that something about the exection
+enviornment?  What about manual paralleism?

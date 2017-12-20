@@ -25,7 +25,7 @@ Hardware research
 # Ideas for current job CV
 
 * Platform upgrades
-* Made large contributions to the development of new strategy into Travel
+* Made contributions to the development of new strategy into Travel
 * SWOT analysis
 * Work with business?
 * Coaching and giving feedback to developers daily
@@ -35,8 +35,7 @@ Hardware research
 * Managing and scheduling projects
 * Coordinating testing and releases
 * Negotiating schedules with management team
-* Colloborating
-* A collobarative approach, listens to each team member
+* Listens to each team member
 * Opens people to alternative approaches of solving a problem
 * Does not micro-manage
 * Years of expeirence managing and developing projectsaround parallel data extraction, transformation, and loading using Oracle and Java technologies.

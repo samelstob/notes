@@ -154,7 +154,7 @@ you
     - When you change jobs think about the job after that
 
 * Peter Drucker
-    - No ones strengths and weaknesses
+    - Know one's strengths and weaknesses
     - What *should* I be doing?  If I know myself where there is a best place
       for me to serve "society" best
 * You can't change a job that you don't like

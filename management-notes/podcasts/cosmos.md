@@ -21,3 +21,9 @@ can only make small increments from what already exists.
 
 * They are all wealthy white men - what if society had enabled people of any
   background to succeed like this - what might we have achieved by now? 
+
+* Our brains have evolved for pattern matching - visualisation!
+
+# Being Ill
+
+

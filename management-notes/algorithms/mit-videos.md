@@ -1756,6 +1756,9 @@ I need to understand Dijkstra and Bellman-Ford better to compare.
 
 # Lecture 20: Dynamic Programming II: Text Justification, Blackjack
 
+Powerful technique to design algorithms especially to solve optimisation
+problems where you want to maximise or minimise something.
+
 DP ~ "Careful brute force"
   - Reduce the exponential search space to a polynomial one
 DP ~ Guessing + recursion + memoization
@@ -1772,6 +1775,59 @@ DP ~ Shortest paths in some DAG
 5. Solve original problem 
 
 ## Text justification
+
+Goal: Split text into "good" lines
+
+text = list of words
+badness[i:j] as a line =  page_width-total_width^3
+
+Aim is to minimise the sum of the badness over all lines
+
+XXXSE Aha this is sounding like that game from the maths series - maximising
+the score splitting the stack - it also sounds a bit like the 0/1 knapsack
+problem
+
+1. Define subproblems
+
+  suffixes of the array of words
+  #subprobs: n
+
+2. Guess (part of solution)
+
+  We know where the first line begins, but where to start the 2nd line?
+
+  #choices <= n-i = O(n)
+
+3. Relate subproblem solutions
+
+I want to setup my sub-problems so that after my first guess I have a problem
+of the original type 
+
+  DP[j] - sum of badness for "suffix" starting at j
+
+  DP[i] = min( DP[j] + badness(i,j)    )
+       for j in range(i+1, n+1)
+
+4. Recurse & memoize
+  OR
+   Build DP table bottom-up
+
+Topological order: i = n,n-1,..,0
+Base case DP(n)=0
+
+Total time: #subproblems.time per subproblem=O(n^2)
+
+
+5. Solve original problem 
+
+DP(0)
+
+### Parent pointers
+
+Remember which guess was best
+
+parent[i] = argmin = j value
+
 ## Blackjack
 
 # 23: Computational Complexity
