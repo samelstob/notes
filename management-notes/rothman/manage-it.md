@@ -854,3 +854,24 @@ the product.
 
 # Chapter 16: Managing the Project Portfolio
 
+
+# Pragmatic Podcasts - 28th Nov 2007
+
+To manage a project successfully:
+* A manager removes obstacles.  Without even trying to the organisations that
+  we work for put obstacles in our way all the time.  You could spend your
+entire day moving obstacles.
+  - Physical obstacles, emotional or mental obstacles - people don't
+    understand the dynamics of software development - they think if you
+shortcut a piece of the process you go faster
+* Have to understand the dynamics of the project
+* Have to have solution space domain expertise (i.e. the inside of the
+  product)
+* Developers who are really good at their craft are the people who practice
+  all the time
+* Understanding the value of each project to the organisation, understanding
+  how to slot that project into all of the other projects, and being able to
+have those conversations with a reasonable tone of voice and without you as a
+project manager getting upset
+
+
