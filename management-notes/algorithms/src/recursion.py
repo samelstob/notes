@@ -9,7 +9,7 @@ Often it will be the identity value for a function e.g. 1 is the identity value 
 
 f(a,x) = a
 
-Recurisive step - reduce to a smaller instance of the same problem - heading towards the base case
+Recursive step - reduce to a smaller instance of the same problem - heading towards the base case
 
 Don't try to think
 """

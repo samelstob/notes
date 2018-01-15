@@ -874,4 +874,3 @@ shortcut a piece of the process you go faster
 have those conversations with a reasonable tone of voice and without you as a
 project manager getting upset
 
-
