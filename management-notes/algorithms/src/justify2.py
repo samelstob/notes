@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 import sys
+"""
+Text Justification using Dynamic Programming
+
+From MIT 6.006
+"""
 
 """ Number of calls to the badness function to demonstrate the time complexity of each solution """
 n_calls = 0
@@ -87,7 +92,7 @@ def justify_bottom_up(text, pagewidth, use_memo, memo):
         # Post-condition: min badness calculated for position i
         #print(memo)
         # Try all the choices for the first line starting at i
-        for j in range(text_len, i, -1):
+        for j in range(i+1, text_len+1):
             #print("i:%d, j:%d, text: %s" % (i, j, text[i:j]))
             this_badness = badness(text[i:j], pagewidth) + memo[j]
             if min_badness is None:

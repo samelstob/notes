@@ -2,7 +2,7 @@
 
 ## Forward
 
-" Setting priorities is hard, but setting priorities and then resetting them
+"Setting priorities is hard, but setting priorities and then resetting them
 as the world changes, without being simply reactive to pressure, has a name.
 It is management."
 
@@ -18,7 +18,7 @@ It is management."
 
 # 2. See Your Future
 
-" You may have loud discussions about which project really is number one.
+"You may have loud discussions about which project really is number one.
 And, as you work through those decisions, you'll discover that you are
 performing the difficult work of leading the organization by deciding what to
 do now, what to do later, and what not to do."

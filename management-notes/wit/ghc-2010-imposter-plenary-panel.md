@@ -2,7 +2,7 @@
 
 ## Yolanda Rankin
 Research Scientist at IBM
-MMORPG for mainstream literacy and second language aquisition
+MMORPG for mainstream literacy and second language acquisition
 
 First African American female to finish PHd in Northwestern in 2008
 
@@ -15,7 +15,7 @@ When you work with people, especially folks that don't directly report to you, y
 relationships with people.
 
 "Many ideas grow better when transplanted into another mind than the one where
-the one where they sprang up" Oliver Wendell Holmes
+they sprang up" Oliver Wendell Holmes
 
 Most of my ideas sound really great to me - then I'll run it by someone and
 they'll have a very different perspective.  They are not trying to tear you

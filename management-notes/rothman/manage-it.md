@@ -76,7 +76,7 @@ Release date        1
 Feature set         2
 Low defects         3
 People              4
-Work enviornment    6
+Work environment    6
 
 In this project, the release date was the primary driver.  If we had missed
 the release date this year, we would have lost all the value of the project.
@@ -222,7 +222,7 @@ choices.
 
 ### Proposed Schedule
 
-* Outlinethe major milestones, as much as you understand them.
+* Outline the major milestones, as much as you understand them.
 
 * I tend to schedule with yellow stickies, so I rarely have a full Gantt chart
   for my projects.  I've been known to say, "See the wall in the project room
