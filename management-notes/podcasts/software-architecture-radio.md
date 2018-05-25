@@ -1,12 +1,12 @@
 # Tudor Girba on Solving Problems Without
 
-Softawre devevlopers transform data problems into decision making problems
+Software developers transform data problems into decision making problems
 
 When developers have their own problem they fall back to the most basic means
 - reading source code.  Trying to put it all in your head - it's in humane -
   like plowing the field with you bare hands.
 
-WHen developers read code they want to understand enough to make a decision.
+When developers read code they want to understand enough to make a decision.
 Instead of code reading I call it assessment.  No two systems have the exact
 problems - they may have the same classes of problems but not the exact same
 problem.
@@ -72,6 +72,8 @@ it beahves quite vadly.
     running synchronusly, and they all exposed to unpredictable demand volume
 from the internet we have all the charactersitcs of systems that we can't
 understand, can't control and that are oging to fail.
+XXXSE This is what we have laernt intuititivly from managing complex systems
+in production so it is great to have it expressed here
   - I can point to lots other systmes like that in society today.
 * One approach is to make them robust.  Robust means that when you distrub
   them away from equalibrium they will return to an equilibrium state on their
@@ -90,11 +92,14 @@ This competitive landscape is continuously changing, you can't just map a
 course over the next several years and say this is where we are going to be in
 our five year plan - you ahve to plan to adapt and manevour and continue
 changing what you are doing over that time.
+XXXSE This is really interesting - I had some thoughts about this a few years
+ago when I did a presentation on Agile and I could empahsise it more
   - S3 and EBS faciliated all these other services.  A group will make a
     ervice that makes a bunch of things that were economocally unfrasbible to
 attack and makes the possible, maybe even more efficient than what you were
 doing before.  What's going on inside my company that's it's own ecosystem
 inside the company.
+  - XXXSE This is very relevant
   - We have to be uncomfortable with some inefficiencies at micro level to
     gain that competitive advanatage at the macro level.
 * Companies don't look at the inventory side of software - by keeping code

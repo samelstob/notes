@@ -17,6 +17,8 @@
 
 Drucker - THe EFfective Executive
 
+https://blog.drift.com/lessons-from-peter-drucker/
+
 For executives you have time to really make a difference in one area.  People
 think they have skills in lots of areas so they want to apply themselves to
 all the places where they think their skills are distinctive.
