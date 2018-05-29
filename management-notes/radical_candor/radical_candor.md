@@ -1,4 +1,4 @@
-# 2. Get, Give, and Enourage Guidance
+# 2. Get, Give, and Encourage Guidance
 
 "When you do that thing with your hand, I feel like you're ignoring what I'm
 telling you.  I can see I am going to have to be really direct to get through
@@ -26,4 +26,27 @@ finger at the sidewalk, and said with a loud, firm voice, "SIT!"
   She sat.  I gaped in amazement.
   He smiled and explained, "It's not mean.  It's clear!"
 
+## Giving meaningful praise is hard
+
+"I really admire that you are a Little League coach"
+
+I realised later that my complimenet had not been specific - I adn't told Russ
+why I admired that he was a coach.
+
+"Well, the real problem is that I don't think you meant it - you hate sports"
+
+Giving meaningful praise is hard.  That's why it's so important to guage your
+guidance - to find how it lands for people.
+
+## Obnoxious Aggression
+
+Choosing between being a "nice incompetent" or a "competent asshole" is a
+false dichotomy: you don't have to choose beteen those two extremes.  Time and
+again, I have seen that it was kinder in the long run to be direct, even if
+articulating my criticism caused some momentary upset ("It's not mean, it's
+clear").
+
+It's the fear of being labeled a jerk that pushes many people toward
+Manipulative Insincerity of Ruinous Empath - both of which are actually worse
+for their colleagues than Obnoxious Agression.
 

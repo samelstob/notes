@@ -158,3 +158,48 @@ c2 wiki is a fantastic resource - the discussions around the patterns are all
 there.
 
 Pattern oriented system architecture
+
+# 006 Modular Monoliths
+
+## c4 model
+
+* A software system is made up of one or more containers: applications or data
+  stores.
+  - Each of those containers is made up of one or components.
+  - A component is a bunch of related functionality between a clean simple
+    interface.
+
+* c4 model
+* http://www.codingthearchitecture.com/authors/sbrown/
+* Microservices has got people thinking about architecture
+* At least Microservices make it hard to break boundaries
+
+## Software Architecture and decomposition
+
+* When you ask people how they design software they say "we use our
+  experience"
+* People are no longer aware of the classic decomposition techniques e.g.
+  functional decomposition, volatility based decomposition.  Some foundational
+knowledge of our discipline seems to have been forgotten!
+* https://blog.acolyer.org/2016/09/05/on-the-criteria-to-be-used-in-decomposing-systems-into-modules/
+
+## Cargo Culting
+
+* People don't necessarily think about if a 3 layer architecture is correct
+  for them
+    - Martin Fowler's PresentationDomainDataLayering
+* Testing
+  - Unit Testing - People have different ideas about what a unit is - a
+    method, a class, a feature?
+  - Integration Tests - people don't necessarily agree about what this is
+* "A unit isn't necessarily a class.  A unit is a set of related functionality"
+* If the tooling tells us to do it this way it becomes the path if least
+  resistance (e.g. unit testing each class)
+
+## Terminology
+
+* "One of the big problems we have is terminology: component, module, unit,
+  integration - there is no agreed definition.  People will use the word
+component to mean very different things - we have this horrendous ambiguity
+with terminology"
+
